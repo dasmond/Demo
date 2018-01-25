@@ -1,17 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace DsLib.Common
 {
     public static class Utils
     {
-        //ToInt ToDouble ToBoolean ToDateTime ToFullString ToDBC
-        #region - 转换：类型 -
-
-        /// <summary>转为整数</summary>
+        
+        //获得当前物理路径
+        #region - string GetMapPath(string strPath) -
+        /// <summary>
+        /// 获得当前物理路径 有“\”
+        /// </summary>
+        /// <param name="strPath">指定的虚拟路径</param>
+        /// <returns>返回与虚拟路径对应的物理路径</returns>
+        public static string GetMapPath(string strPath)
+        {
+            if (HttpContext.Current != null)
+            {
+                return HttpContext.Current.Server.MapPath(strPath);
+            }
+            else //非web程序引用,或HttpContext终止的情况下
+            {
+                strPath = strPath.Replace("~/", "").Replace("/", "\\");
+                return System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, strPath);
+            }
+        }
+        #endregion
+        
+        //static readonly String[] trueStr = new String[] { "True", "Y", "Yes", "On" };
+        //static readonly String[] falseStr = new String[] { "False", "N", "N", "Off" };
+        
+        //转为整数
+        #region - Int32 ToInt(this Object value, Int32 defaultValue = 0) -
+        /// <summary>
+        /// 转为整数
+        /// </summary>
         /// <param name="value">待转换对象</param>
         /// <param name="defaultValue">默认值。待转换对象无效时使用</param>
         /// <returns></returns>
@@ -59,8 +87,13 @@ namespace DsLib.Common
             }
             catch { return defaultValue; }
         }
+        #endregion
 
-        /// <summary>转为浮点数</summary>
+        //转为浮点数
+        #region - Double ToDouble(this Object value, Double defaultValue = 0) -
+        /// <summary>
+        /// 转为浮点数
+        /// </summary>
         /// <param name="value">待转换对象</param>
         /// <param name="defaultValue">默认值。待转换对象无效时使用</param>
         /// <returns></returns>
@@ -112,11 +145,13 @@ namespace DsLib.Common
             }
             catch { return defaultValue; }
         }
+        #endregion
 
-        //static readonly String[] trueStr = new String[] { "True", "Y", "Yes", "On" };
-        //static readonly String[] falseStr = new String[] { "False", "N", "N", "Off" };
-
-        /// <summary>转为布尔型。支持大小写True/False、0和非零</summary>
+        //转为浮点数
+        #region - Boolean ToBoolean(this Object value, Boolean defaultValue = false) -
+        /// <summary>
+        /// 转为布尔型。支持大小写True/False、0和非零
+        /// </summary>
         /// <param name="value">待转换对象</param>
         /// <param name="defaultValue">默认值。待转换对象无效时使用</param>
         /// <returns></returns>
@@ -150,16 +185,23 @@ namespace DsLib.Common
             }
             catch { return defaultValue; }
         }
+        #endregion
 
-
-        /// <summary>转为时间日期</summary>
+        //转为时间日期
+        #region - DateTime ToDateTime(this Object value) -
+        /// <summary>
+        /// 转为时间日期
+        /// </summary>
         /// <param name="value">待转换对象</param>
         /// <returns></returns>
         public static DateTime ToDateTime(this Object value)
         {
             return ToDateTime(value, DateTime.MinValue);
         }
+        #endregion
 
+        //转为时间日期
+        #region - DateTime ToDateTime(this Object value) -
         /// <summary>转为时间日期</summary>
         /// <param name="value">待转换对象</param>
         /// <param name="defaultValue">默认值。待转换对象无效时使用</param>
@@ -189,8 +231,13 @@ namespace DsLib.Common
             }
             catch { return defaultValue; }
         }
-        
-        /// <summary>时间日期转为yyyy-MM-dd HH:mm:ss完整字符串</summary>
+        #endregion
+
+        //时间日期转为yyyy-MM-dd HH:mm:ss完整字符串
+        #region - String ToFullString(this DateTime value, String emptyValue = null) -
+        /// <summary>
+        /// 时间日期转为yyyy-MM-dd HH:mm:ss完整字符串
+        /// </summary>
         /// <param name="value">待转换对象</param>
         /// <param name="emptyValue">字符串空值时显示的字符串，null表示原样显示最小时间，String.Empty表示不显示</param>
         /// <returns></returns>
@@ -217,8 +264,13 @@ namespace DsLib.Common
 
             return sb.ToString();
         }
+        #endregion
 
-        /// <summary>时间日期转为指定格式字符串</summary>
+        //时间日期转为指定格式字符串
+        #region - String ToString(this DateTime value, String format, String emptyValue) -
+        /// <summary>
+        /// 时间日期转为指定格式字符串
+        /// </summary>
         /// <param name="value">待转换对象</param>
         /// <param name="format">格式化字符串</param>
         /// <param name="emptyValue">字符串空值时显示的字符串，null表示原样显示最小时间，String.Empty表示不显示</param>
@@ -233,7 +285,10 @@ namespace DsLib.Common
 
             return value.ToString(format);
         }
-        
+        #endregion
+
+        //全角转半角
+        #region - String ToDBC(this String str) -
         /// <summary>全角转半角</summary>
         /// <remarks>全角半角的关系是相差0xFEE0</remarks>
         /// <param name="str"></param>
@@ -251,8 +306,9 @@ namespace DsLib.Common
             }
             return new string(ch);
         }
-
         #endregion
+
+
 
 
     }

@@ -12,10 +12,12 @@ using SuperSocket.SocketBase.Command;
 
 namespace SocketServer.AiThinker
 {
+    //GPSCommand 命令
+
     /// <summary>
-    /// 
+    /// 请求命令：ECHO
     /// </summary>
-    public class GPSCommand : CommandBase<GPSSession, StringRequestInfo>
+    public class ECHO : CommandBase<GPSSession, StringRequestInfo>
     {
         /// <summary>
         /// 命令处理类
@@ -24,15 +26,12 @@ namespace SocketServer.AiThinker
         /// <param name="requestInfo"></param>
         public override void ExecuteCommand(GPSSession session, StringRequestInfo requestInfo)
         {
-            //session.CustomID = new Random().Next(10000, 99999);
-            //session.CustomName = "hello word";
-
             var key = requestInfo.Key;
             var param = requestInfo.Parameters;
             var body = requestInfo.Body;
-            //返回随机数session.Send(session.CustomID.ToString());
-            //返回
-            session.Send("命令发送");
+                        
+            //("服务器收到命令：ECHO ", JsonHelper.SerializeObject(requestInfo));
+            session.Send("服务器收到命令：ECHO");
         }
 
     }

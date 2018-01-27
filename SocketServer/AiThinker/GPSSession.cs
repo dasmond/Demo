@@ -12,12 +12,11 @@ namespace SocketServer.AiThinker
 {
     /// <summary>
     /// GPS客户端逻辑连接/会话
+    /// <para>AppServer  承载TCP连接的服务器实例。通过AppServer实例获取客户端连接，服务器级别的操作和逻辑。</para>
+    /// <para>AppSession 客户端逻辑连接，通过AppSession实例处理基于连接的操作。发送数据到客户端，接收客户端发送的数据或者关闭连接。</para>
     /// </summary>
     public class GPSSession : AppSession<GPSSession>
     {
-        //AppServer  承载TCP连接的服务器实例。通过AppServer实例获取客户端连接，服务器级别的操作和逻辑。
-        //AppSession 客户端逻辑连接，通过AppSession实例处理基于连接的操作。发送数据到客户端，接收客户端发送的数据或者关闭连接。
-
         public int MacId { get; internal set; }
                 
         /// <summary>
@@ -34,7 +33,7 @@ namespace SocketServer.AiThinker
             //Charset
             //PrevCommand
             //CurrentCommand
-            LogHelper.Info("客户端接入... IP={0},Port={1},SessionID={2}", this.LocalEndPoint.Address, this.LocalEndPoint.Port, this.SessionID);
+            Logger.DebugFormat("客户端接入... IP={0},Port={1},Charest={2},SessionID={3}", this.LocalEndPoint.Address, this.LocalEndPoint.Port, this.Charset, this.SessionID);
             this.Send("Welcome to GPS Server");
         }
 
@@ -44,7 +43,7 @@ namespace SocketServer.AiThinker
         /// <param name="reason"></param>
         protected override void OnSessionClosed(CloseReason reason)
         {
-            LogHelper.Info("客户端关闭... SessionID={0}", this.SessionID);
+            Logger.DebugFormat("客户端关闭... SessionID={0}", this.SessionID);
             base.OnSessionClosed(reason);
         }
 
@@ -54,7 +53,7 @@ namespace SocketServer.AiThinker
         /// <param name="requestInfo"></param>
         protected override void HandleUnknownRequest(StringRequestInfo requestInfo)
         {
-            LogHelper.Info("未知请求：{0}", JsonHelper.SerializeObject(requestInfo));
+            Logger.DebugFormat("未知请求：{0}", JsonHelper.SerializeObject(requestInfo));
             base.HandleUnknownRequest(requestInfo);
             this.Send("Unknow request");
         }
@@ -65,7 +64,7 @@ namespace SocketServer.AiThinker
         /// <param name="e"></param>
         protected override void HandleException(Exception e)
         {
-            LogHelper.Error("异常输入：{0}",JsonHelper.SerializeObject(e));
+            Logger.ErrorFormat("异常输入：{0}",JsonHelper.SerializeObject(e));
             this.Send("Application error: {0}", e.Message);
         }
 

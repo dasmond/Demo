@@ -61,15 +61,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DemoDelegate.cs" />
-    <Compile Include="GPSSession.cs" />
+    <Compile Include="AiThinker\GPSCommand.cs" />
+    <Compile Include="AiThinker\GPSServer.cs" />
+    <Compile Include="Demo\DemoDelegate.cs" />
+    <Compile Include="AiThinker\GPSSession.cs" />
+    <Compile Include="Demo\DemoSimpleScoket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Config\log4net.config" />
-    <None Include="Config\log4net.unix.config" />
+    <None Include="Config\log4net.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

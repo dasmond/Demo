@@ -43,7 +43,9 @@ namespace DsLib.Common
         /// </summary>
         public static void Debug(string msg, params Object[] args)
         {
-            logger.Debug(string.Format(msg, args));
+            if (args.Length > 0)
+                msg = string.Format(msg, args);
+            logger.Debug(msg);
         }
 
         /// <summary>
@@ -51,7 +53,9 @@ namespace DsLib.Common
         /// </summary>
         public static void Info(string msg, params Object[] args)
         {
-            logger.Info(string.Format(msg, args));
+            if (args.Length > 0)
+                msg = string.Format(msg, args);
+            logger.Info(msg);
         }
 
         /// <summary>
@@ -59,7 +63,9 @@ namespace DsLib.Common
         /// </summary>
         public static void Warn(string msg, params Object[] args)
         {
-            logger.Warn(string.Format(msg, args));
+            if (args.Length > 0)
+                msg = string.Format(msg, args);
+            logger.Warn(msg);
         }
 
         /// <summary>
@@ -67,7 +73,9 @@ namespace DsLib.Common
         /// </summary>
         public static void Error(string msg, params Object[] args)
         {
-            logger.Error(string.Format(msg, args));
+            if (args.Length > 0)
+                msg = string.Format(msg, args);
+            logger.Error(msg);
         }
 
         /// <summary>
@@ -75,7 +83,9 @@ namespace DsLib.Common
         /// </summary>
         public static void Fatal(string msg, params Object[] args)
         {
-            logger.Fatal(string.Format(msg, args));
+            if (args.Length > 0)
+                msg = string.Format(msg, args);
+            logger.Error(msg);
         }
 
          

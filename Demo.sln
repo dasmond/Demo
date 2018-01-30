@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketServer", "SocketServe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DsLib", "DsLib\DsLib.csproj", "{B50F4171-E8A4-4912-A624-E44B94890752}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{22E008B5-731A-4B18-9F07-D4D3FD107A41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B50F4171-E8A4-4912-A624-E44B94890752}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B50F4171-E8A4-4912-A624-E44B94890752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B50F4171-E8A4-4912-A624-E44B94890752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E008B5-731A-4B18-9F07-D4D3FD107A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E008B5-731A-4B18-9F07-D4D3FD107A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E008B5-731A-4B18-9F07-D4D3FD107A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E008B5-731A-4B18-9F07-D4D3FD107A41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

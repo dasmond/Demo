@@ -31,10 +31,30 @@ namespace DsLib.Common
             }
         }
         #endregion
-        
+
+
+        //GPS：降度分秒格式经纬度转换为小数经纬度
+        #region - double GPSConvertToDegree(string _Value) -
+        /// <summary>
+        /// GPS：降度分秒格式经纬度转换为小数经纬度
+        /// </summary>
+        /// <param name="_Value">度分秒经纬度</param>
+        /// <returns>小数经纬度</returns>
+        public static double GPSConvertToDegree(string _Value)
+        {
+            double Ret = 0.0;
+            string[] TempStr = _Value.Split('.');
+            string x = TempStr[0].Substring(0, TempStr[0].Length - 2);
+            string y = TempStr[0].Substring(TempStr[0].Length - 2, 2);
+            string z = TempStr[1].Substring(0, 4);
+            Ret = Convert.ToDouble(x) + Convert.ToDouble(y) / 60 + Convert.ToDouble(z) / 600000;
+            return Ret;
+        }
+        #endregion
+
         //static readonly String[] trueStr = new String[] { "True", "Y", "Yes", "On" };
         //static readonly String[] falseStr = new String[] { "False", "N", "N", "Off" };
-        
+
         //转为整数
         #region - Int32 ToInt(this Object value, Int32 defaultValue = 0) -
         /// <summary>

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DsLib.Common;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
+using SuperSocket.SocketBase.Protocol;
 
 namespace SocketServer.AiThinker
 {
@@ -17,6 +18,24 @@ namespace SocketServer.AiThinker
     /// </summary>
     public class GPSServer : AppServer<GPSSession>
     {
+        /// <summary>
+        /// 服务构造
+        /// <para>自定义命令行协议 GPSRequestInfoParser</para>
+        /// </summary>
+        public GPSServer() : base(new CommandLineReceiveFilterFactory(Encoding.Default, new GPSRequestInfoParser()))
+        {
+            //GPSServer() : base(new CommandLineReceiveFilterFactory(Encoding.Default, new BasicRequestInfoParser(",", ",")))
+            //内置的协议
+            //CommandLineReceiveFilterFactory - 命令行协议
+            //TerminatorReceiveFilter - 结束符协议
+            //CountSpliterReceiveFilter - 固定数量分隔符协议
+            //FixedSizeReceiveFilter - 固定请求大小的协议
+            //BeginEndMarkReceiveFilter - 带起止符的协议
+            //FixedHeaderReceiveFilter - 头部格式固定并且包含内容长度的协议
+            
+
+        }
+
         /// <summary>
         /// 服务配置
         /// <para>http://docs.supersocket.net/v1-6/zh-CN/SuperSocket-Basic-Configuration</para>
@@ -29,11 +48,17 @@ namespace SocketServer.AiThinker
             return base.Setup(rootConfig, serverConfig);
         }
 
+        /// <summary>
+        /// 服务开始
+        /// </summary>
         protected override void OnStarted()
         {
             base.OnStarted();
         }
 
+        /// <summary>
+        /// 服务停止
+        /// </summary>
         protected override void OnStopped()
         {
             base.OnStopped();

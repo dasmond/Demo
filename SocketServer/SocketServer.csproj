@@ -62,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AiThinker\GPSCommand.cs" />
+    <Compile Include="AiThinker\GPSInfo.cs" />
+    <Compile Include="AiThinker\GPSRequestInfo.cs" />
+    <Compile Include="AiThinker\GPSRequestInfoParser.cs" />
     <Compile Include="AiThinker\GPSServer.cs" />
     <Compile Include="Demo\DemoDelegate.cs" />
     <Compile Include="AiThinker\GPSSession.cs" />

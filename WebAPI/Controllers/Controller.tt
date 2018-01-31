@@ -1,0 +1,361 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #> 
+<#@ include file="$(ProjectDir)/T4/MSSQLHelper.ttinclude" #>
+<#@ include file="$(ProjectDir)/T4/MultipleOutputHelper.ttinclude" #>
+<# var manager = Manager.Create(Host, GenerationEnvironment); #> 
+<# manager.StartHeader(); #>
+//------------------------------------------------------------------------------
+//  ！！！ 数据库表必须有说明信息才能自动生成 ！！！
+//	此代码由T4模板自动生成 
+//	生成时间 <#=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")#> By XiaoKe
+//	对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
+//------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Linq.Expressions;
+using System.Reflection;
+using System.Web.Http;
+using System.Web.Http.Description;
+
+using DsLib.Common;
+using DsLib.EntityFramework;
+
+namespace DJW.WebAPI.Controllers
+{
+
+<#
+	manager.EndBlock(); //--- manager.StartHeader(); 
+
+	//--- 文件循环开始
+	List<DbInfo> tl = DbHelper.GetClassInfos();
+	foreach (var t in tl)
+    {
+		//   表名称：t.TableName 
+		//   表说明：t.TableDesc
+		//   实体类：t.ModelName
+		//   业务类：t.BllName 
+		//   控制类：t.CtrName
+        // 主键名称：t.KeyName
+		// 主键类型：t.KeyType
+		//   列信息：t.Columns
+			//    列类型：t.Columns[i].ColumnType
+			//    列名称：t.Columns[i].ColumnName 
+			//    列说明：t.Columns[i].Remark 
+			//  是否主键：t.Columns[i].IsPrimaryKey 
+			//  是否自增：t.Columns[i].IsIdentity 
+			//是否允许空：t.Columns[i].IsNullable
+			//    小数位：t.Columns[i].Scale 
+			//  字符长度：t.Columns[i].CharLength 
+			//  字节长度：t.Columns[i].ByteLength
+				
+	manager.StartNewFile(t.CtrName+".cs");
+	 
+#>
+
+    /// <summary>
+    /// <#=t.TableDesc#>
+    /// </summary>
+    [RoutePrefix("api/<#=t.TableName#>")]
+    public partial class <#=t.CtrName#> : ApiController
+    {
+
+
+        //GET: api/Attempt/GetMaxValue?field={field}
+        //获取字段数据中的最大值 
+        #region - Max(string field) -
+        /// <summary>
+        /// 获取字段数据中的最大值
+        /// </summary>
+        /// <param name="field">目标字段名称</param>
+        /// <returns></returns>
+        [Route("Max")]
+        [HttpGet]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult Max(string field)
+        {
+            var _value = Attempts.Max(field);
+            if (_value.ToInt(-1) == -1)
+            {
+                return BadRequest("最大值查询[Max]查询失败！");
+            }
+            return Ok(_value);
+        }
+        #endregion
+        
+        //GET: api/<#=t.TableName#>/Exists
+        //获取字段中包含关键字的行数
+        #region - Count(string field, string keywords) -
+        /// <summary> 
+        /// 获取字段中包含关键字的行数
+        /// -- [field],[keywords]任意留空则查询全部
+        /// </summary>
+        /// <param name="field">字段</param>
+        /// <param name="keywords">关键字</param>
+        /// <returns></returns>
+        [Route("Count")]
+        [HttpGet]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult Count(string field, string keywords)
+        {
+            var _value = Attempts.Count(field, keywords);
+            if (_value == -1)
+                return BadRequest("行数查询[Count]未找到对象！");
+
+            return Ok(_value);
+        }
+        #endregion
+        
+        //GET: api/<#=t.TableName#>/GetModel?<#=t.KeyName#>={<#=t.KeyName#>}
+        //获取实体对象
+        #region - GetModel(<#=t.KeyType#> <#=t.KeyName#>) -
+        /// <summary>
+        /// 获取实体对象
+        /// </summary>
+        /// <param name="<#=t.KeyName#>">主键：<#=t.KeyName#></param>
+        /// <returns></returns>
+        [Route("GetModel")]
+        [HttpGet]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult GetModel(<#=t.KeyType#> <#=t.KeyName#>)
+        {
+            var _value = <#=t.BllName#>.GetModel(<#=t.KeyName#>);
+            return Ok(_value);
+
+            //Expression<Func<<#=t.ModelName#>, bool>> where = null;
+            //where = w => w.<#=t.KeyName.ToLower()#> == <#=t.KeyName#>;
+            //var _value = <#=t.BllName#>.GetModel(where);
+        }
+        #endregion
+        
+        //GET: api/<#=t.TableName#>/GetList?sql={sql}
+        //获取列表
+        #region - GetList(int rows, int pagenum, string field, string sort) -
+        /// <summary>
+        /// 获取列表
+        /// </summary>
+        /// <param name="rows">每页条目数</param>
+        /// <param name="pagenum">当前页码</param>
+        /// <param name="field">排序字段（分隔符',',可附带排序类型）</param>
+        /// <param name="sort">排序类型（ASC,默认：DESC）</param> 
+        /// <returns></returns>
+        [Route("GetList")]
+        [HttpGet]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult GetList(int rows, int pagenum, string field, string sort)
+        {
+            int records = 0; //总记录数
+            int total = 0;   //总页码
+            
+            List<<#=t.ModelName#>> ml = <#=t.BllName#>.GetList(rows, pagenum, field, sort, out records, out total);
+
+            //附带查询条件
+            //Expression<Func<<#=t.ModelName#>, bool>> where = null;
+            //where = w => w.<#=t.KeyName.ToLower()#> == 107;
+            //List<<#=t.ModelName#>> ml = <#=t.BllName#>.GetList(where, rows, pagenum, field, sort, out records, out total);
+
+            var _value = new {
+                pagenum = pagenum, //当前页码
+                records = records, //总记录数
+                total = total,     //总页码
+                list = ml          //数据列表
+            };
+
+            return Ok(_value);
+            
+            //Expression<Func<<#=t.ModelName#>, bool>> where = null;
+            //where = w => w.<#=t.KeyName.ToLower()#> == <#=t.KeyName#>;
+            //var _value = <#=t.BllName#>.GetModel(where);
+
+
+        }
+        #endregion
+        
+
+
+        //POST: api/<#=t.TableName#>/Add
+        //增加一条数据
+        #region - Add(<#=t.ModelName#> model) -
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        [Route("Add")]
+        [HttpPost]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult Add(<#=t.ModelName#> model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (<#=t.BllName#>.Add(model) > 0)
+                return Ok();
+            else
+                return BadRequest("添加失败！");
+
+            //return CreatedAtRoute("DefaultApi", new { id = model.Id }, model);
+        }
+        #endregion
+
+
+        //POST: api/<#=t.TableName#>/AddList
+        //增加多条数据
+        #region - AddList(List<<#=t.ModelName#>> models) -
+        /// <summary>
+        /// 增加多条数据
+        /// </summary>
+        [Route("AddList")]
+        [HttpPost]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult AddList(List<<#=t.ModelName#>> models)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (<#=t.BllName#>.AddList(models) > 0)
+                return Ok();
+            else
+                return BadRequest("添加失败！"); 
+
+            //return CreatedAtRoute("DefaultApi", new { id = model.Id }, model);
+        }
+        #endregion
+
+        
+        //PUT: api/<#=t.TableName#>/Update
+        //修改一条数据
+        #region - Update(<#=t.ModelName#> model) -
+        /// <summary>
+        /// 修改一条数据
+        /// </summary>
+        [Route("Update")]
+        [HttpPut]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult Update(<#=t.ModelName#> model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (!<#=t.BllName#>.Exists(model.<#=t.KeyName#>))
+                return BadRequest("未找到标识为[" + model.<#=t.KeyName#> + "]信息！");
+
+            if (<#=t.BllName#>.Update(model) > 0)
+                return Ok();
+            else
+                return BadRequest("修改失败！");
+
+            //return CreatedAtRoute("DefaultApi", new { id = model.Id }, model);
+        }
+        #endregion
+
+
+        //PUT: api/<#=t.TableName#>/UpdateList
+        //修改多条数据
+        #region - UpdateList(List<<#=t.ModelName#>> models) -
+        /// <summary>
+        /// 修改多条数据
+        /// </summary>
+        /// <param name="models">实体列</param>
+        [Route("UpdateList")]
+        [HttpPut]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult UpdateList(List<<#=t.ModelName#>> models)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            foreach (<#=t.ModelName#> model in models)
+            {
+                if (!<#=t.BllName#>.Exists(model.<#=t.KeyName#>))
+                    return BadRequest("未找到标识为[" + model.<#=t.KeyName#> + "]信息！");
+            }
+
+            if (<#=t.BllName#>.UpdateList(models) > 0)
+                return Ok();
+            else
+                return BadRequest("修改失败！");
+
+            //return CreatedAtRoute("DefaultApi", new { id = model.Id }, model);
+        }
+        #endregion
+
+
+        //DELETE: api/<#=t.TableName#>/Delete
+        //删除一条数据
+        #region - Delete(Guid aid) -
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        /// <param name="<#=t.KeyName#>">ID</param>
+        [Route("Delete")]
+        [HttpDelete]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult Delete(<#=t.KeyType#> <#=t.KeyName#>)
+        {
+            if (!ModelState.IsValid) 
+                return BadRequest(ModelState);
+
+            <#=t.ModelName#> model = <#=t.BllName#>.GetModel(<#=t.KeyName#>);
+            if (model == null)
+                return BadRequest("未找到标识为[" + <#=t.KeyName#> + "]信息！");
+            
+            if (<#=t.BllName#>.Delete(model) > 0)
+                return Ok();
+            else
+                return BadRequest("删除失败！");
+        }
+        #endregion
+
+
+        //DELETE: api/<#=t.TableName#>/DeleteList
+        //删除多条数据
+        #region - DeleteList(List<<#=t.KeyType#>> <#=t.KeyName#>List) -
+        /// <summary>
+        /// 删除多条数据
+        /// </summary>
+        /// <param name="<#=t.KeyName#>List">ID列</param>
+        /// <returns></returns>
+        [Route("DeleteList")]
+        [HttpDelete]
+        [ResponseType(typeof(BaseResult))]
+        public IHttpActionResult DeleteList(List<<#=t.KeyType#>> <#=t.KeyName#>List)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (<#=t.KeyName#>List.Count == 0)
+                return BadRequest("参数错误：空！");
+
+            Expression<Func<<#=t.ModelName#>, bool>> where = null;
+            where = w => <#=t.KeyName#>List.Contains(w.<#=t.KeyName#>);
+
+            if (<#=t.BllName#>.Delete(where) > 0)
+                return Ok();
+            else
+                return BadRequest("删除失败！");             
+        }
+        #endregion
+
+         
+
+
+    }
+
+<#
+	manager.EndBlock(); //--- 文件循环结束 manager.StartNewFile(table.TableName+".cs"); 
+	}
+#>
+
+<# manager.StartFooter(); #> 
+}
+<# manager.EndBlock(); //--- manager.StartFooter();#>
+<# manager.Process(true); #>

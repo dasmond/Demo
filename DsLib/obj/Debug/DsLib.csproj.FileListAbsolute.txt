@@ -7,3 +7,10 @@ C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\obj\Debug\DsLib.dll
 C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\obj\Debug\DsLib.pdb
 C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\Newtonsoft.Json.dll
 C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\Newtonsoft.Json.xml
+C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\DsLib.dll.config
+C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\EntityFramework.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\EntityFramework.xml
+C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DsLib.Common;
+using DsLib.EntityFramework;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
 using SuperSocket.SocketBase.Logging;
@@ -35,10 +36,10 @@ namespace SocketServer.AiThinker
     //MSS：信噪比(SNR), 信号强度，频率，比特率
     //ZDA：时间和日期数据
 
-
+    //北斗定位信息 标识：$GNRMC
+    #region - GNRMC : CommandBase<GPSSession, StringRequestInfo> -
     /// <summary>
-    /// 数据标识：GNRMC
-    /// 北斗定位信息
+    /// 北斗定位信息 标识：GNRMC
     /// </summary>
     public class GNRMC : CommandBase<GPSSession, StringRequestInfo>
     {        
@@ -53,40 +54,55 @@ namespace SocketServer.AiThinker
             var param = requestInfo.Parameters;
             var body = requestInfo.Body;
 
-            //GNRMC解析[北斗]
-            //$GNRMC,00039.262,V,2236.3748,N,11350.4114,E,0.000,0.00,060180,,,N*50
-            //协议头,
-            //【0】UTC时间（hhmmss.sss）,
-            //【1】V/A=无效/有效,
-            //【2】纬度,
-            //【3】N/S=北/南,
-            //【4】经度,
-            //【5】E/W=东/西,
-            //【6】对地速度(1节= 1852米/小时),
-            //【7】方位角（度）
-            //【8】日期（ddmmyy）
-            //【9】磁偏角
-            //【10】磁偏角方向
-            //【11】模式指示
-            //【12】校验和
-            //<CR><LF>回车换行，消息结束
 
-            var info = new GPSInfo();
-            info.GPSType = "BD";
-            info.GPSTime = string.Format("20{0}-{1}-{2} {3}:{4}:{5}", param[8].Substring(4, 2), param[8].Substring(2, 2), param[8].Substring(0, 2),
-                                                                      param[0].Substring(0, 2), param[0].Substring(2, 2), param[0].Substring(4, 2)).ToDateTime(DateTime.MinValue);
-            info.GPSStatus = param[1];
-            info.Speed = param[6].Trim() == "" ? "" : (param[6].ToDouble(0) * 1852).ToString("0.00");
-            info.Latitude = param[2].Trim() == "" ? "" : (Utils.GPSConvertToDegree(param[2])).ToString("0.000000");
-            info.Longitude = param[4].Trim() == "" ? "" : (Utils.GPSConvertToDegree(param[4])).ToString("0.000000");
-            info.Heading = param[7];
+            try
+            {
+                //GNRMC解析[北斗]
+                //$GNRMC,00039.262,V,2236.3748,N,11350.4114,E,0.000,0.00,060180,,,N*50
+                //协议头,
+                //【0】UTC时间（hhmmss.sss）,
+                //【1】V/A=无效/有效,
+                //【2】纬度,
+                //【3】N/S=北/南,
+                //【4】经度,
+                //【5】E/W=东/西,
+                //【6】对地速度(1节= 1852米/小时),
+                //【7】方位角（度）
+                //【8】日期（ddmmyy）
+                //【9】磁偏角
+                //【10】磁偏角方向
+                //【11】模式指示
+                //【12】校验和
+                //<CR><LF>回车换行，消息结束
 
-            session.Logger.Debug(JsonHelper.SerializeObject(info));
+                var pinfo = new GpsPositionInfo();
+                pinfo.GpsPositionId = Guid.NewGuid();
+                pinfo.GpsDeviceId = new Guid("2abd8174-43de-4cd7-89a8-b2096e607c27");
+                pinfo.GpsType = "BD";
+                pinfo.GpsStatus = param[1];
+                pinfo.GpsTime = string.Format("20{0}-{1}-{2} {3}:{4}:{5}", param[8].Substring(4, 2), param[8].Substring(2, 2), param[8].Substring(0, 2),
+                                                                          param[0].Substring(0, 2), param[0].Substring(2, 2), param[0].Substring(4, 2)).ToDateTime(DateTime.MinValue);
+                pinfo.GpsSat = -1;
+                pinfo.GpsLatitude = param[2].Trim() == "" ? "" : (Utils.GPSConvertToDegree(param[2])).ToString("0.000000");
+                pinfo.GpsLongitude = param[4].Trim() == "" ? "" : (Utils.GPSConvertToDegree(param[4])).ToString("0.000000");
+                pinfo.GpsSpeed = param[6].Trim() == "" ? "" : (param[6].ToDouble(0) * 1852).ToString("0.00");
+                pinfo.GpsHeading = param[7];
+                pinfo.LbsMcc = "";
+                pinfo.LbsMnc = "";
+                pinfo.LbsLac = "";
+                pinfo.LbsCellId = "";
+                pinfo.CreatTime = DateTime.Now;
 
-
+                GpsPositions.Add(pinfo);
+            }
+            catch(Exception ex)
+            {
+                session.Logger.Error("GPS信息处理失败！", ex);
+            }
         }
 
     }
+    #endregion
 
 
 

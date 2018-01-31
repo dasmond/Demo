@@ -47,6 +47,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
     <Reference Include="System.Speech" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,6 +61,38 @@
     <Compile Include="Common\LogHelper.cs" />
     <Compile Include="Common\StringHelper.cs" />
     <Compile Include="Common\Utils.cs" />
+    <Compile Include="EntityFramework\AppDbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\BLL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BLL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GpsDeviceInfo.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GpsDevices.cs">
+      <DependentUpon>BLL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GpsPositionInfo.cs">
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\GpsPositions.cs">
+      <DependentUpon>BLL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Models.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Models.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Repository.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,25 +105,25 @@
     <None Include="T4\MultipleOutputHelper.ttinclude" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="EntityFramework\AppDbContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AppDbContext1.cs</LastGenOutput>
+      <LastGenOutput>AppDbContext.cs</LastGenOutput>
     </Content>
     <Content Include="EntityFramework\BLL.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BLL1.cs</LastGenOutput>
+      <LastGenOutput>BLL.cs</LastGenOutput>
     </Content>
     <Content Include="EntityFramework\Models.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Models1.cs</LastGenOutput>
+      <LastGenOutput>Models.cs</LastGenOutput>
     </Content>
     <Content Include="EntityFramework\Repository.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Repository1.cs</LastGenOutput>
+      <LastGenOutput>Repository.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

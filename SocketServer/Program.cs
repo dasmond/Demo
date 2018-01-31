@@ -18,6 +18,8 @@ namespace SocketServer
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(System.Guid.NewGuid());
+
             Console.WriteLine("服务启动...");
             
             var bootstrap = BootstrapFactory.CreateBootstrap();

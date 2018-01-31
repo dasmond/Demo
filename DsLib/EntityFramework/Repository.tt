@@ -1,0 +1,483 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+<#@ include file="$(ProjectDir)/T4/MSSQLHelper.ttinclude"  #>
+<#@ include file="$(ProjectDir)/T4/MultipleOutputHelper.ttinclude"  #>
+//------------------------------------------------------------------------------
+//	此代码由T4模板自动生成
+//	生成时间 <#=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")#> By XiaoKe
+//	对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
+//------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Core.Objects.DataClasses;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
+using System.Text.RegularExpressions;
+using System.Transactions;
+
+namespace <#=Config.EFNameSpace#>
+{
+
+
+    /// <summary>
+    /// 数据仓储
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public class Repository<T> where T : class, new()
+    {
+        //private AppDbContext context = new AppDbContext();
+
+
+        ///// <summary>
+        ///// 释放
+        ///// </summary>
+        //public void Dispose()
+        //{
+        //    context.Dispose();
+        //}
+        //事务
+        //using (TransactionScope Ts = new TransactionScope(TransactionScopeOption.Required))
+        //{
+        //    context.Set<T>().Add(_model);
+        //    //context.Entry<T>(_model).State = EntityState.Added;
+        //    int revalue = context.SaveChanges();
+        //    Ts.Complete();
+        //    return revalue;
+        //}
+
+        /// <summary>
+        /// 查询存在（单主键）
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool Exists(object id)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                //获取指定属性
+                PropertyInfo[] _props = typeof(T).GetProperties();
+                foreach (var _prop in _props)
+                {
+                    //查询主键
+                    var attr = _prop.CustomAttributes.FirstOrDefault(p => p.AttributeType.Name == "KeyAttribute");
+                    if (attr != null)
+                    {
+                        Expression<Func<T, bool>> _count = p => _prop.GetValue(p).ToString() == id.ToString();
+                        int revalue = context.Set<T>().Count(_count.Compile());
+                        if (revalue > 0)
+                            return true;
+                    }
+                    //var attr = _prop.GetCustomAttributes(typeof(EdmScalarPropertyAttribute), false).FirstOrDefault() as EdmScalarPropertyAttribute;
+                    //if (attr != null && attr.EntityKeyProperty)       
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 最大值：获取字段数据中的最大值
+        /// </summary>
+        /// <param name="field">字段名称</param>
+        /// <returns>错误返回:-1 (int long double decimal)统一返回string型</returns>
+        public string Max(string field)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                //获取指定属性
+                PropertyInfo _prop = typeof(T).GetProperties().FirstOrDefault(p => p.Name.ToLower() == field.ToLower());
+                if (_prop == null)
+                {
+                    //LogHelper.Debug("没有在对象[" + typeof(T).FullName + "]中找到[" + field + "]");
+                    return "-1";
+                }
+                //查询：Max
+                Expression<Func<T, object>> _max = p => _prop.GetValue(p);
+                object revalue = context.Set<T>().Max(_max.Compile());
+                return revalue.ToString();
+            }
+        }
+
+        /// <summary>
+        /// 计数：获取字段中包含关键字的行数 
+        /// -- [field],[keywords]任意留空则查询全部
+        /// </summary>
+        /// <param name="field">字段名称</param>
+        /// <param name="keywords">关键字</param>
+        /// <returns>错误返回:-1</returns>
+        public int Count(string field, string keywords)
+        {
+
+            using (AppDbContext context = new AppDbContext())
+            {
+                int revalue = -1;
+
+                if (field == "" || field is null || keywords == "" || keywords is null)
+                {
+                    //整表计数
+                    return context.Set<T>().Count();
+                }
+
+                //获取指定属性
+                PropertyInfo _prop = typeof(T).GetProperties().FirstOrDefault(p => p.Name.ToLower() == field.ToLower());
+                if (_prop == null)
+                {
+                    //LogHelper.Debug("没有在对象[" + typeof(T).FullName + "]中找到[" + field + "]");
+                    return -1;
+                }
+
+                //查询关键词
+                Expression<Func<T, bool>> _count = p => _prop.GetValue(p).ToString().Contains(keywords);
+                revalue = context.Set<T>().Count(_count.Compile());
+                return revalue;
+            }
+        }
+
+        //----------------------------------------------------
+
+        /// <summary>
+        /// 添加：添加一个实体
+        /// </summary>
+        /// <param name="_model"></param>
+        /// <returns>返回受影响的数据行数</returns>
+        public int Add(T _model)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                context.Entry<T>(_model).State = EntityState.Added;
+                int revalue = context.SaveChanges();
+                return revalue;
+            }
+        }
+
+        /// <summary>
+        /// 添加：添加多个实体
+        /// </summary>
+        /// <param name="_models"></param>
+        /// <returns>返回受影响的数据行数</returns>
+        public int AddList(List<T> _models)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+
+                //事务
+                using (TransactionScope Ts = new TransactionScope(TransactionScopeOption.Required))
+                {
+                    foreach (var m in _models)
+                    {
+                        context.Entry<T>(m).State = EntityState.Added;
+                    }
+                    int revalue = context.SaveChanges();
+                    Ts.Complete();
+                    return revalue;
+                }
+            }
+        }
+        
+
+        //----------------------------------------------------
+
+        /// <summary>
+        /// 更新：更新一个实体
+        /// </summary>
+        /// <param name="_model"></param>
+        /// <returns></returns>
+        public int Update(T _model)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                context.Set<T>().Attach(_model);
+                PropertyInfo[] props = _model.GetType().GetProperties();
+                foreach (PropertyInfo prop in props)
+                {
+                    if (prop.GetValue(_model, null) != null)
+                    {
+                        if (prop.GetValue(_model, null).ToString() == "&nbsp;")
+                            context.Entry(_model).Property(prop.Name).CurrentValue = null;
+                        context.Entry(_model).Property(prop.Name).IsModified = true;
+                    }
+                }
+                return context.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// 更新：更新多个实体
+        /// </summary>
+        /// <param name="_models"></param>
+        /// <returns></returns>
+        public int UpdateList(List<T> _models)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                //事务
+                using (TransactionScope Ts = new TransactionScope(TransactionScopeOption.Required))
+                {
+                    foreach (T _model in _models)
+                    {
+                        context.Set<T>().Attach(_model);
+                        PropertyInfo[] props = _model.GetType().GetProperties();
+                        foreach (PropertyInfo prop in props)
+                        {
+                            if (prop.GetValue(_model, null) != null)
+                            {
+                                if (prop.GetValue(_model, null).ToString() == "&nbsp;")
+                                    context.Entry(_model).Property(prop.Name).CurrentValue = null;
+                                context.Entry(_model).Property(prop.Name).IsModified = true;
+                            }
+                        }
+                    }
+                    int revalue = context.SaveChanges();
+                    Ts.Complete();
+                    return revalue;
+                }
+            }
+        }
+
+        //----------------------------------------------------
+
+        /// <summary>
+        /// 删除：删除一个实体
+        /// </summary>
+        /// <param name="_model"></param>
+        /// <returns></returns>
+        public int Delete(T _model)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                context.Set<T>().Attach(_model);
+                context.Entry<T>(_model).State = EntityState.Deleted;
+                return context.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// 删除：按条件删除
+        /// </summary>
+        /// <param name="_where"></param>
+        /// <returns></returns>
+        public int Delete(Expression<Func<T, bool>> _where)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                //事务
+                using (TransactionScope Ts = new TransactionScope(TransactionScopeOption.Required))
+                {
+                    var models = context.Set<T>().Where(_where).ToList();
+                    models.ForEach(m => context.Entry<T>(m).State = EntityState.Deleted);
+                    int revalue = context.SaveChanges();
+                    Ts.Complete();
+                    return revalue;
+                }
+            }
+        }
+
+        //----------------------------------------------------
+
+        /// <summary>
+        /// 获取：按主键获取一个实体
+        /// </summary>
+        /// <param name="_keyValue">主键值</param>
+        /// <returns></returns>
+        public T GetModel(object _keyValue)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                return context.Set<T>().Find(_keyValue);
+            }
+        }
+
+        /// <summary>
+        /// 获取：按条件获取一个实体
+        /// </summary>
+        /// <param name="_where"></param>
+        /// <returns></returns>
+        public T GetModel(Expression<Func<T, bool>> _where)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                return context.Set<T>().FirstOrDefault(_where);
+            }
+        }
+
+        //----------------------------------------------------
+
+        /// <summary>
+        /// 查询
+        /// </summary>
+        /// <returns></returns>
+        public IQueryable<T> IQueryable()
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                return context.Set<T>();
+            }
+        }
+
+        /// <summary>
+        /// 查询：按条件查询
+        /// </summary>
+        /// <param name="_where"></param>
+        /// <returns></returns>
+        public IQueryable<T> IQueryable(Expression<Func<T, bool>> _where)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                return context.Set<T>().Where(_where);
+            }
+        }
+
+        //----------------------------------------------------
+
+        /// <summary>
+        /// 列表：使用SQL语句获取列表
+        /// </summary>
+        /// <param name="_sql">SQL语句</param>
+        /// <returns></returns>
+        public List<T> GetList(string _sql)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                return context.Database.SqlQuery<T>(_sql).ToList<T>();
+            }
+        }
+
+        /// <summary>
+        /// 列表：使用SQL语句和SQL参数获取列表
+        /// </summary>
+        /// <param name="_sql"></param>
+        /// <param name="_param"></param>
+        /// <returns></returns>
+        public List<T> GetList(string _sql, DbParameter[] _param)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                return context.Database.SqlQuery<T>(_sql, _param).ToList<T>();
+            }
+        }
+
+        /// <summary>
+        /// 列表：按分页获取
+        /// </summary>
+        /// <param name="_rows">每页条目数</param>
+        /// <param name="_pagenum">当前页码</param>
+        /// <param name="_field">排序字段（分隔符',',可附带排序类型）</param>
+        /// <param name="_sort">排序类型（ASC,默认：DESC）</param>
+        /// <param name="_records">总记录数</param>
+        /// <param name="_total">总页码</param>
+        /// <returns></returns>
+        public List<T> GetList(int _rows, int _pagenum, string _field, string _sort, out int _records, out int _total)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                if (_sort == null) { _sort = "desc"; }
+                if (_rows < 1) { _rows = 1; }
+                if (_pagenum < 1) { _pagenum = 1; }
+
+                bool isAsc = _sort.ToLower() == "asc" ? true : false;
+                string[] _order = _field.Split(',');
+                MethodCallExpression resultExp = null;
+                var result = context.Set<T>().AsQueryable();
+                foreach (string item in _order)
+                {
+                    string _orderPart = item.Trim();
+                    _orderPart = Regex.Replace(_orderPart, @"\s+", " ");
+                    string[] _orderArry = _orderPart.Split(' ');
+                    string _orderField = _orderArry[0];
+                    bool sort = isAsc;
+                    if (_orderArry.Length == 2)
+                    {
+                        isAsc = _orderArry[1].ToLower() == "asc" ? true : false;
+                    }
+                    var parameter = Expression.Parameter(typeof(T), "t");
+                    var property = typeof(T).GetProperty(_orderField);
+                    var propertyAccess = Expression.MakeMemberAccess(parameter, property);
+                    var orderByExp = Expression.Lambda(propertyAccess, parameter);
+                    resultExp = Expression.Call(typeof(Queryable), isAsc ? "OrderBy" : "OrderByDescending", new Type[] { typeof(T), property.PropertyType }, result.Expression, Expression.Quote(orderByExp));
+                }
+                result = result.Provider.CreateQuery<T>(resultExp);
+
+                _records = result.Count();
+                if (_records > 0)
+                {
+                    _total = _records % _rows == 0 ? _records / _rows : _records / _rows + 1;
+                }
+                else
+                {
+                    _total = 0;
+                }
+
+                result = result.Skip<T>(_rows * (_pagenum - 1)).Take<T>(_rows).AsQueryable();
+                return result.ToList();
+            }
+        }
+
+        /// <summary>
+        /// 列表：按分页获取
+        /// </summary>
+        /// <param name="_where">查询条件</param>
+        /// <param name="_rows">每页条目数</param>
+        /// <param name="_pagenum">当前页码</param>
+        /// <param name="_field">排序字段（分隔符',',可附带排序类型）</param>
+        /// <param name="_sort">排序类型（ASC,DESC）</param>
+        /// <param name="_records">总记录数</param>
+        /// <param name="_total">总页码</param>
+        /// <returns></returns>
+        public List<T> GetList(Expression<Func<T, bool>> _where, int _rows, int _pagenum, string _field, string _sort, out int _records, out int _total)
+        {
+            using (AppDbContext context = new AppDbContext())
+            {
+                if (_sort == null) { _sort = "desc"; }
+                if (_rows < 1) { _rows = 1; }
+                if (_pagenum < 1) { _pagenum = 1; }
+
+                bool isAsc = _sort.ToLower() == "asc" ? true : false;
+                string[] _order = _field.Split(',');
+                MethodCallExpression resultExp = null;
+                var result = context.Set<T>().Where(_where);
+                foreach (string item in _order)
+                {
+                    string _orderPart = item.Trim();
+                    _orderPart = Regex.Replace(_orderPart, @"\s+", " ");
+                    string[] _orderArry = _orderPart.Split(' ');
+                    string _orderField = _orderArry[0];
+                    bool sort = isAsc;
+                    if (_orderArry.Length == 2)
+                    {
+                        isAsc = _orderArry[1].ToLower() == "asc" ? true : false;
+                    }
+                    var parameter = Expression.Parameter(typeof(T), "t");
+                    var property = typeof(T).GetProperty(_orderField);
+                    var propertyAccess = Expression.MakeMemberAccess(parameter, property);
+                    var orderByExp = Expression.Lambda(propertyAccess, parameter);
+                    resultExp = Expression.Call(typeof(Queryable), isAsc ? "OrderBy" : "OrderByDescending", new Type[] { typeof(T), property.PropertyType }, result.Expression, Expression.Quote(orderByExp));
+                }
+                result = result.Provider.CreateQuery<T>(resultExp);
+
+                _records = result.Count();
+                if (_records > 0)
+                {
+                    _total = _records % _rows == 0 ? _records / _rows : _records / _rows + 1;
+                }
+                else
+                {
+                    _total = 0;
+                }
+
+                result = result.Skip<T>(_rows * (_pagenum - 1)).Take<T>(_rows).AsQueryable();
+                return result.ToList();
+            }
+        }
+
+
+
+
+    }
+} 

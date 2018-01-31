@@ -1,0 +1,90 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+<#@ include file="$(ProjectDir)/T4/MSSQLHelper.ttinclude"  #>
+<#@ include file="$(ProjectDir)/T4/MultipleOutputHelper.ttinclude"  #>
+<# var manager = Manager.Create(Host, GenerationEnvironment); #>
+<# manager.StartHeader(); #>
+//------------------------------------------------------------------------------
+//  ！！！ 数据库表必须有说明信息才能自动生成 ！！！
+//	此代码由T4模板自动生成 
+//	生成时间 <#=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")#> By XiaoKe
+//	对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
+//------------------------------------------------------------------------------
+
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace <#=Config.EFNameSpace#>
+{
+<#
+	manager.EndBlock(); //--- manager.StartHeader(); 
+
+	List<DbInfo> tl = DbHelper.GetClassInfos();
+	foreach (var t in tl)
+    {
+		//   表名称：t.TableName 
+		//   表说明：t.TableDesc
+		//   实体类：t.ModelName
+		//   业务类：t.BllName 
+		//   控制类：t.CtrName
+        // 主键名称：t.KeyName
+		// 主键类型：t.KeyType
+		//   列信息：t.Columns
+			//    列类型：t.Columns[i].ColumnType
+			//    列名称：t.Columns[i].ColumnName 
+			//    列说明：t.Columns[i].Remark 
+			//  是否主键：t.Columns[i].IsPrimaryKey 
+			//  是否自增：t.Columns[i].IsIdentity 
+			//是否允许空：t.Columns[i].IsNullable
+			//    小数位：t.Columns[i].Scale 
+			//  字符长度：t.Columns[i].CharLength 
+			//  字节长度：t.Columns[i].ByteLength
+    	
+	manager.StartNewFile(t.ModelName+".cs");
+	//--------------------------------------------------------------------------------------
+	#>
+    /// <summary> 
+    /// <#=t.TableDesc#>
+    /// </summary>   
+    [Table("<#=t.TableName#>")]
+    public class <#=t.ModelName#>
+    {		
+		<#foreach(DbColumn col in t.Columns){#>
+
+		/// <summary>
+        /// <#=col.Remark#> 
+        /// </summary>
+<#
+string tagstr = "";
+if(col.IsPrimaryKey){ tagstr = "Key"; }
+if(col.IsIdentity){ if(tagstr.Length > 0){ tagstr += ","; }; tagstr += "DatabaseGenerated(DatabaseGeneratedOption.Identity)"; }
+
+if(tagstr.Length > 0){#>
+		[<#=tagstr#>]
+<#}#>
+		public <#=col.CSharpType#> <#=col.ColumnName#> { set; get; }<#
+		if(col.ColumnType == "datetime"){#> = DateTime.Parse("1900-01-01");<#} 
+		else if(col.ColumnType == "uniqueidentifier"){#> = System.Guid.NewGuid();<#}#>
+
+		<#}#>
+
+	}
+	<#
+	//--------------------------------------------------------------------------------------
+	manager.EndBlock(); //--- manager.StartNewFile(t.ModelName+".cs");
+
+	} //END：foreach (var c in cl)
+#>
+
+
+<# manager.StartFooter(); #> 
+} <#//END：namespace#>
+<# manager.EndBlock(); //--- manager.StartFooter();#>
+<# manager.Process(true); #>
+

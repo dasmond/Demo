@@ -31,7 +31,7 @@ using System.Web.Http.Description;
 using DsLib.Common;
 using DsLib.EntityFramework;
 
-namespace DJW.WebAPI.Controllers
+namespace WebAPI.Controllers
 {
 
 <#
@@ -71,7 +71,7 @@ namespace DJW.WebAPI.Controllers
     {
 
 
-        //GET: api/Attempt/GetMaxValue?field={field}
+        //GET: api/<#=t.TableName#>/GetMaxValue?field={field}
         //获取字段数据中的最大值 
         #region - Max(string field) -
         /// <summary>
@@ -84,7 +84,7 @@ namespace DJW.WebAPI.Controllers
         [ResponseType(typeof(BaseResult))]
         public IHttpActionResult Max(string field)
         {
-            var _value = Attempts.Max(field);
+            var _value = <#=t.BllName#>.Max(field);
             if (_value.ToInt(-1) == -1)
             {
                 return BadRequest("最大值查询[Max]查询失败！");
@@ -108,7 +108,7 @@ namespace DJW.WebAPI.Controllers
         [ResponseType(typeof(BaseResult))]
         public IHttpActionResult Count(string field, string keywords)
         {
-            var _value = Attempts.Count(field, keywords);
+            var _value = <#=t.BllName#>.Count(field, keywords);
             if (_value == -1)
                 return BadRequest("行数查询[Count]未找到对象！");
 

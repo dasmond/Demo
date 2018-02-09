@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------
 //  ！！！ 数据库表必须有说明信息才能自动生成 ！！！
 //	此代码由T4模板自动生成 
-//	生成时间 2018-01-31 17:02:18 By XiaoKe
+//	生成时间 2018-02-07 09:42:56 By XiaoKe
 //	对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
 //------------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ using System.Web.Http.Description;
 using DsLib.Common;
 using DsLib.EntityFramework;
 
-namespace DJW.WebAPI.Controllers
+namespace WebAPI.Controllers
 {
 
 
@@ -33,7 +33,7 @@ namespace DJW.WebAPI.Controllers
     {
 
 
-        //GET: api/Attempt/GetMaxValue?field={field}
+        //GET: api/GpsDevice/GetMaxValue?field={field}
         //获取字段数据中的最大值 
         #region - Max(string field) -
         /// <summary>
@@ -46,7 +46,7 @@ namespace DJW.WebAPI.Controllers
         [ResponseType(typeof(BaseResult))]
         public IHttpActionResult Max(string field)
         {
-            var _value = Attempts.Max(field);
+            var _value = GpsDevices.Max(field);
             if (_value.ToInt(-1) == -1)
             {
                 return BadRequest("最大值查询[Max]查询失败！");
@@ -70,7 +70,7 @@ namespace DJW.WebAPI.Controllers
         [ResponseType(typeof(BaseResult))]
         public IHttpActionResult Count(string field, string keywords)
         {
-            var _value = Attempts.Count(field, keywords);
+            var _value = GpsDevices.Count(field, keywords);
             if (_value == -1)
                 return BadRequest("行数查询[Count]未找到对象！");
 

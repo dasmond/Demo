@@ -56,3 +56,14 @@ C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\obj\Debug\WebAPI.csprojResolveAssembl
 C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\obj\Debug\WebAPI.csproj.CoreCompileInputs.cache
 C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\obj\Debug\WebAPI.dll
 C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\obj\Debug\WebAPI.pdb
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\DsLib.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\EntityFramework.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\log4net.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\DsLib.pdb
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\DsLib.dll.config
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\EntityFramework.xml
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\log4net.xml
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\zh-Hans\EntityFramework.SqlServer.resources.dll

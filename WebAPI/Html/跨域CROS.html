@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <script src="../Scripts/jquery.cookie.js"></script>
+</head>
+<body>
+
+
+    http://47.96.165.26:8080/ncgctest/sysUserScreen/loginForApp.json?username=test2&password=admin  <br />
+    <button id="btnAjax1" onclick="doAjax1()">测试Ajax1</button><br />
+
+    <div id="info1" style="width:500px; word-wrap:break-word;"></div>
+
+    http://47.96.165.26:8080/ncgctest/sandCarrierScreen/findOne.json?uid=1  <br />
+    <button id="btnAjax2" onclick="doAjax2()">测试Ajax2</button><br />
+
+    <div id="info2" style="width:500px; word-wrap:break-word;"></div>
+
+    <script>
+        
+        function doAjax1() {
+            $.ajax({
+                type: "HEAD",
+                url: "http://47.96.165.26:8080/ncgctest/sysUserScreen/loginForApp.json?username=test2&password=admin",
+                data: {},
+                dataType: 'text', 
+                //crossDomain: true,  //指定跨域
+                //xhrFields: {
+                //    //如果要传递cookies等，withCredentials设置必须有且必须为true，此时服务器需同时发送Access-Control-Allow-Credentials: true
+                //    withCredentials: true, 
+                //},
+                success: function (data, status, xhr) {
+                    //console.log(data);
+                    //console.log(status);
+                    //console.log(xhr.getResponseHeader("content-type"));
+                    //console.log(xhr.getResponseHeader("Set-Cookie"));
+                    //console.log(xhr.getAllResponseHeaders());
+                    //console.log($.cookie("tmp0"));
+
+                    console.log(xhr);
+                },
+                complete: function (xhr, data) {
+                    console.log(xhr.getAllResponseHeaders());
+                }
+            });
+        }
+
+        function doAjax2() {
+            //$.cookie('tmp0', 'xxx', {
+            //    expires: 7,
+            //    path: 'ganchang',
+            //    domain: '/',
+            //    secure: true
+            //})　
+            $.ajax({
+                type: "GET",
+                headers: {
+                    'Cookie': 'JSESSIONID=3R866O91-4GFSRW9EV6M4D3WOL88M2-ONUYKBDJ-31;tmp0=eNrzYPMICS1OLXKWSc7P1avKqspI0StOzEvRA3Jz8%2FP0ILKT2UqBpGcKR1FqYo5fYm4qS1F%2BTmrCBD8%2F3mDX4GBPf794X38XVx%2BDiOrMFCsl4yALMzN%2FS0NdE3e34KBwS9cwM18TF%2BNwfx8LC18jXX%2B%2F0EhvJxcvXWNDJZ3kEitDU0NzS0MLC0NLU0MTncRkNIHcCiuD2igABQUyGw%3D%3D' },
+                url: "http://47.96.165.26:8080/ncgctest/sandCarrierScreen/findOne.json?uid=1",
+                data: {},
+                dataType: 'jsonp',
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
+                success: function (result) {
+                    $("#info2").text(JSON.stringify(result));
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

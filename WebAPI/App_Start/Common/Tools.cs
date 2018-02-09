@@ -23,6 +23,7 @@ namespace WebAPI
             if (!string.IsNullOrEmpty(domain) && domain.Length > 0)
                 cookie.Domain = domain;
             HttpContext.Current.Response.Cookies.Add(cookie);
+
         }
     }
 }

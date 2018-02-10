@@ -1,7 +1,7 @@
 # Demo
 
 ## Asp.Net WebAPI - 使用多个Xml文件显示帮助文档[HelpPage]
-在项目'属性'--'生成'--'输出'-'勾选`XML 文档文件`
+在项目属性--生成--输出--勾选`XML 文档文件`
 在目录 ~/Areas/HelpPage/ 下添加 MultiXmlDocumentationProvider.cs
 
 ```

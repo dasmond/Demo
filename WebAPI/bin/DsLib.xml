@@ -1,0 +1,993 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DsLib</name>
+    </assembly>
+    <members>
+        <member name="T:DsLib.Common.JsonObject">
+            <summary>
+            Json 实体类：继承[Newtonsoft.Json.Linq.JObject]
+            </summary>
+        </member>
+        <member name="T:DsLib.Common.JsonHelper">
+            <summary>
+            Json 辅助类
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.JsonHelper.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.JsonHelper.DeserializeObject(System.String)">
+            <summary>
+            反序列化对象（匿名 | 索引器：JObject）
+            </summary>
+            <param name="_json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.JsonHelper.DeserializeObject``1(System.String)">
+            <summary>
+            将指定的 JSON 数据反序列化成指定对象。
+            使用方法： List&lt;model&gt; ml = JsonHelper.DeserializeObject&lt;List&lt;model&gt;&gt;(JsonString);
+            </summary>
+            <typeparam name="T">对象类型。</typeparam>
+            <param name="json">JSON 数据。</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.JsonHelper.DeserializeAnonymousType``1(System.String,``0)">
+            <summary>
+            反序列化JSON到给定的匿名对象
+            </summary>
+            <typeparam name="T">匿名对象类型</typeparam>
+            <param name="json">json字符串</param>
+            <param name="anonymousTypeObject">匿名对象</param>
+            <returns>匿名对象</returns>
+        </member>
+        <member name="M:DsLib.Common.JsonHelper.SerializeObject(System.Object)">
+            <summary>
+            序列化对象
+            </summary>
+            <param name="_obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.JsonHelper.SerializeObject(System.Object,System.String[])">
+            <summary>
+            序列化对象
+            </summary>
+            <param name="_obj">对象</param>
+            <param name="_props">需要序列化的属性</param>
+            <returns></returns>
+        </member>
+        <member name="T:DsLib.Common.JsonHelper.PropsContractResolver">
+            自定义的Json解析器
+        </member>
+        <member name="M:DsLib.Common.JsonHelper.PropsContractResolver.CreateProperties(System.Type,Newtonsoft.Json.MemberSerialization)">
+            <summary>
+            重写CreateProperties方法
+            </summary>
+        </member>
+        <member name="T:DsLib.Common.LogHelper">
+            <summary>
+            日志帮助类
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.LogHelper.#cctor">
+            <summary>
+            静态构造
+            </summary>
+        </member>
+        <member name="F:DsLib.Common.LogHelper.logger">
+            <summary>
+            ILog对象
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.LogHelper.LoadUnhandledException">
+            <summary>
+            定义常规应用程序中未处理的异常信息记录方式
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.LogHelper.Debug(System.String,System.Object[])">
+            <summary>
+            调试日志记录
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.LogHelper.Info(System.String,System.Object[])">
+            <summary>
+            信息日志记录
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.LogHelper.Warn(System.String,System.Object[])">
+            <summary>
+            警告日志记录
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.LogHelper.Error(System.String,System.Object[])">
+            <summary>
+            错误日志记录
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.LogHelper.Fatal(System.String,System.Object[])">
+            <summary>
+            严重错误日志记录
+            </summary>
+        </member>
+        <member name="T:DsLib.Common.StringHelper">
+            <summary>
+            字符串助手类
+            </summary>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.EqualIgnoreCase(System.String,System.String[])">
+            <summary>
+            字符串扩展：忽略大小写的字符串相等比较，判断是否以任意一个待比较字符串相等
+            </summary>
+            <param name="value">字符串</param>
+            <param name="strs">待比较字符串数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.StartsWithIgnoreCase(System.String,System.String[])">
+            <summary>
+            字符串扩展：忽略大小写的字符串开始比较，判断是否以任意一个待比较字符串开始
+            </summary>
+            <param name="value">字符串</param>
+            <param name="strs">待比较字符串数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.EndsWithIgnoreCase(System.String,System.String[])">
+            <summary>
+            字符串扩展：忽略大小写的字符串结束比较，判断是否以任意一个待比较字符串结束
+            </summary>
+            <param name="value">字符串</param>
+            <param name="strs">待比较字符串数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.IsNullOrEmpty(System.String)">
+            <summary>
+            字符串扩展：指示指定的字符串是 null 还是 String.Empty 字符串
+            </summary>
+            <param name="value">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            字符串扩展：是否空或者空白字符串
+            </summary>
+            <param name="value">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.Split(System.String,System.String[])">
+            <summary>
+            字符串扩展：拆分字符串，过滤空格，无效时返回空数组
+            </summary>
+            <param name="value">字符串</param>
+            <param name="separators">分组分隔符，默认逗号分号</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.SplitAsInt(System.String,System.String[])">
+            <summary>
+            字符串扩展：拆分字符串成为整型数组，默认逗号分号分隔，无效时返回空数组
+            </summary>
+            <remarks>过滤空格、过滤无效、不过滤重复</remarks>
+            <param name="value">字符串</param>
+            <param name="separators">分组分隔符，默认逗号分号</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.SplitAsDictionary(System.String,System.String,System.String[])">
+            <summary>
+            字符串扩展：拆分字符串成为名值字典。逗号分号分组，等号分隔
+            </summary>
+            <param name="value">字符串</param>
+            <param name="nameValueSeparator">名值分隔符，默认等于号</param>
+            <param name="separators">分组分隔符，默认逗号分号</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.Join(System.Collections.IEnumerable,System.String)">
+            <summary>
+            字符串扩展：把一个列表组合成为一个字符串，默认逗号分隔
+            </summary>
+            <param name="value"></param>
+            <param name="separator">组合分隔符，默认逗号</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.Join``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.String})">
+            <summary>
+            字符串扩展：把一个列表组合成为一个字符串，默认逗号分隔
+            </summary>
+            <param name="value"></param>
+            <param name="separator">组合分隔符，默认逗号</param>
+            <param name="func">把对象转为字符串的委托</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.Separate(System.Text.StringBuilder,System.String)">
+            <summary>
+            字符串扩展：追加分隔符字符串，忽略开头，常用于拼接
+            </summary>
+            <param name="sb">字符串构造者</param>
+            <param name="separator">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.GetBytes(System.String,System.Text.Encoding)">
+            <summary>
+            字符串扩展：字符串转数组
+            </summary>
+            <param name="value">字符串</param>
+            <param name="encoding">编码，默认utf-8无BOM</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.EnsureStart(System.String,System.String)">
+            <summary>
+            截取扩展：确保字符串以指定的另一字符串开始（若缺失则补充），不区分大小写
+            </summary>
+            <param name="str">字符串</param>
+            <param name="start"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.EnsureEnd(System.String,System.String)">
+            <summary>
+            截取扩展：确保字符串以指定的另一字符串结束（若缺失则补充），不区分大小写
+            </summary>
+            <param name="str">字符串</param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.TrimStart(System.String,System.String[])">
+            <summary>
+            截取扩展：从当前字符串开头移除另一字符串，不区分大小写，循环多次匹配前缀
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="starts">另一字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.TrimEnd(System.String,System.String[])">
+            <summary>
+            截取扩展：从当前字符串结尾移除另一字符串，不区分大小写，循环多次匹配后缀
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="ends">另一字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.Substring(System.String,System.String,System.String,System.Int32,System.Int32[])">
+            <summary>
+            截取扩展：从字符串中检索子字符串，在指定头部字符串之后，指定尾部字符串之前
+            <para>常用于截取xml某一个元素等操作</para>
+            </summary>
+            <param name="str">目标字符串</param>
+            <param name="after">头部字符串，在它之后</param>
+            <param name="before">尾部字符串，在它之前</param>
+            <param name="startIndex">搜索的开始位置</param>
+            <param name="positions">位置数组，两个元素分别记录头尾位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.Cut(System.String,System.Int32,System.String)">
+            <summary>
+            截取扩展：根据最大长度截取字符串，并允许以指定空白填充末尾
+            </summary>
+            <param name="str">字符串</param>
+            <param name="maxLength">截取后字符串的最大允许长度，包含后面填充</param>
+            <param name="pad">需要填充在后面的字符串，比如几个圆点</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.CutBinary(System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            截取扩展：根据最大长度截取字符串（二进制计算长度），并允许以指定空白填充末尾
+            <para>默认采用Default编码进行处理，其它编码请参考本函数代码另外实现</para>
+            </summary>
+            <param name="str">字符串</param>
+            <param name="maxLength">截取后字符串的最大允许长度，包含后面填充</param>
+            <param name="pad">需要填充在后面的字符串，比如几个圆点</param>
+            <param name="strict">严格模式时，遇到截断位置位于一个字符中间时，忽略该字符，否则包括该字符。默认true</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.CutStart(System.String,System.String[])">
+            <summary>
+            截取扩展：从当前字符串开头移除另一字符串以及之前的部分
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="starts">另一字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.CutEnd(System.String,System.String[])">
+            <summary>
+            截取扩展：从当前字符串结尾移除另一字符串以及之后的部分
+            </summary>
+            <param name="str">当前字符串</param>
+            <param name="ends">另一字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.LevenshteinSearch(System.String,System.String[])">
+            <summary>
+            LD算法：编辑距离搜索，从词组中找到最接近关键字的若干匹配项
+            </summary>
+            <remarks>
+            算法代码由@Aimeast 独立完成。http://www.cnblogs.com/Aimeast/archive/2011/09/05/2167844.html
+            </remarks>
+            <param name="key">关键字</param>
+            <param name="words">词组</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.LevenshteinDistance(System.String,System.String)">
+            <summary>
+            LD算法：获取编辑距离
+            </summary>
+            <remarks>
+            又称Levenshtein距离（也叫做Edit Distance），是指两个字串之间，由一个转成另一个所需的最少编辑操作次数。
+            许可的编辑操作包括将一个字符替换成另一个字符，插入一个字符，删除一个字符。
+            算法代码来源 @Aimeast http://www.cnblogs.com/Aimeast/archive/2011/09/05/2167844.html
+            </remarks>
+            <param name="str1"></param>
+            <param name="str2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.LCSSearch(System.String,System.String[])">
+            <summary>
+            LCS算法：最长公共子序列搜索，从词组中找到最接近关键字的若干匹配项
+            </summary>
+            <remarks>
+            算法代码由@Aimeast 独立完成。http://www.cnblogs.com/Aimeast/archive/2011/09/05/2167844.html
+            </remarks>
+            <param name="key"></param>
+            <param name="words"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.LCSDistance(System.String,System.String[])">
+            <summary>
+            LCS算法：最长公共子序列问题是寻找两个或多个已知数列最长的子序列。
+            一个数列 S，如果分别是两个或多个已知数列的子序列，且是所有符合此条件序列中最长的，则 S 称为已知序列的最长公共子序列。
+            The longest common subsequence (LCS) problem is to find the longest subsequence common to all sequences in a set of sequences (often just two). Note that subsequence is different from a substring, see substring vs. subsequence. It is a classic computer science problem, the basis of diff (a file comparison program that outputs the differences between two files), and has applications in bioinformatics.
+            </summary>
+            <remarks>
+            算法代码来源 @Aimeast http://www.cnblogs.com/Aimeast/archive/2011/09/05/2167844.html
+            </remarks>
+            <param name="word"></param>
+            <param name="keys">多个关键字。长度必须大于0，必须按照字符串长度升序排列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.Speak(System.String)">
+            <summary>调用语音引擎说出指定话</summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.SpeakAsync(System.String)">
+            <summary>异步调用语音引擎说出指定话。可能导致后来的调用打断前面的语音</summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:DsLib.Common.StringHelper.SpeechTip(System.String)">
+            <summary>语音提示操作</summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:DsLib.Common.Utils.GetMapPath(System.String)">
+            <summary>
+            获得当前物理路径 有“\”
+            </summary>
+            <param name="strPath">指定的虚拟路径</param>
+            <returns>返回与虚拟路径对应的物理路径</returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.GPSConvertToDegree(System.String)">
+            <summary>
+            GPS：降度分秒格式经纬度转换为小数经纬度
+            </summary>
+            <param name="_Value">度分秒经纬度</param>
+            <returns>小数经纬度</returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.ToInt(System.Object,System.Int32)">
+            <summary>
+            转为整数
+            </summary>
+            <param name="value">待转换对象</param>
+            <param name="defaultValue">默认值。待转换对象无效时使用</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.ToDouble(System.Object,System.Double)">
+            <summary>
+            转为浮点数
+            </summary>
+            <param name="value">待转换对象</param>
+            <param name="defaultValue">默认值。待转换对象无效时使用</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.ToBoolean(System.Object,System.Boolean)">
+            <summary>
+            转为布尔型。支持大小写True/False、0和非零
+            </summary>
+            <param name="value">待转换对象</param>
+            <param name="defaultValue">默认值。待转换对象无效时使用</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.ToDateTime(System.Object)">
+            <summary>
+            转为时间日期
+            </summary>
+            <param name="value">待转换对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.ToDateTime(System.Object,System.DateTime)">
+            <summary>转为时间日期</summary>
+            <param name="value">待转换对象</param>
+            <param name="defaultValue">默认值。待转换对象无效时使用</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.ToFullString(System.DateTime,System.String)">
+            <summary>
+            时间日期转为yyyy-MM-dd HH:mm:ss完整字符串
+            </summary>
+            <param name="value">待转换对象</param>
+            <param name="emptyValue">字符串空值时显示的字符串，null表示原样显示最小时间，String.Empty表示不显示</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.ToString(System.DateTime,System.String,System.String)">
+            <summary>
+            时间日期转为指定格式字符串
+            </summary>
+            <param name="value">待转换对象</param>
+            <param name="format">格式化字符串</param>
+            <param name="emptyValue">字符串空值时显示的字符串，null表示原样显示最小时间，String.Empty表示不显示</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.Common.Utils.ToDBC(System.String)">
+            <summary>全角转半角</summary>
+            <remarks>全角半角的关系是相差0xFEE0</remarks>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DsLib.EntityFramework.AppDbContext">
+            <summary>
+            数据库上下文：应用程序数据库
+            </summary>
+        </member>
+        <member name="M:DsLib.EntityFramework.AppDbContext.#ctor">
+            <summary>
+            数据库连接和初始化
+            (App.config 或 Web.config)中配置连接字符串“AppDbContext”
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.AppDbContext.GpsDeviceInfos">
+            <summary> 
+            数据实体：GPS设备信息
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.AppDbContext.GpsPositionInfos">
+            <summary> 
+            数据实体：GPS位置信息
+            </summary>
+        </member>
+        <member name="T:DsLib.EntityFramework.GpsDeviceInfo">
+            <summary> 
+            GPS设备信息
+            </summary>   
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.GpsDeviceId">
+            <summary>
+            GPS设备信息ID 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.GpsImei">
+            <summary>
+            GPS设备编码 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.GpsType">
+            <summary>
+            GPS设备类型 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.IpAddress">
+            <summary>
+            设备接入的IP地址（包含端口） 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.ConnectTime">
+            <summary>
+            接入的时间 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.LastTime">
+            <summary>
+            最后接收到数据的时间 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.CreatTime">
+            <summary>
+            创建时间 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.UpdateTime">
+            <summary>
+            更新时间 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.DisplayOrder">
+            <summary>
+            显示排序 
+            </summary>
+        </member>
+        <member name="T:DsLib.EntityFramework.GpsDevices">
+            <summary>
+            GPS设备信息
+            </summary>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.Exists(System.Guid)">
+            <summary>
+            查询存在
+            </summary>
+            <param name="GpsDeviceId">主键ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.Max(System.String)">
+            <summary>
+            查询最大值，只用于（int long double decimal）等数字类型的查询，失败返回:-1
+            </summary>
+            <param name="field">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.Count(System.String,System.String)">
+            <summary>
+            查询行数，可用于查询存在，未找到字段名称返回:-1
+            </summary>
+            <param name="field">字段名称</param>
+            <param name="keywords">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.Add(DsLib.EntityFramework.GpsDeviceInfo)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.AddList(System.Collections.Generic.List{DsLib.EntityFramework.GpsDeviceInfo})">
+            <summary>
+            添加
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.Update(DsLib.EntityFramework.GpsDeviceInfo)">
+            <summary>
+            更新
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.UpdateList(System.Collections.Generic.List{DsLib.EntityFramework.GpsDeviceInfo})">
+            <summary>
+            更新多个
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.Delete(DsLib.EntityFramework.GpsDeviceInfo)">
+            <summary>
+            删除：删除一个实体
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.Delete(System.Linq.Expressions.Expression{System.Func{DsLib.EntityFramework.GpsDeviceInfo,System.Boolean}})">
+            <summary>
+            删除：按条件删除
+            </summary>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.GetModel(System.Guid)">
+            <summary>
+            获取：按主键获取一个实体
+            </summary>
+            <param name="GpsDeviceId">主键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.GetModel(System.Linq.Expressions.Expression{System.Func{DsLib.EntityFramework.GpsDeviceInfo,System.Boolean}})">
+            <summary>
+            获取：按条件获取一个实体
+            </summary>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.GetList(System.Int32,System.Int32,System.String,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            列表：按分页获取
+            </summary>
+            <param name="rows">每页条目数</param>
+            <param name="pagenum">当前页码</param>
+            <param name="field">排序字段（分隔符',',可附带排序类型）</param>
+            <param name="sort">排序类型（ASC,DESC）</param>
+            <param name="records">总记录数</param>
+            <param name="total">总页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.GetList(System.Linq.Expressions.Expression{System.Func{DsLib.EntityFramework.GpsDeviceInfo,System.Boolean}},System.Int32,System.Int32,System.String,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            列表：按分页获取
+            </summary>
+            <param name="where">查询条件</param>
+            <param name="rows">每页条目数</param>
+            <param name="pagenum">当前页码</param>
+            <param name="field">排序字段（分隔符',',可附带排序类型）</param>
+            <param name="sort">排序类型（ASC,默认：DESC）</param>
+            <param name="records">总记录数</param>
+            <param name="total">总页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.IQueryable">
+            <summary>
+            查询：IQueryable只存贮条件，不立即运行，实现延迟加载。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.IQueryable(System.Linq.Expressions.Expression{System.Func{DsLib.EntityFramework.GpsDeviceInfo,System.Boolean}})">
+            <summary>
+            查询：按条件查询
+            </summary>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.GetList(System.String)">
+            <summary>
+            列表：使用SQL语句获取列表
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsDevices.GetList(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            列表：使用SQL语句和SQL参数获取列表
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DsLib.EntityFramework.GpsPositionInfo">
+            <summary> 
+            GPS位置信息
+            </summary>   
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsPositionId">
+            <summary>
+            位置信息ID 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsDeviceId">
+            <summary>
+            GPS设备信息ID 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsStatus">
+            <summary>
+            定位状态 （A=数据有效，V=数据无效） 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsTime">
+            <summary>
+            定位时间 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsType">
+            <summary>
+            定位类型（BD=北斗，GP=全球定位系统） 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsSat">
+            <summary>
+            定位卫星数 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsLatitude">
+            <summary>
+            纬度（decimal(12,8)） 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsLongitude">
+            <summary>
+            经度（decimal(12,8)） 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsSpeed">
+            <summary>
+            速度 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.GpsHeading">
+            <summary>
+            航向 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.LbsMcc">
+            <summary>
+            国家代号(MCC) 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.LbsMnc">
+            <summary>
+            移动网号码(MNC) 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.LbsLac">
+            <summary>
+            位置区码 (LAC) 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.LbsCellId">
+            <summary>
+            基站ID (Cell ID) 
+            </summary>
+        </member>
+        <member name="P:DsLib.EntityFramework.GpsPositionInfo.CreatTime">
+            <summary>
+            创建时间 
+            </summary>
+        </member>
+        <member name="T:DsLib.EntityFramework.GpsPositions">
+            <summary>
+            GPS位置信息
+            </summary>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.Exists(System.Guid)">
+            <summary>
+            查询存在
+            </summary>
+            <param name="GpsPositionId">主键ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.Max(System.String)">
+            <summary>
+            查询最大值，只用于（int long double decimal）等数字类型的查询，失败返回:-1
+            </summary>
+            <param name="field">字段名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.Count(System.String,System.String)">
+            <summary>
+            查询行数，可用于查询存在，未找到字段名称返回:-1
+            </summary>
+            <param name="field">字段名称</param>
+            <param name="keywords">关键字</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.Add(DsLib.EntityFramework.GpsPositionInfo)">
+            <summary>
+            添加
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.AddList(System.Collections.Generic.List{DsLib.EntityFramework.GpsPositionInfo})">
+            <summary>
+            添加
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.Update(DsLib.EntityFramework.GpsPositionInfo)">
+            <summary>
+            更新
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.UpdateList(System.Collections.Generic.List{DsLib.EntityFramework.GpsPositionInfo})">
+            <summary>
+            更新多个
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.Delete(DsLib.EntityFramework.GpsPositionInfo)">
+            <summary>
+            删除：删除一个实体
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.Delete(System.Linq.Expressions.Expression{System.Func{DsLib.EntityFramework.GpsPositionInfo,System.Boolean}})">
+            <summary>
+            删除：按条件删除
+            </summary>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.GetModel(System.Guid)">
+            <summary>
+            获取：按主键获取一个实体
+            </summary>
+            <param name="GpsPositionId">主键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.GetModel(System.Linq.Expressions.Expression{System.Func{DsLib.EntityFramework.GpsPositionInfo,System.Boolean}})">
+            <summary>
+            获取：按条件获取一个实体
+            </summary>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.GetList(System.Int32,System.Int32,System.String,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            列表：按分页获取
+            </summary>
+            <param name="rows">每页条目数</param>
+            <param name="pagenum">当前页码</param>
+            <param name="field">排序字段（分隔符',',可附带排序类型）</param>
+            <param name="sort">排序类型（ASC,DESC）</param>
+            <param name="records">总记录数</param>
+            <param name="total">总页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.GetList(System.Linq.Expressions.Expression{System.Func{DsLib.EntityFramework.GpsPositionInfo,System.Boolean}},System.Int32,System.Int32,System.String,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            列表：按分页获取
+            </summary>
+            <param name="where">查询条件</param>
+            <param name="rows">每页条目数</param>
+            <param name="pagenum">当前页码</param>
+            <param name="field">排序字段（分隔符',',可附带排序类型）</param>
+            <param name="sort">排序类型（ASC,默认：DESC）</param>
+            <param name="records">总记录数</param>
+            <param name="total">总页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.IQueryable">
+            <summary>
+            查询：IQueryable只存贮条件，不立即运行，实现延迟加载。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.IQueryable(System.Linq.Expressions.Expression{System.Func{DsLib.EntityFramework.GpsPositionInfo,System.Boolean}})">
+            <summary>
+            查询：按条件查询
+            </summary>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.GetList(System.String)">
+            <summary>
+            列表：使用SQL语句获取列表
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.GpsPositions.GetList(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            列表：使用SQL语句和SQL参数获取列表
+            </summary>
+            <param name="sql"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DsLib.EntityFramework.Repository`1">
+            <summary>
+            数据仓储
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.Exists(System.Object)">
+            <summary>
+            查询存在（单主键）
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.Max(System.String)">
+            <summary>
+            最大值：获取字段数据中的最大值
+            </summary>
+            <param name="field">字段名称</param>
+            <returns>错误返回:-1 (int long double decimal)统一返回string型</returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.Count(System.String,System.String)">
+            <summary>
+            计数：获取字段中包含关键字的行数 
+            -- [field],[keywords]任意留空则查询全部
+            </summary>
+            <param name="field">字段名称</param>
+            <param name="keywords">关键字</param>
+            <returns>错误返回:-1</returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.Add(`0)">
+            <summary>
+            添加：添加一个实体
+            </summary>
+            <param name="_model"></param>
+            <returns>返回受影响的数据行数</returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.AddList(System.Collections.Generic.List{`0})">
+            <summary>
+            添加：添加多个实体
+            </summary>
+            <param name="_models"></param>
+            <returns>返回受影响的数据行数</returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.Update(`0)">
+            <summary>
+            更新：更新一个实体
+            </summary>
+            <param name="_model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.UpdateList(System.Collections.Generic.List{`0})">
+            <summary>
+            更新：更新多个实体
+            </summary>
+            <param name="_models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.Delete(`0)">
+            <summary>
+            删除：删除一个实体
+            </summary>
+            <param name="_model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            删除：按条件删除
+            </summary>
+            <param name="_where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.GetModel(System.Object)">
+            <summary>
+            获取：按主键获取一个实体
+            </summary>
+            <param name="_keyValue">主键值</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.GetModel(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取：按条件获取一个实体
+            </summary>
+            <param name="_where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.IQueryable">
+            <summary>
+            查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.IQueryable(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查询：按条件查询
+            </summary>
+            <param name="_where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.GetList(System.String)">
+            <summary>
+            列表：使用SQL语句获取列表
+            </summary>
+            <param name="_sql">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.GetList(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            列表：使用SQL语句和SQL参数获取列表
+            </summary>
+            <param name="_sql"></param>
+            <param name="_param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.GetList(System.Int32,System.Int32,System.String,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            列表：按分页获取
+            </summary>
+            <param name="_rows">每页条目数</param>
+            <param name="_pagenum">当前页码</param>
+            <param name="_field">排序字段（分隔符',',可附带排序类型）</param>
+            <param name="_sort">排序类型（ASC,默认：DESC）</param>
+            <param name="_records">总记录数</param>
+            <param name="_total">总页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DsLib.EntityFramework.Repository`1.GetList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.String,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            列表：按分页获取
+            </summary>
+            <param name="_where">查询条件</param>
+            <param name="_rows">每页条目数</param>
+            <param name="_pagenum">当前页码</param>
+            <param name="_field">排序字段（分隔符',',可附带排序类型）</param>
+            <param name="_sort">排序类型（ASC,DESC）</param>
+            <param name="_records">总记录数</param>
+            <param name="_total">总页码</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

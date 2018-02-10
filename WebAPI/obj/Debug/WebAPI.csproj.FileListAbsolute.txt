@@ -67,3 +67,5 @@ C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\EntityFramework.SqlServer.xml
 C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\log4net.xml
 C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\zh-Hans\EntityFramework.resources.dll
 C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\WebAPI.xml
+C:\Users\xiaoke\Desktop\GitHub\Demo\WebAPI\bin\DsLib.xml

@@ -14,4 +14,4 @@ C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\EntityFramework.xml
 C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\zh-Hans\EntityFramework.resources.dll
 C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
-C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\obj\Debug\DsLib.csprojResolveAssemblyReference.cache
+C:\Users\xiaoke\Desktop\GitHub\Demo\DsLib\bin\Debug\DsLib.xml

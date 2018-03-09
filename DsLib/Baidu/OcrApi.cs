@@ -7,14 +7,67 @@ using Baidu.Aip.Ocr;
 namespace DsLib.Baidu
 {
     /// <summary>
-    /// 
+    /// 百度文字识别
+    /// API文档：http://ai.baidu.com/docs#/OCR-API/e1bd77f3
     /// </summary>
     public class OcrApi
     {
+        /// <summary>APPID：百度 App ID</summary>
+        public static string APP_ID = "你的 App ID";
+        /// <summary>AK：百度 Api Key</summary>
+        public static string API_KEY = "你的 Api Key";
+        /// <summary>SK：百度 Secret Key </summary>
+        public static string SECRET_KEY = "你的 Secret Key";
 
+        /// <summary> 文字识别交互类 </summary>
+        public static Ocr client = new Ocr(API_KEY, SECRET_KEY);
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static void GeneralBasic()
         {
-            var client = new Ocr("Api Key", "Secret Key");
+            var image = File.ReadAllBytes("图片文件路径");
+            // 调用通用文字识别, 图片参数为本地图片，可能会抛出网络等异常，请使用try/catch捕获
+            var result = client.GeneralBasic(image);
+            Console.WriteLine(result);
+            // 如果有可选参数
+            var options = new Dictionary<string, object>{
+                                    {"language_type", "CHN_ENG"},
+                                    {"detect_direction", "true"},
+                                    {"detect_language", "true"},
+                                    {"probability", "true"}
+                                };
+            // 带参数调用通用文字识别, 图片参数为本地图片
+            result = client.GeneralBasic(image, options);
+            Console.WriteLine(result);
+        }
+
+        public void GeneralBasicUrlDemo()
+        {
+            var url = "https//www.x.com/sample.jpg";
+
+            // 调用通用文字识别, 图片参数为远程url图片，可能会抛出网络等异常，请使用try/catch捕获
+            var result = client.GeneralBasicUrl(url);
+            Console.WriteLine(result);
+            // 如果有可选参数
+            var options = new Dictionary<string, object>{
+        {"language_type", "CHN_ENG"},
+        {"detect_direction", "true"},
+        {"detect_language", "true"},
+        {"probability", "true"}
+    };
+            // 带参数调用通用文字识别, 图片参数为远程url图片
+            result = client.GeneralBasicUrl(url, options);
+            Console.WriteLine(result);
+        }
+
+        /// <summary>
+        /// 通用文字识别
+        /// </summary>
+        public static void GeneralBasic()
+        { 
             var image = File.ReadAllBytes("图片文件路径");
 
             // 通用文字识别
@@ -24,6 +77,9 @@ namespace DsLib.Baidu
             result = client.GeneralBasicUrl("https://www.baidu.com/img/bd_logo1.png");
         }
 
+        /// <summary>
+        /// 通用文字识别（含生僻字版）
+        /// </summary>
         public static void GeneralEnhanced()
         {
             var client = new Ocr("Api Key", "Secret Key");
@@ -33,6 +89,9 @@ namespace DsLib.Baidu
             var result = client.GeneralEnhanced(image);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void GeneralWithLocatin()
         {
             var client = new Ocr("Api Key", "Secret Key");

@@ -6,6 +6,7 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -63,6 +64,12 @@ namespace DsLib.EntityFramework
         /// 显示排序 
         /// </summary>
 		public int DisplayOrder { set; get; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<GpsPositionInfo> infos { set; get; }
 		
 	}
 	 

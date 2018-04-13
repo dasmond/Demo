@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /><!-- 禁止用户缩放页面 -->
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>    
+    <title>区域地图</title>
+    <style>
+        /* 隐藏百度地图LOGO */
+        .anchorBL {
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container" style="width:1200px;height:800px; margin:10px auto;"></div>
+    
+    <!-- 联络站对话框信息 -->
+    <div id="infobox" style="z-index:9999; height:300px; width:300px; background:#ffffff; border:1px solid #ff6a00; top:100px; left:100px; position:absolute;">
+        <button onclick="javascript:$('#infobox').hide();">关闭</button>
+        联络站信息
+    </div>
+
+
+    <script type="text/javascript">
+
+        //隐藏对话框
+        $('#infobox').hide();
+
+
+        //百度地图类参考
+        //http://lbsyun.baidu.com/cms/jsapi/reference/jsapi_reference_3_0.html
+        //百度地图DEMO
+        //http://lbsyun.baidu.com/jsdemo.htm#a1_2
+        //百度地图样式编辑器
+        //http://developer.baidu.com/map/custom/
+
+        //页面加载事件
+        window.onload = loadScript;
+
+        //异步加载：百度地图加载完毕后再加载地图实例
+        function loadScript() {
+            var script = document.createElement("script");
+            script.src = "http://api.map.baidu.com/api?v=3.0&ak=vd5EOH65yMo36mnhnFGYGecMO0CgztZZ&callback=initialize";
+            document.body.appendChild(script);
+        }
+
+
+        //变量：百度地图
+        var __Map;
+
+        //初始化：百度地图
+        function initialize() {
+            //实例化百度地图
+            __Map = new BMap.Map("container", { enableMapClick: false });
+
+            //设置地图中心点和缩放等级 县府点位：119.983765, 30.549278 覆盖物中心点位：120.059654,30.568185
+            __Map.centerAndZoom(new BMap.Point(120.059654, 30.568185), 12);
+
+            //清除所属有覆盖物
+            //map.clearOverlays();
+
+            //禁用地图拖拽
+            __Map.disableDragging();
+
+            //禁止双击缩放
+            __Map.disableDoubleClickZoom();
+
+            //设置地图样式
+            setMapStyle();
+
+            //折线覆盖物
+            drawPolyline();
+
+            //添加联络站
+            addOverlay(new BMap.Point(119.983765, 30.549278), "武康街道");
+            //添加联络站
+            addOverlay(new BMap.Point(119.983765, 30.509278), "乾元镇");
+
+        }
+
+
+        //方法：设置百度地图样式
+        function setMapStyle() {
+            __Map.setMapStyle({
+                styleJson: [
+                    {
+                        //不显示兴趣点信息
+                        "featureType": "poilabel",
+                        "elementType": "all",
+                        "stylers": {
+                            "visibility": "off"
+                        }
+                    }
+                ]
+            });
+        }
+
+        //方法：绘制区域折线覆盖物
+        function drawPolyline() {
+
+            var bdary = new BMap.Boundary();
+            var name = "德清县";
+
+            //获取行政区域
+            bdary.get(name, function (rs) {
+
+                //清除地图覆盖物
+                //map.clearOverlays();
+
+                //区域点数量
+                var count = rs.boundaries.length;
+
+                //console.log(rs);
+
+                //遍历点位
+                for (var i = 0; i < count; i++) {
+
+                    //创建折线覆盖物
+                    var ply = new BMap.Polyline(rs.boundaries[i], {
+                        strokeColor: "#ff0000",    //折线颜色
+                        strokeWeight: 5,   //折线的宽度，以像素为单位
+                        strokeOpacity: 0.9, //折线的透明度，取值范围0 - 1
+                        strokeStyle: "solid"//折线的样式，solid或dashed
+                    });
+
+                    //添加覆盖物
+                    __Map.addOverlay(ply);
+
+                    //调整视野
+                    __Map.setViewport(ply.getPath());
+                }
+
+            });
+        }
+
+
+        //方法：添加标注覆盖物
+        function addOverlay(point, title) {
+            var div = document.createElement("div");
+            div.style.position = "absolute";
+            div.style.zIndex = BMap.Overlay.getZIndex(point.lat);
+            div.style.backgroundColor = "#EE5D5B";
+            div.style.border = "1px solid #BC3B3A";
+            div.style.color = "white";
+            div.style.height = "50px";
+            div.style.width = "120px";
+            div.style.padding = "2px";
+            div.style.lineHeight = "18px";
+            div.style.whiteSpace = "nowrap";
+            div.style.MozUserSelect = "none";
+            div.style.fontSize = "12px"
+
+            //点击显示对话框
+            div.onclick = function () {
+                $('#infobox').show();
+            }
+
+            var span = document.createElement("span");
+            div.appendChild(span);
+            span.appendChild(document.createTextNode(title));
+
+            __Map.getPanes().labelPane.appendChild(div);
+
+            var pixel = __Map.pointToOverlayPixel(point);
+            div.style.left = pixel.x + "px";
+            div.style.top = pixel.y + "px";
+        }
+
+    </script>
+
+</body>
+</html>

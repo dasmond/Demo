@@ -4,6 +4,38 @@
         <name>DsLib</name>
     </assembly>
     <members>
+        <member name="T:DsLib.Baidu.OcrApi">
+            <summary>
+            百度文字识别
+            API文档：http://ai.baidu.com/docs#/OCR-API/e1bd77f3
+            </summary>
+        </member>
+        <member name="F:DsLib.Baidu.OcrApi.APP_ID">
+            <summary>APPID：百度 App ID</summary>
+        </member>
+        <member name="F:DsLib.Baidu.OcrApi.API_KEY">
+            <summary>AK：百度 Api Key</summary>
+        </member>
+        <member name="F:DsLib.Baidu.OcrApi.SECRET_KEY">
+            <summary>SK：百度 Secret Key </summary>
+        </member>
+        <member name="F:DsLib.Baidu.OcrApi.client">
+            <summary> 文字识别交互类 </summary>
+        </member>
+        <member name="M:DsLib.Baidu.OcrApi.GeneralBasic(System.String)">
+            <summary>
+            通用文字识别（本地图片）
+            用户向服务请求识别某张图中的所有文字
+            </summary>
+            <param name="_img">本地图片路径</param>
+        </member>
+        <member name="M:DsLib.Baidu.OcrApi.GeneralBasicUrl(System.String)">
+            <summary>
+            通用文字识别（远程图片）
+            用户向服务请求识别某张图中的所有文字
+            </summary>
+            <param name="_url">远程图片路径</param>
+        </member>
         <member name="T:DsLib.Common.JsonObject">
             <summary>
             Json 实体类：继承[Newtonsoft.Json.Linq.JObject]

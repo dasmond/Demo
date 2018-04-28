@@ -74,9 +74,14 @@
             drawPolyline();
 
             //添加联络站
-            addOverlay(new BMap.Point(119.983765, 30.549278), "武康街道");
+            addOverlay(new BMap.Point(119.899827, 30.603005), "莫干山");
             //添加联络站
-            addOverlay(new BMap.Point(119.983765, 30.509278), "乾元镇");
+            addOverlay(new BMap.Point(120.293645, 30.616929), "新市镇");
+
+            __Map.addEventListener("click", function (e) {
+                console.log(e.pixel);
+                console.log(e.point.lng + ',' + e.point.lat);
+            });
 
         }
 
@@ -128,8 +133,8 @@
                     //添加覆盖物
                     __Map.addOverlay(ply);
 
-                    //调整视野
-                    __Map.setViewport(ply.getPath());
+                    //调整视野 ！！联络站覆盖物会偏移！！
+                    //__Map.setViewport(ply.getPath());
                 }
 
             });

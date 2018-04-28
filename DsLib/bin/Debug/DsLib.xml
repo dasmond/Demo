@@ -531,6 +531,11 @@
             显示排序 
             </summary>
         </member>
+        <member name="P:DsLib.EntityFramework.GpsDeviceInfo.infos">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:DsLib.EntityFramework.GpsDevices">
             <summary>
             GPS设备信息

@@ -1,0 +1,9 @@
+D:\GitHub\Demo\LEDConsole\bin\Debug\LEDConsole.exe.config
+D:\GitHub\Demo\LEDConsole\bin\Debug\LEDConsole.exe
+D:\GitHub\Demo\LEDConsole\bin\Debug\LEDConsole.pdb
+D:\GitHub\Demo\LEDConsole\obj\Debug\LEDConsole.csprojResolveAssemblyReference.cache
+D:\GitHub\Demo\LEDConsole\obj\Debug\LEDConsole.csproj.CoreCompileInputs.cache
+D:\GitHub\Demo\LEDConsole\obj\Debug\LEDConsole.exe
+D:\GitHub\Demo\LEDConsole\obj\Debug\LEDConsole.pdb
+D:\GitHub\Demo\LEDConsole\bin\Debug\EQ2008_Dll.dll
+D:\GitHub\Demo\LEDConsole\bin\Debug\EQ2008_Dll_Set.ini

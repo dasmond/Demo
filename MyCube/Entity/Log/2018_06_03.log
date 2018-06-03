@@ -1,0 +1,46 @@
+﻿#Software: devenv
+#ProcessID: 11212
+#AppDomain: throwawayDomain2aba2249-f270-4b2a-9da1-2dc42cff679d
+#BaseDirectory: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\
+#CurrentDirectory: C:\WINDOWS\System32
+#CommandLine: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe" "D:\GitHub\Demo\Demo.sln"
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, 
+#OS: Windows 10.0.17134.0 x64, Microsoft Windows NT 10.0.17134.0, xiaoke/DESKTOP-6F6J1B7
+#Memory: 4,070M/8,084M
+#CPU: 4
+#Date: 2018-06-03
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+14:01:21.521  1 N - NewLife.Core v7.0.2018.0506 Build 2018-05-28 22:04:40 .NET Framework 4.5
+14:01:21.522  1 N - 组件核心库 ©2002-2018 新生命开发团队 https://github.com/NewLifeX/X
+14:01:21.522  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\GitHub\Demo\MyCube\Entity
+14:01:21.533  1 N - XCode v9.7.2018.0421 Build 2018-05-28 22:04:42 .NET Framework 4.5
+14:01:21.533  1 N - 大数据中间件 ©2002-2018 新生命开发团队 http://www.NewLifeX.com
+14:01:22.510  1 N - 代码生成源：D:\GitHub\Demo\MyCube\Entity\Cube.xml
+14:01:22.511  1 N - 代码生成：2 输出：D:\GitHub\Demo\MyCube\Entity 命名空间：MyCube.Entity 连接名：Cube 基类：Entity
+
+#Software: devenv
+#ProcessID: 4080
+#AppDomain: throwawayDomain1e60580e-670e-454f-8ae8-8a55f6d978e9
+#BaseDirectory: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\
+#CurrentDirectory: C:\WINDOWS\System32
+#CommandLine: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\devenv.exe" "D:\GitHub\Demo\Demo.sln"
+#ApplicationType: WinForm
+#CLR: 4.0.30319.42000, 
+#OS: Windows 10.0.17134.0 x64, Microsoft Windows NT 10.0.17134.0, xiaoke/DESKTOP-6F6J1B7
+#Memory: 2,757M/8,084M
+#CPU: 4
+#Date: 2018-06-03
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:58:18.610  1 N - NewLife.Core v7.0.2018.0506 Build 2018-05-28 22:04:40 .NET Framework 4.5
+16:58:18.611  1 N - 组件核心库 ©2002-2018 新生命开发团队 https://github.com/NewLifeX/X
+16:58:18.611  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\GitHub\Demo\MyCube\Entity
+16:58:18.618  1 N - XCode v9.7.2018.0421 Build 2018-05-28 22:04:42 .NET Framework 4.5
+16:58:18.618  1 N - 大数据中间件 ©2002-2018 新生命开发团队 http://www.NewLifeX.com
+16:58:19.661  1 N - 代码生成源：D:\GitHub\Demo\MyCube\Entity\Cube.xml
+16:58:19.661  1 N - 代码生成：2 输出：D:\GitHub\Demo\MyCube\Entity 命名空间：MyCube.Entity 连接名：Cube 基类：Entity
+16:58:55.762  1 N - 未指定模型文件，准备从目录中查找第一个xml文件 D:\GitHub\Demo\MyCube\Entity
+16:58:55.764  1 N - 代码生成源：D:\GitHub\Demo\MyCube\Entity\Cube.xml
+16:58:55.764  1 N - 代码生成：2 输出：D:\GitHub\Demo\MyCube\Entity 命名空间：MyCube.Entity 连接名：Cube 基类：Entity

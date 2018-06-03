@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreWebApi", "CoreWebApi\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LEDConsole", "LEDConsole\LEDConsole.csproj", "{6E8E5B88-12EF-4D4F-B28C-DC738714E3BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCube", "MyCube\MyCube.csproj", "{EFA80313-CFD8-4D41-91F9-83E6D23370B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{6E8E5B88-12EF-4D4F-B28C-DC738714E3BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E8E5B88-12EF-4D4F-B28C-DC738714E3BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E8E5B88-12EF-4D4F-B28C-DC738714E3BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA80313-CFD8-4D41-91F9-83E6D23370B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA80313-CFD8-4D41-91F9-83E6D23370B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA80313-CFD8-4D41-91F9-83E6D23370B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA80313-CFD8-4D41-91F9-83E6D23370B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

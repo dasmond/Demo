@@ -1,0 +1,413 @@
+﻿#Software: Microsoft.VisualStudio.Web.Host
+#ProcessID: 11928
+#AppDomain: acb463ea-3-131724893632724038
+#BaseDirectory: D:\GitHub\Demo\MyCube\
+#CurrentDirectory: C:\WINDOWS\System32
+#CommandLine: "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Microsoft.VisualStudio.Web.Host.exe" /endpointGuid:df044bcd-1692-4a28-b008-96cb11db4b51 /vsPid:4080 /authorisedUserSid:S-1-5-21-4272026244-1228113501-3746439510-1001 /readyEventName:VsCBMProcess:324c348b-da9b-4134-b1b2-3951b5cbc489 /clientId:cd9bbd08-2209-4333-8330-f191b47711a4 /attachDebugger:False
+#ApplicationType: Web
+#CLR: 4.0.30319.42000, 
+#OS: Windows 8.1 x64, Microsoft Windows NT 6.3.9600.0, xiaoke/DESKTOP-6F6J1B7
+#Memory: 3,154M/8,084M
+#CPU: 4
+#Date: 2018-06-03
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:49:23.671 19 Y - NewLife.Core v7.0.2018.0506 Build 2018-05-28 22:04:40 .NET Framework 4.5
+16:49:23.672 19 Y - 组件核心库 ©2002-2018 新生命开发团队 https://github.com/NewLifeX/X
+16:49:23.672 19 Y - 配置文件D:\GitHub\Demo\MyCube\Config\Cube.config格式不一致，保存为最新格式！
+
+#Software: iisexpress
+#ProcessID: 9984
+#AppDomain: /LM/W3SVC/4/ROOT-1-131724894665480745
+#BaseDirectory: D:\GitHub\Demo\MyCube\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: "C:\Program Files (x86)\IIS Express\iisexpress.exe"  /config:"D:\GitHub\Demo\.vs\config\applicationhost.config" /site:"MyCube" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Web
+#CLR: 4.0.30319.42000, 
+#OS: Windows 10.0.17134.0 x64, Microsoft Windows NT 10.0.17134.0, xiaoke/DESKTOP-6F6J1B7
+#Memory: 3,091M/8,084M
+#CPU: 4
+#Date: 2018-06-03
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+16:51:07.277  7 W - NewLife.Core v7.0.2018.0506 Build 2018-05-28 22:04:40 .NET Framework 4.5
+16:51:07.278  7 W - 组件核心库 ©2002-2018 新生命开发团队 https://github.com/NewLifeX/X
+16:51:07.278  7 W - XCode v9.7.2018.0421 Build 2018-05-28 22:04:42 .NET Framework 4.5
+16:51:07.278  7 W - 大数据中间件 ©2002-2018 新生命开发团队 http://www.NewLifeX.com
+16:51:07.282  7 W - 配置文件D:\GitHub\Demo\MyCube\Config\Sys.config格式不一致，保存为最新格式！
+
+#Software: iisexpress
+#ProcessID: 3952
+#AppDomain: /LM/W3SVC/4/ROOT-1-131724908403476511
+#BaseDirectory: D:\GitHub\Demo\MyCube\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: "C:\Program Files (x86)\IIS Express\iisexpress.exe"  /config:"D:\GitHub\Demo\.vs\config\applicationhost.config" /site:"MyCube" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Web
+#CLR: 4.0.30319.42000, 
+#OS: Windows 10.0.17134.0 x64, Microsoft Windows NT 10.0.17134.0, xiaoke/DESKTOP-6F6J1B7
+#Memory: 2,659M/8,084M
+#CPU: 4
+#Date: 2018-06-03
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+17:14:04.057  1 N - NewLife.Core v7.0.2018.0506 Build 2018-05-28 22:04:40 .NET Framework 4.5
+17:14:04.058  1 N - 组件核心库 ©2002-2018 新生命开发团队 https://github.com/NewLifeX/X
+17:14:04.058  1 N - 系统启动
+17:14:04.799  1 N - ================================ Start 初始化魔方 ================================
+17:14:04.799  1 N - MyCube v1.0.0.0 Build 2000-01-01 .NET Framework 4.6.1
+17:14:04.799  1 N - MyCube Copyright ©  2018
+17:14:04.807  1 N - 注册区域视图程序集：MyCube, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+17:14:04.827  1 N - 注册复合预编译引擎，共有视图程序集1个
+17:14:04.832  1 N - 注册实体模型绑定器：MyCube.EntityModelBinderProvider
+17:14:04.832  1 N - 注册过滤器：MyCube.MvcHandleErrorAttribute
+17:14:04.832  1 N - 注册过滤器：MyCube.EntityAuthorizeAttribute
+17:14:04.858  1 N - ================================ End   初始化魔方 ================================
+17:14:04.860  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[MyCube.Admin.Controllers]
+17:14:04.876  1 N - 初始化权限管理体系
+17:14:04.881  8 Y 3 Admin.ScanController
+17:14:05.009  1 N - XCode v9.7.2018.0421 Build 2018-05-28 22:04:42 .NET Framework 4.5
+17:14:05.009  1 N - 大数据中间件 ©2002-2018 新生命开发团队 http://www.NewLifeX.com
+17:14:05.012  1 N - 系统启动完成
+17:14:05.134  8 Y 3 自动为[Membership]设置SQLite连接字符串：Data Source=..\Data\Membership.db;Migration=On
+17:14:05.136  8 Y 3 Membership 设定 Data Source=..\Data\Membership.db;Migration=On
+17:14:05.141  8 Y 3 Data Source=D:\GitHub\Demo\Data\Membership.db;Pooling=true;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+17:14:05.141  8 Y 3 Membership 格式 Data Source=D:\GitHub\Demo\Data\Membership.db;Pooling=true;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+17:14:05.142  8 Y 3 检查实体XCode.Membership.Menu的数据表架构，模式：CheckTableWhenFirstUse
+17:14:05.142  8 Y 3 开始同步检查表[Menu/SQLite]的数据表架构……
+17:14:05.147  8 Y 3 创建数据库：Membership
+17:14:05.149  8 Y 3 创建数据库：D:\GitHub\Demo\Data\Membership.db
+17:14:05.197  8 Y 3 System.Data.SQLite.dll不存在或平台版本不正确，准备联网获取 http://x.newlifex.com/
+17:14:05.211  8 Y 3 目标文件C:\X\Cache\System.Data.SQLiteFx40.v1.0.105.zip已存在，更新于2018-06-01 11:17:48.089
+17:14:05.238 10 Y 4 WebClientX.Get http://x.newlifex.com/
+17:14:05.679  8 Y 3 分析得到文件 System.Data.SQLiteFx40.v1.0.105.zip，准备下载 http://x.newlifex.com/System.Data.SQLiteFx40.v1.0.105.zip
+17:14:05.681 10 Y 19 WebClientX.Get http://x.newlifex.com/System.Data.SQLiteFx40.v1.0.105.zip
+17:14:06.487 11 Y T 自动为[Log]设置SQLite连接字符串：Data Source=..\Data\Log.db;Migration=On
+17:14:06.489 11 Y T Log 设定 Data Source=..\Data\Log.db;Migration=On
+17:14:06.489 11 Y T Data Source=D:\GitHub\Demo\Data\Log.db;Pooling=true;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+17:14:06.489 11 Y T Log 格式 Data Source=D:\GitHub\Demo\Data\Log.db;Pooling=true;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+17:14:06.489 11 Y T 集中初始化表架构时没赶上，现在补上！
+17:14:06.490 11 Y T 开始同步检查表[UserOnline/SQLite]的数据表架构……
+17:14:06.490 11 Y T 创建数据库：Log
+17:14:06.490 11 Y T 创建数据库：D:\GitHub\Demo\Data\Log.db
+17:14:06.591  8 Y 3 下载完成，共730,819字节，耗时909毫秒
+17:14:06.591  8 Y 3 解压缩到 D:\GitHub\Demo\MyCube\Plugins
+17:14:06.746  8 Y 3 TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+17:14:06.746  8 Y 3 System.Data.SQLite.SQLite驱动D:\GitHub\Demo\MyCube\Plugins\System.Data.SQLite.dll 版本v1.0.105.1
+17:14:06.808 11 Y T [Log]GetSchema("MetaDataCollections")
+17:14:06.808  8 Y 3 [Membership]GetSchema("MetaDataCollections")
+17:14:07.077 11 Y T [Log]GetSchema("Tables")
+17:14:07.078  8 Y 3 [Membership]GetSchema("Tables")
+17:14:07.081  8 Y 3 创建表：Menu(菜单)
+17:14:07.082 11 Y T 创建表：UserOnline(用户在线)
+17:14:07.090  8 Y 3 Create Table Menu(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL COLLATE NOCASE,
+	DisplayName nvarchar(50) NULL COLLATE NOCASE,
+	FullName nvarchar(200) NULL COLLATE NOCASE,
+	ParentID int NOT NULL,
+	Url nvarchar(200) NULL COLLATE NOCASE,
+	Sort int NOT NULL,
+	Icon nvarchar(50) NULL COLLATE NOCASE,
+	Visible bit NOT NULL,
+	Necessary bit NOT NULL,
+	Permission nvarchar(200) NULL COLLATE NOCASE,
+	Remark nvarchar(200) NULL COLLATE NOCASE
+)
+17:14:07.090 11 Y T Create Table UserOnline(
+	ID integer Primary Key AUTOINCREMENT,
+	UserID int NOT NULL,
+	Name nvarchar(50) NULL COLLATE NOCASE,
+	SessionID nvarchar(50) NULL COLLATE NOCASE,
+	Times int NOT NULL,
+	Page nvarchar(50) NULL COLLATE NOCASE,
+	Status nvarchar(200) NULL COLLATE NOCASE,
+	OnlineTime int NOT NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateTime datetime NULL
+)
+17:14:07.095  8 Y 3 Create Index IX_Menu_Name On Menu (Name)
+17:14:07.095 11 Y T Create Index IX_UserOnline_UserID On UserOnline (UserID)
+17:14:07.095  8 Y 3 Create Unique Index IU_Menu_ParentID_Name On Menu (ParentID, Name)
+17:14:07.095  8 Y 3 检查表[Menu/SQLite]的数据表架构耗时1,953ms
+17:14:07.096 11 Y T Create Index IX_UserOnline_SessionID On UserOnline (SessionID)
+17:14:07.096 11 Y T Create Index IX_UserOnline_CreateTime On UserOnline (CreateTime)
+17:14:07.096 11 Y T 检查表[UserOnline/SQLite]的数据表架构耗时607ms
+17:14:07.097  8 Y 3 开始检查连接[Membership/SQLite]的数据库架构……
+17:14:07.097 10 Y 29 开始检查连接[Log/SQLite]的数据库架构……
+17:14:07.111 11 Y T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 4
+17:14:07.115 11 Y T Select Count(*) From UserOnline
+17:14:07.132  8 Y 3 [Membership]的所有实体类（3个）：UserX,Menu,Role
+17:14:07.132  8 Y 3 [Membership]需要检查架构的实体类（0个）：
+17:14:07.132  8 Y 3 检查连接[Membership/SQLite]的数据库架构耗时35ms
+17:14:07.132 10 Y 29 [Log]的所有实体类（3个）：Log,UserOnline,VisitStat
+17:14:07.132 10 Y 29 [Log]需要检查架构的实体类（2个）：UserOnline,VisitStat
+17:14:07.133 10 Y 29 Log待检查表架构的实体个数：1
+17:14:07.133 10 Y 29 [Log]GetSchema("Tables")
+17:14:07.135  8 Y 3 初始化[Admin]的菜单体系
+17:14:07.139 10 Y 29 [Log]GetSchema("Columns")
+17:14:07.153  8 Y 3 Select * From Menu Order By ID Desc
+17:14:07.204 10 Y 29 [Log]GetSchema("Indexes")
+17:14:07.205 10 Y 29 [Log]GetSchema("IndexColumns")
+17:14:07.205 10 Y 29 创建表：VisitStat(访问统计)
+17:14:07.205 10 Y 29 Create Table VisitStat(
+	ID integer Primary Key AUTOINCREMENT,
+	Level int NOT NULL,
+	Time datetime NULL,
+	Page nvarchar(50) NOT NULL COLLATE NOCASE,
+	Title nvarchar(50) NULL COLLATE NOCASE,
+	Times int NOT NULL,
+	Users int NOT NULL,
+	IPs int NOT NULL,
+	Error int NOT NULL,
+	Cost int NOT NULL,
+	MaxCost int NOT NULL,
+	CreateTime datetime NULL,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:14:07.206 10 Y 29 Create Unique Index IU_VisitStat_Page_Level_Time On VisitStat (Page, Level, Time)
+17:14:07.206 10 Y 29 Create Index IX_VisitStat_Level_Time On VisitStat (Level, Time)
+17:14:07.206 10 Y 29 检查连接[Log/SQLite]的数据库架构耗时109ms
+17:14:07.207  9 Y 38 Select * From UserOnline Where SessionID='riv1uffxiq422qkp1uhqwgbp' Order By ID Desc limit 1
+17:14:07.207 10 Y 29 Select * From UserOnline Where SessionID='e5uetib0x0zzlckp2srthuoe' Order By ID Desc limit 1
+17:14:07.286 10 Y 29 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'e5uetib0x0zzlckp2srthuoe', 1, '/', 'GET / 1,443ms', 0, '::1', '2018-06-03 17:14:07', '2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:07.315  9 Y 38 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'riv1uffxiq422qkp1uhqwgbp', 1, '/Admin', 'GET /Admin 41ms', 0, '::1', '2018-06-03 17:14:07', '2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:07.347  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Admin', null, 'MyCube.Admin.Controllers', 0, '~/Admin', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.351  9 Y 45 Select * From VisitStat Where Level=3 And Time='2018-06-03 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+17:14:07.351 10 Y 43 Select * From VisitStat Where Level=3 And Time='2018-06-03 00:00:00' And Page='/' Order By ID Desc limit 1
+17:14:07.356  9 Y 45 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-03 00:00:00', '/Admin', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.357 10 Y 43 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-03 00:00:00', '/', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.364  9 Y 45 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+17:14:07.364 10 Y 43 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/' Order By ID Desc limit 1
+17:14:07.364  9 Y 45 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.364 10 Y 43 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.366  9 Y 45 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+17:14:07.366  9 Y 45 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.366  9 Y 45 Select * From VisitStat Where Level=0 And Page='/Admin' Order By ID Desc limit 1
+17:14:07.366  9 Y 45 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.367  9 Y 45 Select * From VisitStat Where Level=3 And Time='2018-06-03 00:00:00' And Page='全部' Order By ID Desc limit 1
+17:14:07.367  9 Y 45 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-03 00:00:00', '全部', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.367  9 Y 45 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+17:14:07.367  9 Y 45 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '全部', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.368  9 Y 45 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+17:14:07.368  9 Y 45 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '全部', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.368  9 Y 45 Select * From VisitStat Where Level=0 And Page='全部' Order By ID Desc limit 1
+17:14:07.368  9 Y 45 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '全部', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', null);Select last_insert_rowid() newid
+17:14:07.370  9 Y 44 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/' Order By ID Desc limit 1
+17:14:07.371  9 Y 44 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', '2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:07.371  9 Y 44 Select * From VisitStat Where Level=0 And Page='/' Order By ID Desc limit 1
+17:14:07.372  9 Y 44 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:07', '2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:07.372  9 Y 44 Select * From VisitStat Where Level=3 And Time='2018-06-03 00:00:00' And Page='全部' Order By ID Desc limit 1
+17:14:07.377  9 Y 44 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+17:14:07.377  9 Y 44 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+17:14:07.378  9 Y 44 Select * From VisitStat Where Level=0 And Page='全部' Order By ID Desc limit 1
+17:14:07.388  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Core', '基本设置', 'MyCube.Admin.Controllers.CoreController', 1, '~/Admin/Core', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.399  8 Y 3 Update Menu Set Visible=0, Permission='' Where ID=2
+17:14:07.406  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Cube', '平台设置', 'MyCube.Admin.Controllers.CubeController', 1, '~/Admin/Cube', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.410  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Db', '数据库', 'MyCube.Admin.Controllers.DbController', 1, '~/Admin/Db', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.412  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('File', '文件', 'MyCube.Admin.Controllers.FileController', 1, '~/Admin/File', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.413  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Log', '日志', 'MyCube.Admin.Controllers.LogController', 1, '~/Admin/Log', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.434  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Menu', '菜单', 'MyCube.Admin.Controllers.MenuController', 1, '~/Admin/Menu', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.449  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Role', '角色', 'MyCube.Admin.Controllers.RoleController', 1, '~/Admin/Role', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.454  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Sys', '系统设置', 'MyCube.Admin.Controllers.SysController', 1, '~/Admin/Sys', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.455  8 Y 3 Update Menu Set Visible=0, Permission='' Where ID=9
+17:14:07.456  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('UserConnect', '用户链接', 'MyCube.Admin.Controllers.UserConnectController', 1, '~/Admin/UserConnect', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.462  8 Y 3 Update Menu Set Visible=0, Permission='', Remark='第三方登录信息' Where ID=10
+17:14:07.463  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('User', '用户', 'MyCube.Admin.Controllers.UserController', 1, '~/Admin/User', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.465  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('UserOnline', '用户在线', 'MyCube.Admin.Controllers.UserOnlineController', 1, '~/Admin/UserOnline', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.468  8 Y 3 Update Menu Set Visible=0, Permission='', Remark='已登录系统的用户，操作情况。' Where ID=12
+17:14:07.470  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('UserToken', '用户令牌', 'MyCube.Admin.Controllers.UserTokenController', 1, '~/Admin/UserToken', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.477  8 Y 3 Update Menu Set Visible=0, Permission='', Remark='授权其他人直接拥有指定用户的身份，支持有效期，支持数据接口' Where ID=13
+17:14:07.479  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('VisitStat', '访问统计', 'MyCube.Admin.Controllers.VisitStatController', 1, '~/Admin/VisitStat', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.482  8 Y 3 Update Menu Set Visible=0, Permission='', Remark='每个页面每天的访问统计信息' Where ID=14
+17:14:07.484  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('XCode', '数据中间件', 'MyCube.Admin.Controllers.XCodeController', 1, '~/Admin/XCode', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.484  8 Y 3 Update Menu Set Visible=0, Permission='' Where ID=15
+17:14:07.485  8 Y 3 Insert Into Menu(Name, DisplayName, FullName, ParentID, Url, Sort, Icon, Visible, Necessary, Permission) Values('Index', '首页', 'MyCube.Admin.Controllers.IndexController', 1, '~/Admin/Index', 0, '&#xe63f;', 1, 0, '');Select last_insert_rowid() newid
+17:14:07.485  8 Y 3 Update Menu Set Visible=0, Permission='' Where ID=16
+17:14:07.487  8 Y 3 Update Menu Set Sort=39, Permission='1#查看,4#修改' Where ID=2
+17:14:07.487  8 Y 3 Update Menu Set Sort=34, Permission='1#查看,4#修改' Where ID=3
+17:14:07.487  8 Y 3 Update Menu Set Sort=26, Permission='1#查看,2#添加,4#修改' Where ID=4
+17:14:07.487  8 Y 3 Update Menu Set Sort=28, Permission='1#查看,2#添加,4#修改,8#删除' Where ID=5
+17:14:07.487  8 Y 3 Update Menu Set Sort=70, Permission='1#查看', Remark='系统内重要操作均记录日志，便于审计。任何人都不能删除、修改或伪造操作日志。' Where ID=6
+17:14:07.487  8 Y 3 Update Menu Set Sort=80, Permission='1#查看,2#添加,4#修改,8#删除', Remark='系统操作菜单以及功能目录树。支持排序，不可见菜单仅用于功能权限限制。每个菜单的权限子项由系统自动生成，请不要人为修改' Where ID=7
+17:14:07.487  8 Y 3 Update Menu Set Sort=90, Permission='1#查看,2#添加,4#修改,8#删除,16#打印', Remark='系统基于角色授权，每个角色对不同的功能模块具备添删改查以及自定义权限等多种权限设定。' Where ID=8
+17:14:07.487  8 Y 3 Update Menu Set Sort=38, Permission='1#查看,4#修改' Where ID=9
+17:14:07.488  8 Y 3 Update Menu Set Sort=40, Permission='1#查看,2#添加,4#修改,8#删除' Where ID=10
+17:14:07.488  8 Y 3 Update Menu Set Sort=100, Permission='1#查看,2#添加,4#修改,8#删除', Remark='系统基于角色授权，每个角色对不同的功能模块具备添删改查以及自定义权限等多种权限设定。' Where ID=11
+17:14:07.488  8 Y 3 Update Menu Set Sort=60, Permission='1#查看,2#添加,4#修改,8#删除' Where ID=12
+17:14:07.488  8 Y 3 Update Menu Set Sort=40, Permission='1#查看,2#添加,4#修改,8#删除' Where ID=13
+17:14:07.488  8 Y 3 Update Menu Set Sort=50, Permission='1#查看,2#添加,4#修改,8#删除' Where ID=14
+17:14:07.488  8 Y 3 Update Menu Set Sort=36, Permission='1#查看,4#修改' Where ID=15
+17:14:07.488  8 Y 3 Update Menu Set Sort=10, Permission='1#查看,16#重启' Where ID=16
+17:14:07.489  9 Y 57 新增了菜单，需要检查权限
+17:14:07.489  8 Y 3 Update Menu Set DisplayName='系统管理', Permission='' Where ID=1
+17:14:07.494  9 Y 57 检查实体XCode.Membership.Role的数据表架构，模式：CheckTableWhenFirstUse
+17:14:07.494  9 Y 57 开始同步检查表[Role/SQLite]的数据表架构……
+17:14:07.494  9 Y 57 [Membership]GetSchema("Tables")
+17:14:07.494  9 Y 57 [Membership]GetSchema("Columns")
+17:14:07.502  9 Y 57 [Membership]GetSchema("Indexes")
+17:14:07.503  9 Y 57 [Membership]GetSchema("IndexColumns")
+17:14:07.503  9 Y 57 创建表：Role(角色)
+17:14:07.503  9 Y 57 Create Table Role(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL COLLATE NOCASE,
+	IsSystem bit NOT NULL,
+	Remark nvarchar(50) NULL COLLATE NOCASE,
+	Permission nvarchar(500) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUserID int NOT NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL
+)
+17:14:07.504  9 Y 57 Create Unique Index IU_Role_Name On Role (Name)
+17:14:07.504  9 Y 57 检查表[Role/SQLite]的数据表架构耗时10ms
+17:14:07.505  9 Y 57 Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+17:14:07.505  9 Y 57 Select Count(*) From Role
+17:14:07.506  9 Y 57 开始初始化Role角色数据……
+17:14:07.507  9 Y 57 Select * From Role Where Name='管理员'
+17:14:07.511  9 Y 57 Insert Into Role(Name, IsSystem, Remark, Permission, CreateUserID, CreateTime, UpdateUserID, UpdateTime) Values('管理员', 1, '默认拥有全部最高权限，由系统工程师使用，安装配置整个系统', '', 0, '2018-06-03 17:14:07', 0, '2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:07.511  9 Y 57 Select * From Role Where Name='高级用户'
+17:14:07.511  9 Y 57 Insert Into Role(Name, IsSystem, Remark, Permission, CreateUserID, CreateTime, UpdateUserID, UpdateTime) Values('高级用户', 0, '业务管理人员，可以管理业务模块，可以分配授权用户等级', '', 0, '2018-06-03 17:14:07', 0, '2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:07.511  9 Y 57 Select * From Role Where Name='普通用户'
+17:14:07.511  9 Y 57 Insert Into Role(Name, IsSystem, Remark, Permission, CreateUserID, CreateTime, UpdateUserID, UpdateTime) Values('普通用户', 0, '普通业务人员，可以使用系统常规业务模块功能', '', 0, '2018-06-03 17:14:07', 0, '2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:07.512  9 Y 57 Select * From Role Where Name='游客'
+17:14:07.512  9 Y 57 Insert Into Role(Name, IsSystem, Remark, Permission, CreateUserID, CreateTime, UpdateUserID, UpdateTime) Values('游客', 0, '新注册用户默认属于游客组', '', 0, '2018-06-03 17:14:07', 0, '2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:07.512  9 Y 57 完成初始化Role角色数据！
+17:14:07.512  9 Y 57 Select * From Role Order By ID Desc
+17:14:07.514  9 Y 57 Select * From Menu Order By ID Desc
+17:14:07.529  9 Y 57 Update Role Set Permission='1#1' Where ID=4
+17:14:07.529  9 Y 57 Update Role Set Permission='1#1' Where ID=3
+17:14:07.529  9 Y 57 Update Role Set Permission='1#1' Where ID=2
+17:14:07.529  9 Y 57 Update Role Set Permission='1#1' Where ID=1
+17:14:07.532  9 Y 57 没有任何角色拥有菜单[Index]的权限
+17:14:07.532  9 Y 57 没有任何角色拥有菜单[XCode]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[VisitStat]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[UserToken]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[UserOnline]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[User]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[UserConnect]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[Sys]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[Role]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[Menu]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[Log]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[File]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[Db]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[Cube]的权限
+17:14:07.533  9 Y 57 没有任何角色拥有菜单[Core]的权限
+17:14:07.534  9 Y 57 共有15个菜单，没有任何角色拥有权限，准备授权第一系统角色[管理员]拥有其完全管理权！
+17:14:07.535  9 Y 57 Update Role Set Permission='1#1,2#255,3#255,4#255,5#255,6#255,7#255,8#255,9#255,10#255,11#255,12#255,13#255,14#255,15#255,16#255' Where ID=1
+17:14:07.535  9 Y 57 Select * From Role Order By ID Desc
+17:14:07.536  9 Y 57 Select * From Menu Order By ID Desc
+17:14:08.180 11 W - 配置文件D:\GitHub\Demo\MyCube\Config\OAuth.config格式不一致，保存为最新格式！
+17:14:08.186  8 Y 58 Select * From UserOnline Where SessionID='v44xf5ncybepfnk3wj1ow53u' Order By ID Desc limit 1
+17:14:08.187  8 Y 58 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'v44xf5ncybepfnk3wj1ow53u', 1, '/Admin/User/Login', '用户管理 GET /Admin/User/Login?r=%2FAdmin 954ms', 0, '::1', '2018-06-03 17:14:08', '2018-06-03 17:14:08');Select last_insert_rowid() newid
+17:14:08.188  9 Y 60 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+17:14:08.188  8 Y 59 Select * From VisitStat Where Level=3 And Time='2018-06-03 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+17:14:08.188  8 Y 59 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-03 00:00:00', '/Admin/User/Login', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:08', '2018-06-03 17:14:08');Select last_insert_rowid() newid
+17:14:08.188  9 Y 60 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/User/Login', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:08', '2018-06-03 17:14:08');Select last_insert_rowid() newid
+17:14:08.189  8 Y 59 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+17:14:08.189  8 Y 59 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/User/Login', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:08', '2018-06-03 17:14:08');Select last_insert_rowid() newid
+17:14:08.189  7 Y 61 Select * From VisitStat Where Level=0 And Page='/Admin/User/Login' Order By ID Desc limit 1
+17:14:08.191  7 Y 61 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/User/Login', 0, 0, 0, 0, 0, 0, '2018-06-03 17:14:08', '2018-06-03 17:14:08');Select last_insert_rowid() newid
+17:14:08.391  7 Y EQ 检查实体XCode.Membership.Log的数据表架构，模式：CheckTableWhenFirstUse
+17:14:08.391  7 Y EQ 开始同步检查表[Log/SQLite]的数据表架构……
+17:14:08.391  7 Y EQ [Log]GetSchema("Tables")
+17:14:08.391  7 Y EQ [Log]GetSchema("Columns")
+17:14:08.427  7 Y EQ [Log]GetSchema("Indexes")
+17:14:08.428  7 Y EQ [Log]GetSchema("IndexColumns")
+17:14:08.428  7 Y EQ 创建表：Log(日志)
+17:14:08.428  7 Y EQ Create Table Log(
+	ID integer Primary Key AUTOINCREMENT,
+	Category nvarchar(50) NULL COLLATE NOCASE,
+	[Action] nvarchar(50) NULL COLLATE NOCASE,
+	LinkID int NOT NULL,
+	UserName nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:14:08.428  7 Y EQ Create Index IX_Log_Category On Log (Category)
+17:14:08.428  7 Y EQ Create Index IX_Log_CreateUserID On Log (CreateUserID)
+17:14:08.428  7 Y EQ Create Index IX_Log_CreateTime On Log (CreateTime)
+17:14:08.428  7 Y EQ 检查表[Log/SQLite]的数据表架构耗时37ms
+17:14:08.428  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 12, '', 0, '2018-06-03 17:14:07', 'ID=12,Sort=60,Permission=1#查看,2#添加,4#修改,8#删除');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 6, '', 0, '2018-06-03 17:14:07', 'ID=6,Sort=70,Permission=1#查看,Remark=系统内重要操作均记录日志，便于审计。任何人都不能删除、修改或伪造操作日志。');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 6, '', 0, '2018-06-03 17:14:07', 'ID=6,Name=Log,DisplayName=日志,FullName=MyCube.Admin.Controllers.LogController,ParentID=1,Url=~/Admin/Log,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 15, '', 0, '2018-06-03 17:14:07', 'ID=15,Sort=36,Permission=1#查看,4#修改');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 11, '', 0, '2018-06-03 17:14:07', 'ID=11,Sort=100,Permission=1#查看,2#添加,4#修改,8#删除,Remark=系统基于角色授权，每个角色对不同的功能模块具备添删改查以及自定义权限等多种权限设定。');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 9, '', 0, '2018-06-03 17:14:07', 'ID=9,Sort=38,Permission=1#查看,4#修改');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 8, '', 0, '2018-06-03 17:14:07', 'ID=8,Name=Role,DisplayName=角色,FullName=MyCube.Admin.Controllers.RoleController,ParentID=1,Url=~/Admin/Role,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 8, '', 0, '2018-06-03 17:14:07', 'ID=8,Sort=90,Permission=1#查看,2#添加,4#修改,8#删除,16#打印,Remark=系统基于角色授权，每个角色对不同的功能模块具备添删改查以及自定义权限等多种权限设定。');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '添加', 4, '', 0, '2018-06-03 17:14:07', 'ID=4,Name=游客,Remark=新注册用户默认属于游客组,CreateTime=2018-06-03 17:14:07,UpdateTime=2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 16, '', 0, '2018-06-03 17:14:07', 'ID=16,Visible=False,Permission=');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 4, '', 0, '2018-06-03 17:14:07', 'ID=4,Name=Db,DisplayName=数据库,FullName=MyCube.Admin.Controllers.DbController,ParentID=1,Url=~/Admin/Db,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '添加', 3, '', 0, '2018-06-03 17:14:07', 'ID=3,Name=普通用户,Remark=普通业务人员，可以使用系统常规业务模块功能,CreateTime=2018-06-03 17:14:07,UpdateTime=2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:08.429  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 15, '', 0, '2018-06-03 17:14:07', 'ID=15,Name=XCode,DisplayName=数据中间件,FullName=MyCube.Admin.Controllers.XCodeController,ParentID=1,Url=~/Admin/XCode,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 14, '', 0, '2018-06-03 17:14:07', 'ID=14,Name=VisitStat,DisplayName=访问统计,FullName=MyCube.Admin.Controllers.VisitStatController,ParentID=1,Url=~/Admin/VisitStat,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '修改', 1, '', 0, '2018-06-03 17:14:07', 'ID=1,Permission=1#1,2#255,3#255,4#255,5#255,6#255,7#255,8#255,9#255,10#255,11#255,12#255,13#255,14#255,15#255,16#255');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '添加', 1, '', 0, '2018-06-03 17:14:07', 'ID=1,Name=管理员,IsSystem=True,Remark=默认拥有全部最高权限，由系统工程师使用，安装配置整个系统,CreateTime=2018-06-03 17:14:07,UpdateTime=2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 13, '', 0, '2018-06-03 17:14:07', 'ID=13,Sort=40,Permission=1#查看,2#添加,4#修改,8#删除');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 10, '', 0, '2018-06-03 17:14:07', 'ID=10,Visible=False,Permission=,Remark=第三方登录信息');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 14, '', 0, '2018-06-03 17:14:07', 'ID=14,Sort=50,Permission=1#查看,2#添加,4#修改,8#删除');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 7, '', 0, '2018-06-03 17:14:07', 'ID=7,Name=Menu,DisplayName=菜单,FullName=MyCube.Admin.Controllers.MenuController,ParentID=1,Url=~/Admin/Menu,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '修改', 1, '', 0, '2018-06-03 17:14:07', 'ID=1,Permission=1#1');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '修改', 4, '', 0, '2018-06-03 17:14:07', 'ID=4,Permission=1#1');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 10, '', 0, '2018-06-03 17:14:07', 'ID=10,Sort=40,Permission=1#查看,2#添加,4#修改,8#删除');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 13, '', 0, '2018-06-03 17:14:07', 'ID=13,Visible=False,Permission=,Remark=授权其他人直接拥有指定用户的身份，支持有效期，支持数据接口');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 13, '', 0, '2018-06-03 17:14:07', 'ID=13,Name=UserToken,DisplayName=用户令牌,FullName=MyCube.Admin.Controllers.UserTokenController,ParentID=1,Url=~/Admin/UserToken,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 9, '', 0, '2018-06-03 17:14:07', 'ID=9,Name=Sys,DisplayName=系统设置,FullName=MyCube.Admin.Controllers.SysController,ParentID=1,Url=~/Admin/Sys,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 2, '', 0, '2018-06-03 17:14:07', 'ID=2,Sort=39,Permission=1#查看,4#修改');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 5, '', 0, '2018-06-03 17:14:07', 'ID=5,Name=File,DisplayName=文件,FullName=MyCube.Admin.Controllers.FileController,ParentID=1,Url=~/Admin/File,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 14, '', 0, '2018-06-03 17:14:07', 'ID=14,Visible=False,Permission=,Remark=每个页面每天的访问统计信息');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 12, '', 0, '2018-06-03 17:14:07', 'ID=12,Name=UserOnline,DisplayName=用户在线,FullName=MyCube.Admin.Controllers.UserOnlineController,ParentID=1,Url=~/Admin/UserOnline,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.430  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 1, '', 0, '2018-06-03 17:14:07', 'ID=1,Name=Admin,FullName=MyCube.Admin.Controllers,Url=~/Admin,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '添加', 2, '', 0, '2018-06-03 17:14:07', 'ID=2,Name=高级用户,Remark=业务管理人员，可以管理业务模块，可以分配授权用户等级,CreateTime=2018-06-03 17:14:07,UpdateTime=2018-06-03 17:14:07');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 5, '', 0, '2018-06-03 17:14:07', 'ID=5,Sort=28,Permission=1#查看,2#添加,4#修改,8#删除');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 7, '', 0, '2018-06-03 17:14:07', 'ID=7,Sort=80,Permission=1#查看,2#添加,4#修改,8#删除,Remark=系统操作菜单以及功能目录树。支持排序，不可见菜单仅用于功能权限限制。每个菜单的权限子项由系统自动生成，请不要人为修改');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 9, '', 0, '2018-06-03 17:14:07', 'ID=9,Visible=False,Permission=');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '修改', 2, '', 0, '2018-06-03 17:14:07', 'ID=2,Permission=1#1');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 4, '', 0, '2018-06-03 17:14:07', 'ID=4,Sort=26,Permission=1#查看,2#添加,4#修改');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 16, '', 0, '2018-06-03 17:14:07', 'ID=16,Name=Index,DisplayName=首页,FullName=MyCube.Admin.Controllers.IndexController,ParentID=1,Url=~/Admin/Index,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 15, '', 0, '2018-06-03 17:14:07', 'ID=15,Visible=False,Permission=');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 1, '', 0, '2018-06-03 17:14:07', 'ID=1,DisplayName=系统管理,Permission=');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 11, '', 0, '2018-06-03 17:14:07', 'ID=11,Name=User,DisplayName=用户,FullName=MyCube.Admin.Controllers.UserController,ParentID=1,Url=~/Admin/User,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 2, '', 0, '2018-06-03 17:14:07', 'ID=2,Name=Core,DisplayName=基本设置,FullName=MyCube.Admin.Controllers.CoreController,ParentID=1,Url=~/Admin/Core,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 3, '', 0, '2018-06-03 17:14:07', 'ID=3,Sort=34,Permission=1#查看,4#修改');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 10, '', 0, '2018-06-03 17:14:07', 'ID=10,Name=UserConnect,DisplayName=用户链接,FullName=MyCube.Admin.Controllers.UserConnectController,ParentID=1,Url=~/Admin/UserConnect,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('角色', '修改', 3, '', 0, '2018-06-03 17:14:07', 'ID=3,Permission=1#1');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 2, '', 0, '2018-06-03 17:14:07', 'ID=2,Visible=False,Permission=');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 16, '', 0, '2018-06-03 17:14:07', 'ID=16,Sort=10,Permission=1#查看,16#重启');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '添加', 3, '', 0, '2018-06-03 17:14:07', 'ID=3,Name=Cube,DisplayName=平台设置,FullName=MyCube.Admin.Controllers.CubeController,ParentID=1,Url=~/Admin/Cube,Icon=&#xe63f;,Visible=True');Select last_insert_rowid() newid
+17:14:08.431  7 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('菜单', '修改', 12, '', 0, '2018-06-03 17:14:07', 'ID=12,Visible=False,Permission=,Remark=已登录系统的用户，操作情况。');Select last_insert_rowid() newid
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=696, MaxCost=696, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=5
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=696, MaxCost=696, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=1
+17:14:12.358 10 Y EQ Update VisitStat Set Title='用户管理', Times=2, IPs=1, Cost=1622, MaxCost=2290, UpdateTime='2018-06-03 17:14:08', Remark='::1' Where ID=6
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=696, MaxCost=696, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=7
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=2290, MaxCost=2290, Remark='::1' Where ID=11
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=2290, MaxCost=2290, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=2
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=2290, MaxCost=2290, Remark='::1' Where ID=10
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=696, MaxCost=696, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=6
+17:14:12.358 10 Y EQ Update VisitStat Set Title='用户管理', Times=2, IPs=1, Cost=1622, MaxCost=2290, UpdateTime='2018-06-03 17:14:08', Remark='::1' Where ID=7
+17:14:12.358 10 Y EQ Update VisitStat Set Title='用户管理', Times=2, IPs=1, Cost=1622, MaxCost=2290, UpdateTime='2018-06-03 17:14:08', Remark='::1' Where ID=8
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=696, MaxCost=696, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=9
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=696, MaxCost=696, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=4
+17:14:12.358 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=696, MaxCost=696, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=8
+17:14:12.358 10 Y EQ Update VisitStat Set Title='用户管理', Times=2, IPs=1, Cost=1622, MaxCost=2290, UpdateTime='2018-06-03 17:14:08', Remark='::1' Where ID=9
+17:14:12.359 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=2290, MaxCost=2290, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=12
+17:14:12.359 10 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=696, MaxCost=696, UpdateTime='2018-06-03 17:14:07', Remark='::1' Where ID=3
+17:14:16.490  5 N T 对象缓存<UserOnline>(0)     总次数          3	[XCode.Membership.UserOnline]
+17:14:16.491  5 N T 实体缓存<Menu>(16)          总次数         51，命中         50（98.04%）	[XCode.Membership.Menu]
+17:14:17.360 10 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=955, MaxCost=955, Remark='::1' Where ID=13
+17:14:17.360 10 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=955, MaxCost=955, Remark='::1' Where ID=15
+17:14:17.360 10 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=955, MaxCost=955, Remark='::1' Where ID=16
+17:14:17.360 10 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=955, MaxCost=955, Remark='::1' Where ID=14
+17:14:19.896 10 Y T System.ArgumentException: filename
+参数名: 在程序集MyCube中无法找到名为favicon.ico的资源！
+   在 NewLife.IO.FileSource.ReleaseFile(Assembly asm, String fileName, String destFile, Boolean overWrite) 位置 E:\X\Src\NewLife.Core\IO\FileSource.cs:行号 24
+   在 MyCube.AreaRegistrationBase.<>c__DisplayClass14_0.<CheckContent>b__0(Object s) 位置 D:\GitHub\Demo\MyCube\Common\AreaRegistrationBase.cs:行号 146
+   在 NewLife.Threading.TimerScheduler.Execute(Object state) 位置 E:\X\Src\NewLife.Core\Threading\TimerScheduler.cs:行号 230
+17:14:37.232  7 Y T Select * From UserOnline Where UpdateTime<'2018-06-03 16:54:37' Order By ID Desc

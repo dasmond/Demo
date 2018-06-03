@@ -12,6 +12,7 @@ namespace DsLib.Baidu
     /// </summary>
     public class OcrApi
     {
+        
         /// <summary>APPID：百度 App ID</summary>
         public static string APP_ID = "10903897";
         /// <summary>AK：百度 Api Key</summary>

@@ -1,0 +1,750 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFA80313-CFD8-4D41-91F9-83E6D23370B2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyCube</RootNamespace>
+    <AssemblyName>MyCube</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="NewLife.Core, Version=7.0.6722.39740, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewLife.Core.7.0.6722.39740\lib\net45\NewLife.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.6\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="XCode, Version=9.7.6722.39741, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewLife.XCode.9.7.6722.39741\lib\net45\XCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Core.config" />
+    <Content Include="Config\Cube.config" />
+    <Content Include="Config\DataCache.config" />
+    <Content Include="Config\OAuth.config" />
+    <Content Include="Config\Sys.config" />
+    <Content Include="Config\XCode.config" />
+    <Content Include="Content\ace\css\ace-fonts.min.css" />
+    <Content Include="Content\ace\css\ace-ie.min.css" />
+    <Content Include="Content\ace\css\ace-part2.min.css" />
+    <Content Include="Content\ace\css\ace-skins.min.css" />
+    <Content Include="Content\ace\css\ace.min.css" />
+    <Content Include="Content\ace\css\images\meteorshower2.jpg" />
+    <Content Include="Content\ace\css\images\pattern.jpg" />
+    <Content Include="Content\ace\js\ace-elements.min.js" />
+    <Content Include="Content\ace\js\ace-extra.min.js" />
+    <Content Include="Content\ace\js\ace.min.js" />
+    <Content Include="Content\ace\js\additional-methods.min.js" />
+    <Content Include="Content\ace\js\bootbox.min.js" />
+    <Content Include="Content\ace\js\chosen.jquery.min.js" />
+    <Content Include="Content\ace\js\dropzone.min.js" />
+    <Content Include="Content\ace\js\excanvas.min.js" />
+    <Content Include="Content\ace\js\fullcalendar.min.js" />
+    <Content Include="Content\ace\js\jquery.autosize.min.js" />
+    <Content Include="Content\ace\js\pace.min.js" />
+    <Content Include="Content\ace\js\prettify.min.js" />
+    <Content Include="Content\ace\js\select2.min.js" />
+    <Content Include="Content\ace\js\spin.min.js" />
+    <Content Include="Content\ace\js\typeahead.jquery.min.js" />
+    <Content Include="Content\artDialog\css\ui-dialog.css" />
+    <Content Include="Content\artDialog\dist\dialog-min.js" />
+    <Content Include="Content\artDialog\dist\dialog-plus-min.js" />
+    <Content Include="Content\artDialog\dist\dialog.new.life.js" />
+    <Content Include="Content\bootstrap-switch\bootstrap-switch.min.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap-switch.min.js" />
+    <Content Include="Content\bootstrap\css\bootstrap-multiselect.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\css\font-awesome.min.css" />
+    <Content Include="Content\bootstrap\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bootstrap\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-multiselect.min.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-tag.min.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Cube.css" />
+    <Content Include="Content\Cube.js" />
+    <Content Include="Content\DateTimePicker\bootstrap-datetimepicker.css" />
+    <Content Include="Content\DateTimePicker\bootstrap-datetimepicker.js" />
+    <Content Include="Content\DateTimePicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\DateTimePicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\DateTimePicker\locales\bootstrap-datetimepicker.es.js" />
+    <Content Include="Content\DateTimePicker\locales\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="Content\DateTimePicker\locales\bootstrap-datetimepicker.zh-TW.js" />
+    <Content Include="Content\images\logo\Alipay.png" />
+    <Content Include="Content\images\logo\Baidu.png" />
+    <Content Include="Content\images\logo\Github.png" />
+    <Content Include="Content\images\logo\NewLife.png" />
+    <Content Include="Content\images\logo\QQ.png" />
+    <Content Include="Content\images\logo\Taobao.png" />
+    <Content Include="Content\images\logo\Weibo.png" />
+    <Content Include="Content\images\logo\Weixin.png" />
+    <Content Include="Content\js\html5shiv.min.js" />
+    <Content Include="Content\js\jquery-2.1.3.min.js" />
+    <Content Include="Content\js\jquery-ui.custom.min.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.autosize.min.js" />
+    <Content Include="Content\js\jquery.bootstrap-duallistbox.min.js" />
+    <Content Include="Content\js\jquery.colorbox.min.js" />
+    <Content Include="Content\js\jquery.easypiechart.min.js" />
+    <Content Include="Content\js\jquery.gritter.min.js" />
+    <Content Include="Content\js\jquery.hotkeys.min.js" />
+    <Content Include="Content\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="Content\js\jquery.knob.min.js" />
+    <Content Include="Content\js\jquery.maskedinput.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.mobile.custom.min.js" />
+    <Content Include="Content\js\jquery.mousewheel.min.js" />
+    <Content Include="Content\js\jquery.nestable.min.js" />
+    <Content Include="Content\js\jquery.raty.min.js" />
+    <Content Include="Content\js\jquery.slimscroll.min.js" />
+    <Content Include="Content\js\jquery.sparkline.min.js" />
+    <Content Include="Content\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\js\jquery.validate.min.js" />
+    <Content Include="Content\js\jquery1x.min.js" />
+    <Content Include="Content\js\respond.min.js" />
+    <Content Include="Content\jweui\css\demos.css" />
+    <Content Include="Content\jweui\css\jquery-weui.css" />
+    <Content Include="Content\jweui\css\jquery-weui.min.css" />
+    <Content Include="Content\jweui\images\icon_nav_actionSheet.png" />
+    <Content Include="Content\jweui\images\icon_nav_article.png" />
+    <Content Include="Content\jweui\images\icon_nav_button.png" />
+    <Content Include="Content\jweui\images\icon_nav_calendar.png" />
+    <Content Include="Content\jweui\images\icon_nav_cell.png" />
+    <Content Include="Content\jweui\images\icon_nav_city.png" />
+    <Content Include="Content\jweui\images\icon_nav_datetime.png" />
+    <Content Include="Content\jweui\images\icon_nav_dialog.png" />
+    <Content Include="Content\jweui\images\icon_nav_icons.png" />
+    <Content Include="Content\jweui\images\icon_nav_msg.png" />
+    <Content Include="Content\jweui\images\icon_nav_new.png" />
+    <Content Include="Content\jweui\images\icon_nav_noti.png" />
+    <Content Include="Content\jweui\images\icon_nav_panel.png" />
+    <Content Include="Content\jweui\images\icon_nav_photo.png" />
+    <Content Include="Content\jweui\images\icon_nav_picker.png" />
+    <Content Include="Content\jweui\images\icon_nav_progress.png" />
+    <Content Include="Content\jweui\images\icon_nav_ptr.png" />
+    <Content Include="Content\jweui\images\icon_nav_search_bar.png" />
+    <Content Include="Content\jweui\images\icon_nav_select.png" />
+    <Content Include="Content\jweui\images\icon_nav_swiper.png" />
+    <Content Include="Content\jweui\images\icon_nav_tab.png" />
+    <Content Include="Content\jweui\images\icon_nav_toast.png" />
+    <Content Include="Content\jweui\images\icon_nav_up.png" />
+    <Content Include="Content\jweui\images\pic_160.png" />
+    <Content Include="Content\jweui\images\pic_article.png" />
+    <Content Include="Content\jweui\images\present.png" />
+    <Content Include="Content\jweui\images\swiper-1.jpg" />
+    <Content Include="Content\jweui\images\swiper-2.jpg" />
+    <Content Include="Content\jweui\images\swiper-3.jpg" />
+    <Content Include="Content\jweui\images\swiper-4.jpg" />
+    <Content Include="Content\jweui\images\vcode.jpg" />
+    <Content Include="Content\jweui\js\city-picker.js" />
+    <Content Include="Content\jweui\js\city-picker.min.js" />
+    <Content Include="Content\jweui\js\jquery-weui.js" />
+    <Content Include="Content\jweui\js\jquery-weui.min.js" />
+    <Content Include="Content\jweui\js\swiper.js" />
+    <Content Include="Content\jweui\js\swiper.min.js" />
+    <Content Include="Content\jweui\lib\fastclick.js" />
+    <Content Include="Content\jweui\lib\jquery-2.1.4.js" />
+    <Content Include="Content\jweui\lib\weui.css" />
+    <Content Include="Content\jweui\lib\weui.min.css" />
+    <Content Include="Content\jweui\lib\zepto.js" />
+    <Content Include="Entity\Cube.xml" />
+    <Content Include="Entity\XCoder.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>XCoder.log</LastGenOutput>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\ApiClient.js" />
+    <Content Include="Entity\XCoder.log">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XCoder.tt</DependentUpon>
+    </Content>
+    <Content Include="Areas\Admin\Views\Db\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\File\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\Assembly.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\Cache.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\Main.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\ProcessModules.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\ServerVar.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\Session.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\_Left.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\_Left_Item.cshtml" />
+    <Content Include="Areas\Admin\Views\Index\_Navbar.cshtml" />
+    <Content Include="Areas\Admin\Views\Log\_List_Data.cshtml" />
+    <Content Include="Areas\Admin\Views\Log\_List_Search.cshtml" />
+    <Content Include="Areas\Admin\Views\Menu\_ListTree_Data.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\SetPermission.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\_Form_Group.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\_List_Data.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Object_Nav.cshtml" />
+    <Content Include="Areas\Admin\Views\UserOnline\_List_Data.cshtml" />
+    <Content Include="Areas\Admin\Views\UserToken\_List_Data.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Info.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_Form_Action.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_List_Data.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_List_Search.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_List_Toolbar_Batch.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_Login_Forgot.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_Login_Login.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_Login_Login3.cshtml" />
+    <Content Include="Areas\Admin\Views\User\_Login_Register.cshtml" />
+    <Content Include="Areas\Admin\Views\VisitStat\_List_Data.cshtml" />
+    <Content Include="Areas\Admin\Views\VisitStat\_List_Search.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\WebSocketX.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CoreController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CubeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DbController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FileController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LogController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MenuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SysController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserConnectController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserOnlineController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserTokenController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VisitStatController.cs" />
+    <Compile Include="Areas\Admin\Controllers\XCodeController.cs" />
+    <Compile Include="Areas\Admin\Index\IndexController.cs" />
+    <Compile Include="Areas\Admin\Models\DbItem.cs" />
+    <Compile Include="Areas\Admin\Models\FileItem.cs" />
+    <Compile Include="Common\AreaRegistrationBase.cs" />
+    <Compile Include="Common\ConfigController.cs" />
+    <Compile Include="Common\ControllerBaseX.cs" />
+    <Compile Include="Common\ControllerHelper.cs" />
+    <Compile Include="Common\CubeModule.cs" />
+    <Compile Include="Common\DbRunTimeModule.cs" />
+    <Compile Include="Common\EntityAuthorizeAttribute.cs" />
+    <Compile Include="Common\EntityController.cs" />
+    <Compile Include="Common\EntityModelBinder.cs" />
+    <Compile Include="Common\EntityTreeController.cs" />
+    <Compile Include="Common\FieldCollection.cs" />
+    <Compile Include="Common\HtmlExtensions.cs" />
+    <Compile Include="Common\MembershipExtensions.cs" />
+    <Compile Include="Common\MvcHandleErrorAttribute.cs" />
+    <Compile Include="Common\NoPermissionException.cs" />
+    <Compile Include="Common\ObjectController.cs" />
+    <Compile Include="Common\RazorViewEngineX.cs" />
+    <Compile Include="Common\ViewHelper.cs" />
+    <Compile Include="Common\WeuiJS.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SsoController.cs" />
+    <Compile Include="Entity\用户令牌.Biz.cs" />
+    <Compile Include="Entity\用户令牌.cs" />
+    <Compile Include="Entity\用户链接.Biz.cs" />
+    <Compile Include="Entity\用户链接.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PreApplicationStartCode.cs" />
+    <Compile Include="Precompiled\AssemblyExtensions.cs" />
+    <Compile Include="Precompiled\CompositePrecompiledMvcEngine.cs" />
+    <Compile Include="Precompiled\DefaultViewPageActivator.cs" />
+    <Compile Include="Precompiled\FrontendController.cs" />
+    <Compile Include="Precompiled\Pages.cs" />
+    <Compile Include="Precompiled\PrecompiledMvcEngine.cs" />
+    <Compile Include="Precompiled\PrecompiledMvcView.cs" />
+    <Compile Include="Precompiled\PrecompiledViewAssembly.cs" />
+    <Compile Include="Precompiled\PrecompiledViewLocationCache.cs" />
+    <Compile Include="Precompiled\ViewCacheDependency.cs" />
+    <Compile Include="Precompiled\ViewCacheDependencyManager.cs" />
+    <Compile Include="Precompiled\ViewFile.cs" />
+    <Compile Include="Precompiled\ViewPathProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting.cs" />
+    <Compile Include="Views\CubeHome\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CubeError.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CubeError.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Form.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Form.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\List.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>List.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\ListTree.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListTree.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\NoPermission.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NoPermission.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\ObjectForm.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ObjectForm.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Ace_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Ace_Layout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Ace_Layout_Nav.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Ace_Layout_Nav.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_DateRange.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_DateRange.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Form_Action.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Form_Action.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Form_Body.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Form_Body.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Form_Footer.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Form_Footer.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Form_Group.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Form_Group.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Form_Header.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Form_Header.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Form_Item.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Form_Item.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Layout_Footer.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout_Footer.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Layout_Header.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout_Header.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_ListTree_Data.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ListTree_Data.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Data.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Data.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Data_Action.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Data_Action.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Data_Item.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Data_Item.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Data_Item_First.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Data_Item_First.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Pager.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Pager.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Pager1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Pager1.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Search.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Search.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Toolbar.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Toolbar.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Toolbar_Adv.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Toolbar_Adv.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Toolbar_Batch.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Toolbar_Batch.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_List_Toolbar_Search.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_List_Toolbar_Search.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_LoginPartial.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_LoginPartial.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Object_Nav.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Object_Nav.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_StatLevel.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_StatLevel.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\_ViewStart.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ViewStart.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Web\OAuthHelper.cs" />
+    <Compile Include="Web\SsoProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\ace\fonts\OpenSans-300.woff" />
+    <Content Include="Content\ace\fonts\OpenSans-400.woff" />
+    <Content Include="Content\bootstrap\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\bootstrap\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\bootstrap\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\bootstrap\fonts\FontAwesome.otf" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="packages.config" />
+    <Content Include="Views\CubeHome\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\CubeError.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>CubeError.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\Form.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Form.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\List.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>List.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\ListTree.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ListTree.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\NoPermission.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>NoPermission.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\ObjectForm.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ObjectForm.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Ace_Layout.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Ace_Layout.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Ace_Layout_Nav.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Ace_Layout_Nav.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_DateRange.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_DateRange.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Form_Action.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Form_Action.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Form_Body.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Form_Body.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Form_Footer.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Form_Footer.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Form_Group.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Form_Group.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Form_Header.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Form_Header.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Form_Item.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Form_Item.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Layout.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Layout_Footer.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout_Footer.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Layout_Header.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout_Header.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_ListTree_Data.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ListTree_Data.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Data.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Data.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Data_Action.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Data_Action.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Data_Item.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Data_Item.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Data_Item_First.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Data_Item_First.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Pager.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Pager.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Pager1.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Pager1.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Search.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Search.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Toolbar.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Toolbar.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Toolbar_Adv.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Toolbar_Adv.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Toolbar_Batch.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Toolbar_Batch.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_List_Toolbar_Search.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_List_Toolbar_Search.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_LoginPartial.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_LoginPartial.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Object_Nav.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Object_Nav.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_StatLevel.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_StatLevel.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ViewStart.generated.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Avatars\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54934</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54934/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+      md "$(ProjectDir)..\..\Bin"
+      copy "$(TargetDir)$(TargetName)".* "$(ProjectDir)..\..\Bin\" /y
+      del "$(ProjectDir)..\..\Bin\MyCube.dll.config" /q</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

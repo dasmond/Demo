@@ -75,3 +75,4 @@ D:\GitHub\Demo\MyCube\obj\Debug\MyCube.csproj.CopyComplete
 D:\GitHub\Demo\MyCube\obj\Debug\MyCube.dll
 D:\GitHub\Demo\MyCube\obj\Debug\MyCube.pdb
 D:\GitHub\Demo\MyCube\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\GitHub\Demo\MyCube\obj\Debug\MyCube.csprojAssemblyReference.cache

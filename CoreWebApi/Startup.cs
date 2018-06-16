@@ -20,13 +20,14 @@ namespace CoreWebApi
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // 运行时调用，向容器添加服务
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // 运行时调用，配置HTTP请求管道
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

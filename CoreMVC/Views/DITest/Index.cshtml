@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+@foreach (var item in ViewBag.date)
+{
+
+    <h2>@item</h2>
+}
+
+    <h1>Transient(瞬时的):@ViewBag.guid</h1>
+    <h1>Transient(瞬时的)2:@ViewBag.guid11</h1>
+    <h1> Scoped(作用域的):@ViewBag.guid2</h1>
+    <h1> Scoped(作用域的)2:@ViewBag.guid22</h1>
+    <h1>Singleton(全局唯一的):@ViewBag.guid3</h1>

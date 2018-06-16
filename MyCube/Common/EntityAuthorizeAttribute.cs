@@ -44,7 +44,7 @@ namespace MyCube
         {
             /*
              * 验证范围：
-             * 1，魔方区域下的所有控制器
+             * 1，平台区域下的所有控制器
              * 2，所有带有EntityAuthorize特性的控制器或动作
              */
             var act = filterContext.ActionDescriptor;
@@ -62,7 +62,7 @@ namespace MyCube
             if (!AreaRegistrationBase.Contains(filterContext.Controller))
             {
                 if (!hasAtt) return;
-                // 不属于魔方而又加了权限特性，需要创建菜单
+                // 不属于平台而又加了权限特性，需要创建菜单
                 create = true;
             }
 

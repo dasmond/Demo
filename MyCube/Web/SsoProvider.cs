@@ -221,7 +221,7 @@ namespace MyCube.Web
 
                 if (user == null)
                 {
-                    // 新注册用户采用魔方默认角色
+                    // 新注册用户采用平台默认角色
                     var rid = set.DefaultRole;
                     //if (rid == 0 && client.Items.TryGetValue("roleid", out var roleid)) rid = roleid.ToInt();
                     //if (rid <= 0) rid = GetRole(client.Items, rid < -1);

@@ -276,6 +276,7 @@
     <Content Include="Areas\Admin\Views\VisitStat\_List_Data.cshtml" />
     <Content Include="Areas\Admin\Views\VisitStat\_List_Search.cshtml" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Chick\Views\web.config" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -306,6 +307,7 @@
     <Compile Include="Areas\Admin\Index\IndexController.cs" />
     <Compile Include="Areas\Admin\Models\DbItem.cs" />
     <Compile Include="Areas\Admin\Models\FileItem.cs" />
+    <Compile Include="Areas\Chick\ChickAreaRegistration.cs" />
     <Compile Include="Common\AreaRegistrationBase.cs" />
     <Compile Include="Common\ConfigController.cs" />
     <Compile Include="Common\ControllerBaseX.cs" />
@@ -325,7 +327,7 @@
     <Compile Include="Common\RazorViewEngineX.cs" />
     <Compile Include="Common\ViewHelper.cs" />
     <Compile Include="Common\WeuiJS.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\CubeHomeController.cs" />
     <Compile Include="Controllers\SsoController.cs" />
     <Compile Include="Entity\用户令牌.Biz.cs" />
     <Compile Include="Entity\用户令牌.cs" />
@@ -700,6 +702,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Chick\Controllers\" />
+    <Folder Include="Areas\Chick\Models\" />
+    <Folder Include="Areas\Chick\Views\Shared\" />
     <Folder Include="Avatars\" />
   </ItemGroup>
   <PropertyGroup>

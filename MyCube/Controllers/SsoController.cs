@@ -10,7 +10,7 @@ using MyCube.Entity;
 using MyCube.Web;
 
 /*
- * 魔方OAuth在禁用本地登录，且只设置一个第三方登录时，形成单点登录。
+ * OAuth在禁用本地登录，且只设置一个第三方登录时，形成单点登录。
  * 
  * 验证流程：
  *      进入登录页~/Admin/User/Login

@@ -45,7 +45,7 @@
     <script src="~/Content/js/html5shiv.min.js"></script>
     <script src="~/Content/js/respond.min.js"></script>
     <![endif]-->
-    <!-- JQuery作为一等公民，页面内部随时可能使用 -->
+
     <script src="~/Content/js/jquery-2.1.3.min.js"></script>
 </head>
 <body class="skin-3 no-skin" style="overflow: hidden;">
@@ -118,8 +118,7 @@
                     }
                     fixFrmContentSize();
                     $(window).resize(fixFrmContentSize);
-
-                    //增加iframe被嵌套的检测2015-6-4 景裔增加
+         
                     if (window != top) {
                         top.location.href = location.href;
                     }

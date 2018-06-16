@@ -1,0 +1,1100 @@
+﻿#Software: iisexpress
+#ProcessID: 3676
+#AppDomain: /LM/W3SVC/4/ROOT-1-131725634479375537
+#BaseDirectory: D:\GitHub\Demo\MyCube\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: "C:\Program Files (x86)\IIS Express\iisexpress.exe"  /config:"D:\GitHub\Demo\.vs\config\applicationhost.config" /site:"MyCube" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Web
+#CLR: 4.0.30319.42000, 
+#OS: Windows 10.0.17134.0 x64, Microsoft Windows NT 10.0.17134.0, xiaoke/DESKTOP-6F6J1B7
+#Memory: 4,138M/8,084M
+#CPU: 4
+#Date: 2018-06-04
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+13:24:11.139  1 N - NewLife.Core v7.0.2018.0506 Build 2018-05-28 22:04:40 .NET Framework 4.5
+13:24:11.141  1 N - 组件核心库 ©2002-2018 新生命开发团队 https://github.com/NewLifeX/X
+13:24:11.141  1 N - 系统启动
+13:24:12.188  1 N - ================================ Start 初始化魔方 ================================
+13:24:12.189  1 N - MyCube v1.0.0.0 Build 2000-01-01 .NET Framework 4.6.1
+13:24:12.189  1 N - MyCube Copyright ©  2018
+13:24:12.198  1 N - 注册区域视图程序集：MyCube, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+13:24:12.224  1 N - 注册复合预编译引擎，共有视图程序集1个
+13:24:12.228  1 N - 注册实体模型绑定器：MyCube.EntityModelBinderProvider
+13:24:12.229  1 N - 注册过滤器：MyCube.MvcHandleErrorAttribute
+13:24:12.229  1 N - 注册过滤器：MyCube.EntityAuthorizeAttribute
+13:24:12.256  1 N - ================================ End   初始化魔方 ================================
+13:24:12.260  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[MyCube.Admin.Controllers]
+13:24:12.269  1 N - 初始化权限管理体系
+13:24:12.269  7 Y 3 Admin.ScanController
+13:24:12.551  1 N - XCode v9.7.2018.0421 Build 2018-05-28 22:04:42 .NET Framework 4.5
+13:24:12.551  1 N - 大数据中间件 ©2002-2018 新生命开发团队 http://www.NewLifeX.com
+13:24:12.553  1 N - 系统启动完成
+13:24:12.696  7 Y 3 Membership 设定 Server=.;user id=sa;password=123123;Database=MyCube
+13:24:12.699  7 Y 3 Membership 格式 Server=.;user id=sa;password=123123;Database=MyCube;Pooling=false;Application Name=XCode_MyCube_Membership
+13:24:12.700  7 Y 3 检查实体XCode.Membership.Menu的数据表架构，模式：CheckTableWhenFirstUse
+13:24:12.701  7 Y 3 开始同步检查表[Menu/SqlServer]的数据表架构……
+13:24:12.710  7 Y 3 切换到系统库[master]
+13:24:12.718  7 Y 3 System.Data.SqlClient.Sql驱动C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+13:24:13.116  7 Y 3 [Membership]GetSchema("MetaDataCollections")
+13:24:13.181  7 Y 3 [Membership]GetSchema("Databases", "MyCube")
+13:24:13.293  7 Y 3 退出系统库[master]，回到[MyCube]
+13:24:13.298  7 Y 3 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+13:24:13.351  7 Y 3 [Membership]GetSchema("Tables")
+13:24:13.367  7 Y 3 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+13:24:13.387  7 Y 3 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+13:24:13.402  7 Y 3 [Membership]GetSchema("Columns")
+13:24:13.424  7 Y 3 [Membership]GetSchema("Indexes")
+13:24:13.436  7 Y 3 [Membership]GetSchema("IndexColumns")
+13:24:13.477  7 Y 3 检查表[Menu/SqlServer]的数据表架构耗时772ms
+13:24:13.478  7 Y 3 开始检查连接[Membership/SqlServer]的数据库架构……
+13:24:13.569  7 Y 3 [Membership]的所有实体类（3个）：UserX,Menu,Role
+13:24:13.569  7 Y 3 [Membership]需要检查架构的实体类（0个）：
+13:24:13.569  7 Y 3 检查连接[Membership/SqlServer]的数据库架构耗时91ms
+13:24:13.573  7 Y 3 初始化[Admin]的菜单体系
+13:24:13.637  7 Y 3 Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:24:13.897 12 Y 19 新增了菜单，需要检查权限
+13:24:13.906 12 Y 19 检查实体XCode.Membership.Role的数据表架构，模式：CheckTableWhenFirstUse
+13:24:13.906 12 Y 19 开始同步检查表[Role/SqlServer]的数据表架构……
+13:24:13.906 12 Y 19 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+13:24:13.936 12 Y 19 [Membership]GetSchema("Tables")
+13:24:13.949 12 Y 19 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+13:24:13.985 12 Y 19 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+13:24:14.054 12 Y 19 [Membership]GetSchema("Columns")
+13:24:14.073 12 Y 19 [Membership]GetSchema("Indexes")
+13:24:14.091 12 Y 19 [Membership]GetSchema("IndexColumns")
+13:24:14.110 12 Y 19 检查表[Role/SqlServer]的数据表架构耗时205ms
+13:24:14.126 12 Y 19 Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+13:24:14.130 12 Y 19 Select Count(*) From [Role]
+13:24:14.153 12 Y 19 Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:24:14.171 12 Y 19 Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:24:14.182 12 Y 19 Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:24:14.233 12 Y 19 Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:24:14.241 12 Y 19 Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:24:15.249  7 Y T 自动为[Log]设置SQLite连接字符串：Data Source=....\MyCubeFile\Data\Log.db;Migration=On
+13:24:15.250  7 Y T Log 设定 Data Source=....\MyCubeFile\Data\Log.db;Migration=On
+13:24:15.251  7 Y T Data Source=D:\GitHub\Demo\MyCubeFile\Data\Log.db;Pooling=true;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+13:24:15.251  7 Y T Log 格式 Data Source=D:\GitHub\Demo\MyCubeFile\Data\Log.db;Pooling=true;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+13:24:15.251  7 Y T 集中初始化表架构时没赶上，现在补上！
+13:24:15.251  7 Y T 开始同步检查表[UserOnline/SQLite]的数据表架构……
+13:24:15.253  7 Y T 创建数据库：Log
+13:24:15.254  7 Y T 创建数据库：D:\GitHub\Demo\MyCubeFile\Data\Log.db
+13:24:15.301  7 Y T TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+13:24:15.301  7 Y T System.Data.SQLite.SQLite驱动D:\GitHub\Demo\MyCube\Plugins\System.Data.SQLite.dll 版本v1.0.105.1
+13:24:15.453  7 Y T [Log]GetSchema("MetaDataCollections")
+13:24:15.783  7 Y T [Log]GetSchema("Tables")
+13:24:15.789  7 Y T 创建表：UserOnline(用户在线)
+13:24:15.797  7 Y T Create Table UserOnline(
+	ID integer Primary Key AUTOINCREMENT,
+	UserID int NOT NULL,
+	Name nvarchar(50) NULL COLLATE NOCASE,
+	SessionID nvarchar(50) NULL COLLATE NOCASE,
+	Times int NOT NULL,
+	Page nvarchar(50) NULL COLLATE NOCASE,
+	Status nvarchar(200) NULL COLLATE NOCASE,
+	OnlineTime int NOT NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateTime datetime NULL
+)
+13:24:15.799  7 Y T Create Index IX_UserOnline_UserID On UserOnline (UserID)
+13:24:15.800  7 Y T Create Index IX_UserOnline_SessionID On UserOnline (SessionID)
+13:24:15.800  7 Y T Create Index IX_UserOnline_CreateTime On UserOnline (CreateTime)
+13:24:15.800  7 Y T 检查表[UserOnline/SQLite]的数据表架构耗时548ms
+13:24:15.800  7 Y T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 18
+13:24:15.800 12 Y 20 开始检查连接[Log/SQLite]的数据库架构……
+13:24:15.800  7 Y T Select Count(*) From UserOnline
+13:24:15.817 12 Y 20 [Log]的所有实体类（3个）：Log,UserOnline,VisitStat
+13:24:15.817 12 Y 20 [Log]需要检查架构的实体类（2个）：UserOnline,VisitStat
+13:24:15.818 12 Y 20 Log待检查表架构的实体个数：1
+13:24:15.818 12 Y 20 [Log]GetSchema("Tables")
+13:24:15.820 12 Y 20 [Log]GetSchema("Columns")
+13:24:15.858 12 Y 20 [Log]GetSchema("Indexes")
+13:24:15.858 12 Y 20 [Log]GetSchema("IndexColumns")
+13:24:15.858 12 Y 20 创建表：VisitStat(访问统计)
+13:24:15.859 12 Y 20 Create Table VisitStat(
+	ID integer Primary Key AUTOINCREMENT,
+	Level int NOT NULL,
+	Time datetime NULL,
+	Page nvarchar(50) NOT NULL COLLATE NOCASE,
+	Title nvarchar(50) NULL COLLATE NOCASE,
+	Times int NOT NULL,
+	Users int NOT NULL,
+	IPs int NOT NULL,
+	Error int NOT NULL,
+	Cost int NOT NULL,
+	MaxCost int NOT NULL,
+	CreateTime datetime NULL,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+13:24:15.859 12 Y 20 Create Unique Index IU_VisitStat_Page_Level_Time On VisitStat (Page, Level, Time)
+13:24:15.859 12 Y 20 Create Index IX_VisitStat_Level_Time On VisitStat (Level, Time)
+13:24:15.860 12 Y 20 检查连接[Log/SQLite]的数据库架构耗时59ms
+13:24:15.860 11 Y 21 Select * From UserOnline Where SessionID='jeigwlnseconmafzacptbjvw' Order By ID Desc limit 1
+13:24:15.860 12 Y 20 Select * From UserOnline Where SessionID='py05hsyvuhqylkugkplqz4rr' Order By ID Desc limit 1
+13:24:15.870 12 Y 20 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'py05hsyvuhqylkugkplqz4rr', 1, '/', 'GET / 2,680ms', 0, '::1', '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.870 11 Y 21 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'jeigwlnseconmafzacptbjvw', 1, '/Admin', 'GET /Admin 45ms', 0, '::1', '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.879  7 Y 24 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:24:15.879 11 Y 22 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:24:15.879  8 Y 23 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:24:15.882  8 Y 23 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.882 11 Y 22 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.882  7 Y 24 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '全部', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.884  8 Y 23 Select * From VisitStat Where Level=0 And Page='/Admin' Order By ID Desc limit 1
+13:24:15.884 11 Y 22 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:24:15.884  7 Y 24 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:24:15.884 11 Y 22 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.884  8 Y 23 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.884  7 Y 24 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '全部', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.885  8 Y 23 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:24:15.885  8 Y 23 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '全部', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:15.885  8 Y 23 Select * From VisitStat Where Level=0 And Page='全部' Order By ID Desc limit 1
+13:24:15.885  8 Y 23 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '全部', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:15', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:16.010 12 Y 26 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/' Order By ID Desc limit 1
+13:24:16.010  7 Y 27 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/' Order By ID Desc limit 1
+13:24:16.011 12 Y 26 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:16', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:16.011  7 Y 27 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:16', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:16.011  8 Y 28 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:24:16.011 12 Y 26 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/' Order By ID Desc limit 1
+13:24:16.012 12 Y 26 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:16', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:16.012 12 Y 26 Select * From VisitStat Where Level=0 And Page='/' Order By ID Desc limit 1
+13:24:16.012 12 Y 26 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:16', '2018-06-04 13:24:15');Select last_insert_rowid() newid
+13:24:16.013 12 Y 26 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:24:16.014  8 Y 28 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:24:16.014  8 Y 28 Select * From VisitStat Where Level=0 And Page='全部' Order By ID Desc limit 1
+13:24:16.595  7 Y 30 Select * From UserOnline Where SessionID='v310h1skidbnwfrep0aznaeq' Order By ID Desc limit 1
+13:24:16.596  7 Y 30 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'v310h1skidbnwfrep0aznaeq', 1, '/Admin/User/Login', '用户管理 GET /Admin/User/Login?r=%2FAdmin 1,008ms', 0, '::1', '2018-06-04 13:24:16', '2018-06-04 13:24:16');Select last_insert_rowid() newid
+13:24:16.597  7 Y 31 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:24:16.597  9 Y 32 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:24:16.597  7 Y 31 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/User/Login', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:16', '2018-06-04 13:24:16');Select last_insert_rowid() newid
+13:24:16.597  9 Y 32 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/User/Login', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:16', '2018-06-04 13:24:16');Select last_insert_rowid() newid
+13:24:16.598  7 Y 31 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:24:16.598  7 Y 31 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/User/Login', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:16', '2018-06-04 13:24:16');Select last_insert_rowid() newid
+13:24:16.598 12 Y 34 Select * From VisitStat Where Level=0 And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:24:16.598 12 Y 34 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/User/Login', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:16', '2018-06-04 13:24:16');Select last_insert_rowid() newid
+13:24:20.901  8 Y EQ Update VisitStat Set Title='用户管理', Times=2, IPs=1, Cost=2225, MaxCost=3441, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=7
+13:24:20.902  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=361, MaxCost=361, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=7
+13:24:20.902  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=361, MaxCost=361, Remark='::1' Where ID=5
+13:24:20.902  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=3441, MaxCost=3441, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=11
+13:24:20.902  8 Y EQ Update VisitStat Set Title='用户管理', Times=2, IPs=1, Cost=2225, MaxCost=3441, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=3
+13:24:20.902  8 Y EQ Update VisitStat Set Title='用户管理', Times=2, IPs=1, Cost=2225, MaxCost=3441, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=6
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=361, MaxCost=361, Remark='::1' Where ID=4
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=3441, MaxCost=3441, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=9
+13:24:20.903  8 Y EQ Update VisitStat Set Title='用户管理', Times=2, IPs=1, Cost=2225, MaxCost=3441, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=5
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=361, MaxCost=361, Remark='::1' Where ID=3
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=361, MaxCost=361, Remark='::1' Where ID=6
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=3441, MaxCost=3441, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=12
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=361, MaxCost=361, Remark='::1' Where ID=1
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=3441, MaxCost=3441, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=10
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=361, MaxCost=361, Remark='::1' Where ID=2
+13:24:20.903  8 Y EQ Update VisitStat Set Times=1, IPs=1, Cost=361, MaxCost=361, UpdateTime='2018-06-04 13:24:16', Remark='::1' Where ID=8
+13:24:23.595  5 N T 对象缓存<UserOnline>(0)     总次数          3	[XCode.Membership.UserOnline]
+13:24:23.596  5 N T 实体缓存<Menu>(16)          总次数         34，命中         32（94.12%）	[XCode.Membership.Menu]
+13:24:23.596  8 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:24:25.908  8 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=1009, MaxCost=1009, Remark='::1' Where ID=14
+13:24:25.908  8 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=1009, MaxCost=1009, Remark='::1' Where ID=15
+13:24:25.908  8 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=1009, MaxCost=1009, Remark='::1' Where ID=13
+13:24:25.908  8 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=1009, MaxCost=1009, Remark='::1' Where ID=16
+13:24:27.312  9 Y T System.ArgumentException: filename
+参数名: 在程序集MyCube中无法找到名为favicon.ico的资源！
+   在 NewLife.IO.FileSource.ReleaseFile(Assembly asm, String fileName, String destFile, Boolean overWrite) 位置 E:\X\Src\NewLife.Core\IO\FileSource.cs:行号 24
+   在 MyCube.AreaRegistrationBase.<>c__DisplayClass14_0.<CheckContent>b__0(Object s) 位置 D:\GitHub\Demo\MyCube\Common\AreaRegistrationBase.cs:行号 146
+   在 NewLife.Threading.TimerScheduler.Execute(Object state) 位置 E:\X\Src\NewLife.Core\Threading\TimerScheduler.cs:行号 230
+13:24:45.860  7 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:04:45' Order By ID Desc
+13:24:54.821  7 Y 36 Select * From UserOnline Where SessionID='sqq05ng1bntfbm04j4ve5qjo' Order By ID Desc limit 1
+13:24:54.821  7 Y 36 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'sqq05ng1bntfbm04j4ve5qjo', 1, '/Admin/User/Register', '用户管理 POST /Admin/User/Register?r=%2FAdmin 73ms', 0, '::1', '2018-06-04 13:24:54', '2018-06-04 13:24:54');Select last_insert_rowid() newid
+13:24:54.821  7 Y 37 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User/Register' Order By ID Desc limit 1
+13:24:54.821 19 Y 38 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User/Register' Order By ID Desc limit 1
+13:24:54.821 20 Y 39 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User/Register' Order By ID Desc limit 1
+13:24:54.821  7 Y 37 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/User/Register', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:54', '2018-06-04 13:24:54');Select last_insert_rowid() newid
+13:24:54.821 19 Y 38 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/User/Register', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:54', '2018-06-04 13:24:54');Select last_insert_rowid() newid
+13:24:54.821 20 Y 39 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/User/Register', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:54', '2018-06-04 13:24:54');Select last_insert_rowid() newid
+13:24:54.821  8 Y 40 Select * From VisitStat Where Level=0 And Page='/Admin/User/Register' Order By ID Desc limit 1
+13:24:54.822  8 Y 40 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/User/Register', 0, 0, 0, 0, 0, 0, '2018-06-04 13:24:54', '2018-06-04 13:24:54');Select last_insert_rowid() newid
+13:25:00.911  8 Y EQ Update VisitStat Set Times=Times+1, Cost=1507, UpdateTime='2018-06-04 13:24:54' Where ID=7
+13:25:00.912  8 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=72, MaxCost=72, Remark='::1' Where ID=18
+13:25:00.912  8 Y EQ Update VisitStat Set Times=Times+1, Cost=1507, UpdateTime='2018-06-04 13:24:54' Where ID=3
+13:25:00.912  8 Y EQ Update VisitStat Set Times=Times+1, Cost=1507, UpdateTime='2018-06-04 13:24:54' Where ID=6
+13:25:00.913  8 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=72, MaxCost=72, Remark='::1' Where ID=19
+13:25:00.913  8 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=72, MaxCost=72, UpdateTime='2018-06-04 13:24:55', Remark='::1' Where ID=20
+13:25:00.913  8 Y EQ Update VisitStat Set Times=Times+1, Cost=1507, UpdateTime='2018-06-04 13:24:54' Where ID=5
+13:25:00.913  8 Y EQ Update VisitStat Set Title='用户管理', Times=1, IPs=1, Cost=72, MaxCost=72, Remark='::1' Where ID=17
+13:25:06.077  7 Y 42 Select * From UserOnline Where SessionID='hxugcvm03atnr1esujxs2nj1' Order By ID Desc limit 1
+13:25:06.077  7 Y 42 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'hxugcvm03atnr1esujxs2nj1', 1, '/Admin/User/Register', '用户管理 POST /Admin/User/Register 26ms', 0, '::1', '2018-06-04 13:25:06', '2018-06-04 13:25:06');Select last_insert_rowid() newid
+13:25:06.078  7 Y 43 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User/Register' Order By ID Desc limit 1
+13:25:06.078  9 Y 45 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User/Register' Order By ID Desc limit 1
+13:25:06.079  7 Y 43 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User/Register' Order By ID Desc limit 1
+13:25:06.079  9 Y 45 Select * From VisitStat Where Level=0 And Page='/Admin/User/Register' Order By ID Desc limit 1
+13:25:10.914  8 Y EQ Update VisitStat Set Times=Times+1, Cost=1136, UpdateTime='2018-06-04 13:25:06' Where ID=7
+13:25:10.914  8 Y EQ Update VisitStat Set Times=Times+1, Cost=49, UpdateTime='2018-06-04 13:25:06' Where ID=17
+13:25:10.914  8 Y EQ Update VisitStat Set Times=Times+1, Cost=1136, UpdateTime='2018-06-04 13:25:06' Where ID=3
+13:25:10.914  8 Y EQ Update VisitStat Set Times=Times+1, Cost=1136, UpdateTime='2018-06-04 13:25:06' Where ID=6
+13:25:10.914  8 Y EQ Update VisitStat Set Times=Times+1, Cost=49, UpdateTime='2018-06-04 13:25:06' Where ID=19
+13:25:10.914  8 Y EQ Update VisitStat Set Times=Times+1, Cost=1136, UpdateTime='2018-06-04 13:25:06' Where ID=5
+13:25:10.914  8 Y EQ Update VisitStat Set Times=Times+1, Cost=49, UpdateTime='2018-06-04 13:25:06' Where ID=18
+13:25:10.915  8 Y EQ Update VisitStat Set Times=Times+1, Cost=49, UpdateTime='2018-06-04 13:25:06' Where ID=20
+13:25:15.862 17 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:05:15' Order By ID Desc
+13:25:15.862 19 Y - Select Count(*) From UserOnline
+13:25:45.862  7 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:05:45' Order By ID Desc
+13:26:15.863 18 Y - Select Count(*) From UserOnline
+13:26:15.863 17 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:06:15' Order By ID Desc
+13:26:45.864 18 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:06:45' Order By ID Desc
+13:27:15.865 17 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:07:15' Order By ID Desc
+13:27:15.865  7 Y - Select Count(*) From UserOnline
+13:27:45.865  7 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:07:45' Order By ID Desc
+13:28:15.866  7 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:08:15' Order By ID Desc
+13:28:45.867  7 Y - Select Count(*) From UserOnline
+13:28:45.867 16 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:08:45' Order By ID Desc
+13:29:15.867 20 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:09:15' Order By ID Desc
+13:29:45.867  7 Y - Select Count(*) From UserOnline
+13:29:45.867 15 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:09:45' Order By ID Desc
+13:30:15.869 21 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:10:15' Order By ID Desc
+13:30:45.870 15 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:10:45' Order By ID Desc
+13:30:45.870  9 Y - Select Count(*) From UserOnline
+13:31:15.870 15 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:11:15' Order By ID Desc
+13:31:45.870 15 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:11:45' Order By ID Desc
+13:31:45.870 17 Y - Select Count(*) From UserOnline
+13:32:15.870 23 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:12:15' Order By ID Desc
+13:32:45.871 20 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:12:45' Order By ID Desc
+13:32:45.871  7 Y - Select Count(*) From UserOnline
+13:33:15.872 22 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:13:15' Order By ID Desc
+13:33:45.874 24 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:13:45' Order By ID Desc
+13:33:45.874 20 Y - Select Count(*) From UserOnline
+13:34:15.875 27 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:14:15' Order By ID Desc
+13:34:23.596  5 N T 对象缓存<UserOnline>(0)     总次数          5	[XCode.Membership.UserOnline]
+13:34:23.596  5 N T 实体缓存<Menu>(16)          总次数         35，命中         32（91.43%）	[XCode.Membership.Menu]
+13:34:23.596  7 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:34:45.876 20 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:14:45' Order By ID Desc
+13:34:45.876 25 Y - Select Count(*) From UserOnline
+13:35:15.876  7 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:15:15' Order By ID Desc
+13:35:45.878 30 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:15:45' Order By ID Desc
+13:36:15.878 22 Y - Select Count(*) From UserOnline
+13:36:15.878  7 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:16:15' Order By ID Desc
+13:36:45.879 22 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:16:45' Order By ID Desc
+13:37:15.880 30 Y - Select Count(*) From UserOnline
+13:37:15.880  7 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:17:15' Order By ID Desc
+13:37:45.880 29 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:17:45' Order By ID Desc
+13:38:15.882 29 Y - Select Count(*) From UserOnline
+13:38:15.882 33 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:18:15' Order By ID Desc
+13:38:45.882 29 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:18:45' Order By ID Desc
+13:39:15.883 34 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:19:15' Order By ID Desc
+13:39:15.883 32 Y - Select Count(*) From UserOnline
+13:39:45.884 22 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:19:45' Order By ID Desc
+13:40:15.884 32 Y - Select Count(*) From UserOnline
+13:40:15.884 35 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:20:15' Order By ID Desc
+13:40:45.886 35 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:20:45' Order By ID Desc
+13:41:15.887 34 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:21:15' Order By ID Desc
+13:41:15.887 29 Y - Select Count(*) From UserOnline
+13:41:45.888 32 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:21:45' Order By ID Desc
+13:42:15.888 29 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:22:15' Order By ID Desc
+13:42:45.889 35 Y - Select Count(*) From UserOnline
+13:42:45.889 37 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:22:45' Order By ID Desc
+13:43:15.891 29 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:23:15' Order By ID Desc
+13:43:45.891 32 Y - Select Count(*) From UserOnline
+13:43:45.891 35 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:23:45' Order By ID Desc
+13:44:15.892 37 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:24:15' Order By ID Desc
+13:44:23.597  5 N T 对象缓存<UserOnline>(0)     总次数          5	[XCode.Membership.UserOnline]
+13:44:23.597  5 N T 实体缓存<Menu>(16)          总次数         36，命中         32（88.89%）	[XCode.Membership.Menu]
+13:44:23.597 29 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:44:26.371 38 W - 检查实体XCode.Membership.UserX的数据表架构，模式：CheckTableWhenFirstUse
+13:44:26.371 38 W - 开始同步检查表[UserX/SqlServer]的数据表架构……
+13:44:26.371 38 W - select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+13:44:26.387 38 W - [Membership]GetSchema("Tables")
+13:44:26.400 38 W - SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+13:44:26.412 38 W - select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+13:44:26.420 38 W - [Membership]GetSchema("Columns")
+13:44:26.431 38 W - [Membership]GetSchema("Indexes")
+13:44:26.441 38 W - [Membership]GetSchema("IndexColumns")
+13:44:26.451 38 W - 检查表[UserX/SqlServer]的数据表架构耗时80ms
+13:44:26.451 38 W - UserX.Count 快速计算表记录数（非精确）[User/Membership] 参考值 1
+13:44:26.451 38 W - Select Count(*) From [User]
+13:44:26.461 38 W - Select * From [User] Where Name=N'admin'
+13:44:26.492 38 W - Update [User] Set RoleIDs=N'', Logins=Logins+1, LastLogin={ts'2018-06-04 13:44:26'} Where ID=1
+13:44:26.514 29 Y 49 Select * From UserOnline Where SessionID='wfwcmryp5hc0hukbwp4cttz1' Order By ID Desc limit 1
+13:44:26.515 29 Y 49 Insert Into UserOnline(UserID, Name, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(1, '管理员', 'wfwcmryp5hc0hukbwp4cttz1', 1, '/Admin/User/Login', '用户管理 POST /Admin/User/Login 157ms', 0, '::1', '2018-06-04 13:44:26', '2018-06-04 13:44:26');Select last_insert_rowid() newid
+13:44:26.516 29 Y 50 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:44:26.516 35 Y 51 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:44:26.516 37 Y 52 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:44:26.517 35 Y 51 Select * From VisitStat Where Level=0 And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:44:26.517 37 Y 52 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:44:26.517 35 Y 51 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:44:26.518 35 Y 51 Select * From VisitStat Where Level=0 And Page='全部' Order By ID Desc limit 1
+13:44:26.518 29 Y 50 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:44:26.527 32 W - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:44:26.961 29 Y 54 Select * From UserOnline Where SessionID='wfwcmryp5hc0hukbwp4cttz1' Order By ID Desc limit 1
+13:44:26.975 38 Y 57 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:44:26.975 35 Y 56 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:44:26.975 35 Y 56 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:44:26.975 38 Y 57 Select * From VisitStat Where Level=0 And Page='/Admin' Order By ID Desc limit 1
+13:44:27.488 32 Y EQ 检查实体XCode.Membership.Log的数据表架构，模式：CheckTableWhenFirstUse
+13:44:27.488 32 Y EQ 开始同步检查表[Log/SQLite]的数据表架构……
+13:44:27.488 32 Y EQ [Log]GetSchema("Tables")
+13:44:27.489 32 Y EQ [Log]GetSchema("Columns")
+13:44:27.503 38 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin', Status='GET /Admin 441ms' Where ID=6
+13:44:27.507 32 Y EQ [Log]GetSchema("Indexes")
+13:44:27.507 32 Y EQ [Log]GetSchema("IndexColumns")
+13:44:27.507 32 Y EQ 创建表：Log(日志)
+13:44:27.507 32 Y EQ Create Table Log(
+	ID integer Primary Key AUTOINCREMENT,
+	Category nvarchar(50) NULL COLLATE NOCASE,
+	[Action] nvarchar(50) NULL COLLATE NOCASE,
+	LinkID int NOT NULL,
+	UserName nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+13:44:27.507 32 Y EQ Create Index IX_Log_Category On Log (Category)
+13:44:27.507 32 Y EQ Create Index IX_Log_CreateUserID On Log (CreateUserID)
+13:44:27.508 32 Y EQ Create Index IX_Log_CreateTime On Log (CreateTime)
+13:44:27.508 32 Y EQ 检查表[Log/SQLite]的数据表架构耗时19ms
+13:44:27.508 32 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateIP, CreateTime, Remark) Values('用户', '登录', 0, '', 0, '::1', '2018-06-04 13:44:26', 'admin');Select last_insert_rowid() newid
+13:44:27.508 32 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateIP, CreateTime, Remark) Values('用户', '修改', 1, '管理员', 1, '::1', '2018-06-04 13:44:26', 'ID=1,Logins=4,LastLogin=2018-06-04 13:44:26');Select last_insert_rowid() newid
+13:44:27.894 38 Y 61 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:44:27.894 29 Y 60 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:44:27.894 37 Y 62 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:44:27.894 38 Y 61 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Index/Main', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:27', '2018-06-04 13:44:27');Select last_insert_rowid() newid
+13:44:27.894 38 Y 61 Select * From VisitStat Where Level=0 And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:44:27.894 37 Y 62 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Index/Main', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:27', '2018-06-04 13:44:27');Select last_insert_rowid() newid
+13:44:27.894 29 Y 60 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Index/Main', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:27', '2018-06-04 13:44:27');Select last_insert_rowid() newid
+13:44:27.895 38 Y 61 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Index/Main', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:27', '2018-06-04 13:44:27');Select last_insert_rowid() newid
+13:44:32.504 35 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Index/Main', Status='GET /Admin/Index/Main 740ms', OnlineTime=1, UpdateTime='2018-06-04 13:44:27' Where ID=6
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=407, MaxCost=454, UpdateTime='2018-06-04 13:44:26', Remark='::1,管理员' Where ID=1
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+3, Users=1, Cost=842, UpdateTime='2018-06-04 13:44:27', Remark='::1,管理员' Where ID=5
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=583, UpdateTime='2018-06-04 13:44:26', Remark='::1,管理员' Where ID=15
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+3, Users=1, Cost=792, MaxCost=740, UpdateTime='2018-06-04 13:44:27', Remark='::1,管理员' Where ID=6
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=407, MaxCost=454, UpdateTime='2018-06-04 13:44:26', Remark='::1,管理员' Where ID=8
+13:44:36.072 35 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=740, MaxCost=740, Remark='管理员,::1' Where ID=22
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+3, Users=1, Cost=792, MaxCost=740, UpdateTime='2018-06-04 13:44:27', Remark='::1,管理员' Where ID=3
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=583, UpdateTime='2018-06-04 13:44:26', Remark='::1,管理员' Where ID=16
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=407, MaxCost=454, UpdateTime='2018-06-04 13:44:26', Remark='::1,管理员' Where ID=2
+13:44:36.072 35 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=740, MaxCost=740, Remark='管理员,::1' Where ID=21
+13:44:36.072 35 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=740, MaxCost=740, Remark='管理员,::1' Where ID=24
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=407, MaxCost=454, UpdateTime='2018-06-04 13:44:26', Remark='::1,管理员' Where ID=4
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=583, UpdateTime='2018-06-04 13:44:26', Remark='::1,管理员' Where ID=13
+13:44:36.072 35 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=583, UpdateTime='2018-06-04 13:44:26', Remark='::1,管理员' Where ID=14
+13:44:36.073 35 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=740, MaxCost=740, Remark='管理员,::1' Where ID=23
+13:44:36.073 35 Y EQ Update VisitStat Set Times=Times+3, Users=1, Cost=792, MaxCost=740, UpdateTime='2018-06-04 13:44:27', Remark='::1,管理员' Where ID=7
+13:44:45.893 32 Y - Select Count(*) From UserOnline
+13:44:45.893 35 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:24:45' Order By ID Desc
+13:44:45.895 35 Y T Delete From UserOnline Where ID=3
+13:44:45.895 35 Y T Delete From UserOnline Where ID=2
+13:44:45.895 35 Y T Delete From UserOnline Where ID=1
+13:44:54.848 32 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:44:54.849 38 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:44:54.885 32 Y 66 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Index/Main/Session' Order By ID Desc limit 1
+13:44:54.885 38 Y 67 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Index/Main/Session' Order By ID Desc limit 1
+13:44:54.885 37 Y 68 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Index/Main/Session' Order By ID Desc limit 1
+13:44:54.885 29 Y 69 Select * From VisitStat Where Level=0 And Page='/Admin/Index/Main/Session' Order By ID Desc limit 1
+13:44:54.885 32 Y 66 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Index/Main/Session', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:54', '2018-06-04 13:44:54');Select last_insert_rowid() newid
+13:44:54.885 38 Y 67 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Index/Main/Session', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:54', '2018-06-04 13:44:54');Select last_insert_rowid() newid
+13:44:54.885 29 Y 69 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Index/Main/Session', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:54', '2018-06-04 13:44:54');Select last_insert_rowid() newid
+13:44:54.885 37 Y 68 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Index/Main/Session', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:54', '2018-06-04 13:44:54');Select last_insert_rowid() newid
+13:44:57.508 32 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Index/Main/Session', Status='GET /Admin/Index/Main/Session 42ms', OnlineTime=OnlineTime+27, UpdateTime='2018-06-04 13:44:54' Where ID=6
+13:44:58.319 29 Y 73 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Index/Main/ProcessModules' Order By ID Desc limit 1
+13:44:58.319 35 Y 76 Select * From VisitStat Where Level=0 And Page='/Admin/Index/Main/ProcessModules' Order By ID Desc limit 1
+13:44:58.319 38 Y 75 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Index/Main/ProcessModules' Order By ID Desc limit 1
+13:44:58.319 38 Y 75 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Index/Main/ProcessModules', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:58', '2018-06-04 13:44:58');Select last_insert_rowid() newid
+13:44:58.319 29 Y 73 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Index/Main/ProcessModules', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:58', '2018-06-04 13:44:58');Select last_insert_rowid() newid
+13:44:58.319 35 Y 76 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Index/Main/ProcessModules', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:58', '2018-06-04 13:44:58');Select last_insert_rowid() newid
+13:44:58.319 37 Y 74 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Index/Main/ProcessModules' Order By ID Desc limit 1
+13:44:58.320 37 Y 74 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Index/Main/ProcessModules', 0, 0, 0, 0, 0, 0, '2018-06-04 13:44:58', '2018-06-04 13:44:58');Select last_insert_rowid() newid
+13:45:01.076 37 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=41, MaxCost=41, UpdateTime='2018-06-04 13:44:55', Remark='管理员,::1' Where ID=28
+13:45:01.076 37 Y EQ Update VisitStat Set Times=Times+2, Cost=671, UpdateTime='2018-06-04 13:44:58' Where ID=5
+13:45:01.076 37 Y EQ Update VisitStat Set Times=Times+2, Cost=612, UpdateTime='2018-06-04 13:44:58' Where ID=6
+13:45:01.076 37 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=41, MaxCost=41, Remark='管理员,::1' Where ID=27
+13:45:01.076 37 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=41, MaxCost=41, Remark='管理员,::1' Where ID=26
+13:45:01.076 37 Y EQ Update VisitStat Set Times=Times+2, Cost=612, UpdateTime='2018-06-04 13:44:58' Where ID=3
+13:45:01.076 37 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=41, MaxCost=41, Remark='管理员,::1' Where ID=25
+13:45:01.076 37 Y EQ Update VisitStat Set Times=Times+2, Cost=612, UpdateTime='2018-06-04 13:44:58' Where ID=7
+13:45:02.508 29 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Index/Main/ProcessModules', Status='GET /Admin/Index/Main/ProcessModules 116ms', OnlineTime=OnlineTime+4, UpdateTime='2018-06-04 13:44:58' Where ID=6
+13:45:06.077 29 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=115, MaxCost=115, Remark='管理员,::1' Where ID=29
+13:45:06.077 29 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=115, MaxCost=115, Remark='管理员,::1' Where ID=30
+13:45:06.077 29 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=115, MaxCost=115, Remark='管理员,::1' Where ID=31
+13:45:06.077 29 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=115, MaxCost=115, Remark='管理员,::1' Where ID=32
+13:45:12.764 35 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:45:12.764 29 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:45:12.801 32 W - Select Count(*) From [User]
+13:45:12.813 32 W - Select Top 20 ID,Name,Password,DisplayName,Sex,Mail,Mobile,Code,Avatar,RoleID,RoleIDs,[Online],Enable,Logins,LastLogin,LastLoginIP,RegisterTime,RegisterIP From [User] Order By ID Desc
+13:45:12.885 37 Y 81 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:45:12.885 29 Y 80 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:45:12.885 38 Y 82 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:45:12.885 35 Y 83 Select * From VisitStat Where Level=0 And Page='/Admin/User' Order By ID Desc limit 1
+13:45:12.886 29 Y 80 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/User', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:12', '2018-06-04 13:45:12');Select last_insert_rowid() newid
+13:45:12.886 37 Y 81 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/User', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:12', '2018-06-04 13:45:12');Select last_insert_rowid() newid
+13:45:12.886 38 Y 82 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/User', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:12', '2018-06-04 13:45:12');Select last_insert_rowid() newid
+13:45:12.886 35 Y 83 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/User', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:12', '2018-06-04 13:45:12');Select last_insert_rowid() newid
+13:45:15.898 32 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:25:15' Order By ID Desc
+13:45:15.898 32 Y T Delete From UserOnline Where ID=5
+13:45:15.898 32 Y T Delete From UserOnline Where ID=4
+13:45:17.510 29 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/User', Status='用户管理 GET /Admin/User 126ms', OnlineTime=OnlineTime+14, UpdateTime='2018-06-04 13:45:12' Where ID=6
+13:45:18.752 32 W - Select Count(*) From [Role]
+13:45:18.752 29 Y - Select Count(*) From [Role]
+13:45:18.765 32 W - Select Top 20 ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:45:19.068 29 Y 87 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:45:19.068 37 Y 88 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:45:19.068 35 Y 89 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:45:19.069 29 Y 87 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Role', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:19', '2018-06-04 13:45:18');Select last_insert_rowid() newid
+13:45:19.069 37 Y 88 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Role', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:19', '2018-06-04 13:45:18');Select last_insert_rowid() newid
+13:45:19.069 35 Y 89 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Role', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:19', '2018-06-04 13:45:18');Select last_insert_rowid() newid
+13:45:19.069 32 Y 90 Select * From VisitStat Where Level=0 And Page='/Admin/Role' Order By ID Desc limit 1
+13:45:19.069 32 Y 90 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Role', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:19', '2018-06-04 13:45:18');Select last_insert_rowid() newid
+13:45:21.079 38 Y EQ Update VisitStat Set Title='用户管理', Times=1, Users=1, IPs=1, Cost=125, MaxCost=125, Remark='管理员,::1' Where ID=34
+13:45:21.079 38 Y EQ Update VisitStat Set Title='角色管理', Times=Times+2, Cost=591, UpdateTime='2018-06-04 13:45:19' Where ID=5
+13:45:21.079 38 Y EQ Update VisitStat Set Title='用户管理', Times=1, Users=1, IPs=1, Cost=125, MaxCost=125, Remark='管理员,::1' Where ID=33
+13:45:21.079 38 Y EQ Update VisitStat Set Title='角色管理', Times=Times+2, Cost=535, UpdateTime='2018-06-04 13:45:19' Where ID=6
+13:45:21.079 38 Y EQ Update VisitStat Set Title='角色管理', Times=Times+2, Cost=535, UpdateTime='2018-06-04 13:45:19' Where ID=3
+13:45:21.079 38 Y EQ Update VisitStat Set Title='用户管理', Times=1, Users=1, IPs=1, Cost=125, MaxCost=125, UpdateTime='2018-06-04 13:45:13', Remark='管理员,::1' Where ID=36
+13:45:21.079 38 Y EQ Update VisitStat Set Title='用户管理', Times=1, Users=1, IPs=1, Cost=125, MaxCost=125, UpdateTime='2018-06-04 13:45:13', Remark='管理员,::1' Where ID=35
+13:45:21.079 38 Y EQ Update VisitStat Set Title='角色管理', Times=Times+2, Cost=535, UpdateTime='2018-06-04 13:45:19' Where ID=7
+13:45:22.511 29 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Role', Status='角色管理 GET /Admin/Role 341ms', OnlineTime=OnlineTime+7, UpdateTime='2018-06-04 13:45:19' Where ID=6
+13:45:22.700 29 W - Select * From [Role] Where ID=1
+13:45:22.813 32 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:45:22.834 32 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:45:22.839 35 Y 93 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Role/Edit' Order By ID Desc limit 1
+13:45:22.839 37 Y 94 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Role/Edit' Order By ID Desc limit 1
+13:45:22.839 38 Y 95 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Role/Edit' Order By ID Desc limit 1
+13:45:22.840 35 Y 93 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Role/Edit', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:22', '2018-06-04 13:45:22');Select last_insert_rowid() newid
+13:45:22.840 38 Y 95 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Role/Edit', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:22', '2018-06-04 13:45:22');Select last_insert_rowid() newid
+13:45:22.840 37 Y 94 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Role/Edit', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:22', '2018-06-04 13:45:22');Select last_insert_rowid() newid
+13:45:22.840 32 Y 96 Select * From VisitStat Where Level=0 And Page='/Admin/Role/Edit' Order By ID Desc limit 1
+13:45:22.840 32 Y 96 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Role/Edit', 0, 0, 0, 0, 0, 0, '2018-06-04 13:45:22', '2018-06-04 13:45:22');Select last_insert_rowid() newid
+13:45:26.079 37 Y EQ Update VisitStat Set Title='角色管理', Times=1, Users=1, IPs=1, Cost=341, MaxCost=341, UpdateTime='2018-06-04 13:45:19', Remark='管理员,::1' Where ID=37
+13:45:26.079 37 Y EQ Update VisitStat Set Title='角色管理', Times=1, Users=1, IPs=1, Cost=341, MaxCost=341, UpdateTime='2018-06-04 13:45:19', Remark='管理员,::1' Where ID=40
+13:45:26.079 37 Y EQ Update VisitStat Set Title='角色管理', Times=1, Users=1, IPs=1, Cost=341, MaxCost=341, UpdateTime='2018-06-04 13:45:19', Remark='管理员,::1' Where ID=39
+13:45:26.079 37 Y EQ Update VisitStat Set Title='角色管理', Times=1, Users=1, IPs=1, Cost=341, MaxCost=341, UpdateTime='2018-06-04 13:45:19', Remark='管理员,::1' Where ID=38
+13:45:27.513 32 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Role/Edit', Status='角色管理 GET /Admin/Role/Edit/1 144ms', OnlineTime=OnlineTime+3, UpdateTime='2018-06-04 13:45:22' Where ID=6
+13:45:31.080 35 Y EQ Update VisitStat Set Title='角色管理', Times=1, Users=1, IPs=1, Cost=143, MaxCost=143, Remark='管理员,::1' Where ID=44
+13:45:31.080 35 Y EQ Update VisitStat Set Times=Times+1, Cost=553, UpdateTime='2018-06-04 13:45:22' Where ID=5
+13:45:31.080 35 Y EQ Update VisitStat Set Title='角色管理', Times=1, Users=1, IPs=1, Cost=143, MaxCost=143, Remark='管理员,::1' Where ID=43
+13:45:31.080 35 Y EQ Update VisitStat Set Times=Times+1, Cost=499, UpdateTime='2018-06-04 13:45:22' Where ID=6
+13:45:31.080 35 Y EQ Update VisitStat Set Times=Times+1, Cost=499, UpdateTime='2018-06-04 13:45:22' Where ID=3
+13:45:31.080 35 Y EQ Update VisitStat Set Title='角色管理', Times=1, Users=1, IPs=1, Cost=143, MaxCost=143, Remark='管理员,::1' Where ID=42
+13:45:31.080 35 Y EQ Update VisitStat Set Title='角色管理', Times=1, Users=1, IPs=1, Cost=143, MaxCost=143, Remark='管理员,::1' Where ID=41
+13:45:31.080 35 Y EQ Update VisitStat Set Times=Times+1, Cost=499, UpdateTime='2018-06-04 13:45:22' Where ID=7
+13:45:45.899 35 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:25:45' Order By ID Desc
+13:45:45.899 32 Y - Select Count(*) From UserOnline
+13:45:46.469 35 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:45:46.469 32 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:45:46.475 29 W - Select Count(*) From [Role]
+13:45:46.487 29 W - Select Top 20 ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:45:46.498 37 Y 100 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:45:46.498 32 Y 99 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:45:46.498 38 Y 101 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:45:46.498 35 Y 102 Select * From VisitStat Where Level=0 And Page='/Admin/Role' Order By ID Desc limit 1
+13:45:47.516 32 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Role', Status='角色管理 GET /Admin/Role 31ms', OnlineTime=OnlineTime+24, UpdateTime='2018-06-04 13:45:46' Where ID=6
+13:45:56.084 37 Y EQ Update VisitStat Set Times=Times+1, Cost=512, UpdateTime='2018-06-04 13:45:46' Where ID=5
+13:45:56.084 37 Y EQ Update VisitStat Set Times=Times+1, Cost=185, UpdateTime='2018-06-04 13:45:46' Where ID=39
+13:45:56.085 37 Y EQ Update VisitStat Set Times=Times+1, Cost=459, UpdateTime='2018-06-04 13:45:46' Where ID=6
+13:45:56.085 37 Y EQ Update VisitStat Set Times=Times+1, Cost=185, UpdateTime='2018-06-04 13:45:46' Where ID=37
+13:45:56.085 37 Y EQ Update VisitStat Set Times=Times+1, Cost=459, UpdateTime='2018-06-04 13:45:46' Where ID=3
+13:45:56.086 37 Y EQ Update VisitStat Set Times=Times+1, Cost=185, UpdateTime='2018-06-04 13:45:46' Where ID=40
+13:45:56.086 37 Y EQ Update VisitStat Set Times=Times+1, Cost=185, UpdateTime='2018-06-04 13:45:46' Where ID=38
+13:45:56.087 37 Y EQ Update VisitStat Set Times=Times+1, Cost=459, UpdateTime='2018-06-04 13:45:46' Where ID=7
+13:46:02.763 38 Y 106 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/' Order By ID Desc limit 1
+13:46:02.763 29 Y 105 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/' Order By ID Desc limit 1
+13:46:02.763 35 Y 107 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/' Order By ID Desc limit 1
+13:46:02.763 38 Y 106 Select * From VisitStat Where Level=0 And Page='/' Order By ID Desc limit 1
+13:46:02.828 29 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:46:02.835 32 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:46:03.065 38 Y 115 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:46:03.065 29 Y 114 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:46:03.065 35 Y 116 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:46:03.065 38 Y 115 Select * From VisitStat Where Level=0 And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:46:07.518 35 Y EQ Update UserOnline Set Times=Times+3, Page='/Admin/Index/Main', Status='GET /Admin/Index/Main 29ms', OnlineTime=OnlineTime+17, UpdateTime='2018-06-04 13:46:03' Where ID=6
+13:46:07.715 29 Y 119 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:46:07.715 35 Y 120 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:46:07.716 29 Y 119 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Menu', 0, 0, 0, 0, 0, 0, '2018-06-04 13:46:07', '2018-06-04 13:46:07');Select last_insert_rowid() newid
+13:46:07.716 35 Y 120 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Menu', 0, 0, 0, 0, 0, 0, '2018-06-04 13:46:07', '2018-06-04 13:46:07');Select last_insert_rowid() newid
+13:46:07.716 38 Y 121 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:46:07.716 29 Y 119 Select * From VisitStat Where Level=0 And Page='/Admin/Menu' Order By ID Desc limit 1
+13:46:07.716 38 Y 121 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Menu', 0, 0, 0, 0, 0, 0, '2018-06-04 13:46:07', '2018-06-04 13:46:07');Select last_insert_rowid() newid
+13:46:07.716 29 Y 119 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Menu', 0, 0, 0, 0, 0, 0, '2018-06-04 13:46:07', '2018-06-04 13:46:07');Select last_insert_rowid() newid
+13:46:11.089 38 Y EQ Update VisitStat Set Times=Times+1, Cost=279, UpdateTime='2018-06-04 13:46:02' Where ID=1
+13:46:11.089 38 Y EQ Update VisitStat Set Title='菜单管理', Times=Times+4, Cost=412, UpdateTime='2018-06-04 13:46:07' Where ID=5
+13:46:11.089 38 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=1726, UpdateTime='2018-06-04 13:46:02', Remark='::1,管理员' Where ID=10
+13:46:11.089 38 Y EQ Update VisitStat Set Times=Times+1, Cost=384, UpdateTime='2018-06-04 13:46:03' Where ID=21
+13:46:11.089 38 Y EQ Update VisitStat Set Title='菜单管理', Times=Times+4, Cost=367, UpdateTime='2018-06-04 13:46:07' Where ID=6
+13:46:11.089 38 Y EQ Update VisitStat Set Times=Times+1, Cost=279, UpdateTime='2018-06-04 13:46:02' Where ID=8
+13:46:11.089 38 Y EQ Update VisitStat Set Times=Times+1, Cost=384, UpdateTime='2018-06-04 13:46:03' Where ID=24
+13:46:11.089 38 Y EQ Update VisitStat Set Title='菜单管理', Times=Times+4, Cost=367, UpdateTime='2018-06-04 13:46:07' Where ID=3
+13:46:11.090 38 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=1726, UpdateTime='2018-06-04 13:46:02', Remark='::1,管理员' Where ID=9
+13:46:11.090 38 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=1726, UpdateTime='2018-06-04 13:46:02', Remark='::1,管理员' Where ID=12
+13:46:11.090 38 Y EQ Update VisitStat Set Times=Times+1, Cost=384, UpdateTime='2018-06-04 13:46:03' Where ID=22
+13:46:11.090 38 Y EQ Update VisitStat Set Times=Times+1, Users=1, Cost=1726, UpdateTime='2018-06-04 13:46:02', Remark='::1,管理员' Where ID=11
+13:46:11.090 38 Y EQ Update VisitStat Set Times=Times+1, Cost=279, UpdateTime='2018-06-04 13:46:02' Where ID=2
+13:46:11.090 38 Y EQ Update VisitStat Set Times=Times+1, Cost=279, UpdateTime='2018-06-04 13:46:02' Where ID=4
+13:46:11.090 38 Y EQ Update VisitStat Set Times=Times+1, Cost=384, UpdateTime='2018-06-04 13:46:03' Where ID=23
+13:46:11.090 38 Y EQ Update VisitStat Set Title='菜单管理', Times=Times+4, Cost=367, UpdateTime='2018-06-04 13:46:07' Where ID=7
+13:46:12.519 37 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Menu', Status='菜单管理 GET /Admin/Menu 327ms', OnlineTime=OnlineTime+4, UpdateTime='2018-06-04 13:46:07' Where ID=6
+13:46:15.900 37 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:26:15' Order By ID Desc
+13:46:16.090 29 Y EQ Update VisitStat Set Title='菜单管理', Times=1, Users=1, IPs=1, Cost=328, MaxCost=328, Remark='管理员,::1' Where ID=47
+13:46:16.090 29 Y EQ Update VisitStat Set Title='菜单管理', Times=1, Users=1, IPs=1, Cost=328, MaxCost=328, Remark='管理员,::1' Where ID=45
+13:46:16.090 29 Y EQ Update VisitStat Set Title='菜单管理', Times=1, Users=1, IPs=1, Cost=328, MaxCost=328, Remark='管理员,::1' Where ID=48
+13:46:16.090 29 Y EQ Update VisitStat Set Title='菜单管理', Times=1, Users=1, IPs=1, Cost=328, MaxCost=328, Remark='管理员,::1' Where ID=46
+13:46:24.586 29 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:46:24.586 35 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:46:24.592 32 W - Select * From Menu Where ID=1
+13:46:24.617 29 Y 125 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Menu/Edit' Order By ID Desc limit 1
+13:46:24.617 37 Y 126 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Menu/Edit' Order By ID Desc limit 1
+13:46:24.617 35 Y 127 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Menu/Edit' Order By ID Desc limit 1
+13:46:24.617 37 Y 126 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Menu/Edit', 0, 0, 0, 0, 0, 0, '2018-06-04 13:46:24', '2018-06-04 13:46:24');Select last_insert_rowid() newid
+13:46:24.617 29 Y 125 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Menu/Edit', 0, 0, 0, 0, 0, 0, '2018-06-04 13:46:24', '2018-06-04 13:46:24');Select last_insert_rowid() newid
+13:46:24.617 35 Y 127 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Menu/Edit', 0, 0, 0, 0, 0, 0, '2018-06-04 13:46:24', '2018-06-04 13:46:24');Select last_insert_rowid() newid
+13:46:24.618 32 Y 128 Select * From VisitStat Where Level=0 And Page='/Admin/Menu/Edit' Order By ID Desc limit 1
+13:46:24.618 32 Y 128 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Menu/Edit', 0, 0, 0, 0, 0, 0, '2018-06-04 13:46:24', '2018-06-04 13:46:24');Select last_insert_rowid() newid
+13:46:27.521 29 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Menu/Edit', Status='菜单管理 GET /Admin/Menu/Edit/1 35ms', OnlineTime=OnlineTime+17, UpdateTime='2018-06-04 13:46:24' Where ID=6
+13:46:27.715 32 W - Select Count(*) From [User]
+13:46:27.715 29 Y - Select Count(*) From [User]
+13:46:27.725 32 W - Select Top 20 ID,Name,Password,DisplayName,Sex,Mail,Mobile,Code,Avatar,RoleID,RoleIDs,[Online],Enable,Logins,LastLogin,LastLoginIP,RegisterTime,RegisterIP From [User] Order By ID Desc
+13:46:27.745 29 Y 131 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:46:27.745 37 Y 132 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:46:27.745 38 Y 133 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:46:27.745 37 Y 132 Select * From VisitStat Where Level=0 And Page='/Admin/User' Order By ID Desc limit 1
+13:46:29.115 32 W - Select Count(*) From [Role]
+13:46:29.115 29 Y - Select Count(*) From [Role]
+13:46:29.129 32 W - Select Top 20 ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:46:31.092 29 Y EQ Update VisitStat Set Title='菜单管理', Times=1, Users=1, IPs=1, Cost=34, MaxCost=34, Remark='管理员,::1' Where ID=49
+13:46:31.092 29 Y EQ Update VisitStat Set Title='角色管理', Times=Times+3, Cost=354, UpdateTime='2018-06-04 13:46:29' Where ID=5
+13:46:31.092 29 Y EQ Update VisitStat Set Title='角色管理', Times=Times+3, Cost=313, UpdateTime='2018-06-04 13:46:29' Where ID=6
+13:46:31.092 29 Y EQ Update VisitStat Set Title='角色管理', Times=Times+3, Cost=313, UpdateTime='2018-06-04 13:46:29' Where ID=3
+13:46:31.092 29 Y EQ Update VisitStat Set Title='菜单管理', Times=1, Users=1, IPs=1, Cost=34, MaxCost=34, Remark='管理员,::1' Where ID=52
+13:46:31.093 29 Y EQ Update VisitStat Set Title='菜单管理', Times=1, Users=1, IPs=1, Cost=34, MaxCost=34, Remark='管理员,::1' Where ID=50
+13:46:31.093 29 Y EQ Update VisitStat Set Title='菜单管理', Times=1, Users=1, IPs=1, Cost=34, MaxCost=34, Remark='管理员,::1' Where ID=51
+13:46:31.093 29 Y EQ Update VisitStat Set Title='角色管理', Times=Times+3, Cost=313, UpdateTime='2018-06-04 13:46:29' Where ID=7
+13:46:32.522 38 Y EQ Update UserOnline Set Times=Times+2, Page='/Admin/Role', Status='角色管理 GET /Admin/Role 29ms', OnlineTime=OnlineTime+5, UpdateTime='2018-06-04 13:46:29' Where ID=6
+13:46:34.058 32 W - Select * From [Role] Where ID=2
+13:46:34.073 38 Y 142 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Role/Edit' Order By ID Desc limit 1
+13:46:34.073 29 Y 141 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Role/Edit' Order By ID Desc limit 1
+13:46:34.073 37 Y 143 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Role/Edit' Order By ID Desc limit 1
+13:46:34.074 38 Y 142 Select * From VisitStat Where Level=0 And Page='/Admin/Role/Edit' Order By ID Desc limit 1
+13:46:36.094 37 Y EQ Update VisitStat Set Times=Times+1, Cost=133, UpdateTime='2018-06-04 13:46:29' Where ID=39
+13:46:36.094 37 Y EQ Update VisitStat Set Times=Times+1, Cost=133, UpdateTime='2018-06-04 13:46:29' Where ID=37
+13:46:36.094 37 Y EQ Update VisitStat Set Times=Times+1, Cost=133, UpdateTime='2018-06-04 13:46:29' Where ID=40
+13:46:36.094 37 Y EQ Update VisitStat Set Times=Times+1, Cost=79, UpdateTime='2018-06-04 13:46:27' Where ID=36
+13:46:36.094 37 Y EQ Update VisitStat Set Times=Times+1, Cost=79, UpdateTime='2018-06-04 13:46:27' Where ID=35
+13:46:36.094 37 Y EQ Update VisitStat Set Times=Times+1, Cost=133, UpdateTime='2018-06-04 13:46:29' Where ID=38
+13:46:36.094 37 Y EQ Update VisitStat Set Times=Times+1, Cost=79, UpdateTime='2018-06-04 13:46:27' Where ID=34
+13:46:36.094 37 Y EQ Update VisitStat Set Times=Times+1, Cost=79, UpdateTime='2018-06-04 13:46:27' Where ID=33
+13:46:37.523 37 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Role/Edit', Status='角色管理 GET /Admin/Role/Edit/2 19ms', OnlineTime=OnlineTime+5, UpdateTime='2018-06-04 13:46:34' Where ID=6
+13:46:39.448 29 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:46:39.448 32 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:46:39.463 29 Y 147 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:46:39.463 35 Y 146 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:46:39.463 32 Y 148 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:46:39.463 38 Y 149 Select * From VisitStat Where Level=0 And Page='/Admin/Menu' Order By ID Desc limit 1
+13:46:41.095 32 Y EQ Update VisitStat Set Title='菜单管理', Times=Times+2, Cost=323, UpdateTime='2018-06-04 13:46:39' Where ID=5
+13:46:41.095 32 Y EQ Update VisitStat Set Times=Times+1, Cost=80, UpdateTime='2018-06-04 13:46:34' Where ID=43
+13:46:41.095 32 Y EQ Update VisitStat Set Title='菜单管理', Times=Times+2, Cost=284, UpdateTime='2018-06-04 13:46:39' Where ID=6
+13:46:41.095 32 Y EQ Update VisitStat Set Times=Times+1, Cost=80, UpdateTime='2018-06-04 13:46:34' Where ID=44
+13:46:41.095 32 Y EQ Update VisitStat Set Title='菜单管理', Times=Times+2, Cost=284, UpdateTime='2018-06-04 13:46:39' Where ID=3
+13:46:41.095 32 Y EQ Update VisitStat Set Times=Times+1, Cost=80, UpdateTime='2018-06-04 13:46:34' Where ID=42
+13:46:41.095 32 Y EQ Update VisitStat Set Times=Times+1, Cost=80, UpdateTime='2018-06-04 13:46:34' Where ID=41
+13:46:41.095 32 Y EQ Update VisitStat Set Title='菜单管理', Times=Times+2, Cost=284, UpdateTime='2018-06-04 13:46:39' Where ID=7
+13:46:42.527 35 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/Menu', Status='菜单管理 GET /Admin/Menu 21ms', OnlineTime=OnlineTime+5, UpdateTime='2018-06-04 13:46:39' Where ID=6
+13:46:45.901 37 Y - Select Count(*) From UserOnline
+13:46:45.901 32 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:26:45' Order By ID Desc
+13:46:46.095 35 Y EQ Update VisitStat Set Times=Times+1, Cost=174, UpdateTime='2018-06-04 13:46:39' Where ID=47
+13:46:46.095 35 Y EQ Update VisitStat Set Times=Times+1, Cost=174, UpdateTime='2018-06-04 13:46:39' Where ID=48
+13:46:46.095 35 Y EQ Update VisitStat Set Times=Times+1, Cost=174, UpdateTime='2018-06-04 13:46:39' Where ID=46
+13:46:46.095 35 Y EQ Update VisitStat Set Times=Times+1, Cost=174, UpdateTime='2018-06-04 13:46:39' Where ID=45
+13:47:15.901 32 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:27:15' Order By ID Desc
+13:47:45.902 38 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:27:45' Order By ID Desc
+13:48:15.903 29 Y - Select Count(*) From UserOnline
+13:48:15.903 38 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:28:15' Order By ID Desc
+
+#Software: iisexpress
+#ProcessID: 16536
+#AppDomain: /LM/W3SVC/4/ROOT-1-131725652045333388
+#BaseDirectory: D:\GitHub\Demo\MyCube\
+#CurrentDirectory: C:\Program Files (x86)\IIS Express
+#CommandLine: "C:\Program Files (x86)\IIS Express\iisexpress.exe"  /config:"D:\GitHub\Demo\.vs\config\applicationhost.config" /site:"MyCube" /apppool:"Clr4IntegratedAppPool"
+#ApplicationType: Web
+#CLR: 4.0.30319.42000, 
+#OS: Windows 10.0.17134.0 x64, Microsoft Windows NT 10.0.17134.0, xiaoke/DESKTOP-6F6J1B7
+#Memory: 3,971M/8,084M
+#CPU: 4
+#Date: 2018-06-04
+#字段: 时间 线程ID 线程池Y网页W普通N 线程名 消息内容
+#Fields: Time ThreadID IsPoolThread ThreadName Message
+13:53:24.928  1 N - NewLife.Core v7.0.2018.0506 Build 2018-05-28 22:04:40 .NET Framework 4.5
+13:53:24.929  1 N - 组件核心库 ©2002-2018 新生命开发团队 https://github.com/NewLifeX/X
+13:53:24.929  1 N - 系统启动
+13:53:24.936  1 N - ================================ Start 初始化魔方 ================================
+13:53:24.936  1 N - MyCube v1.0.0.0 Build 2000-01-01 .NET Framework 4.6.1
+13:53:24.936  1 N - MyCube Copyright ©  2018
+13:53:24.980  1 N - 注册区域视图程序集：MyCube, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+13:53:24.996  1 N - 注册复合预编译引擎，共有视图程序集1个
+13:53:25.002  1 N - 注册实体模型绑定器：MyCube.EntityModelBinderProvider
+13:53:25.002  1 N - 注册过滤器：MyCube.MvcHandleErrorAttribute
+13:53:25.002  1 N - 注册过滤器：MyCube.EntityAuthorizeAttribute
+13:53:25.010  1 N - ================================ End   初始化魔方 ================================
+13:53:25.014  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[MyCube.Admin.Controllers]
+13:53:25.019  1 N - 初始化权限管理体系
+13:53:25.020  8 Y 3 Admin.ScanController
+13:53:25.269  1 N - XCode v9.7.2018.0421 Build 2018-05-28 22:04:42 .NET Framework 4.5
+13:53:25.269  1 N - 大数据中间件 ©2002-2018 新生命开发团队 http://www.NewLifeX.com
+13:53:25.270  1 N - 系统启动完成
+13:53:25.309  8 Y 3 Membership 设定 Server=.;user id=sa;password=123123;Database=MyCube
+13:53:25.313  8 Y 3 Membership 格式 Server=.;user id=sa;password=123123;Database=MyCube;Pooling=false;Application Name=XCode_MyCube_Membership
+13:53:25.313  8 Y 3 检查实体XCode.Membership.Menu的数据表架构，模式：CheckTableWhenFirstUse
+13:53:25.314  8 Y 3 开始同步检查表[Menu/SqlServer]的数据表架构……
+13:53:25.320  8 Y 3 切换到系统库[master]
+13:53:25.325  8 Y 3 System.Data.SqlClient.Sql驱动C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll 版本v4.0.0.0
+13:53:25.362  8 Y 3 [Membership]GetSchema("MetaDataCollections")
+13:53:25.375  8 Y 3 [Membership]GetSchema("Databases", "MyCube")
+13:53:25.377  8 Y 3 退出系统库[master]，回到[MyCube]
+13:53:25.380  8 Y 3 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+13:53:25.389  8 Y 3 [Membership]GetSchema("Tables")
+13:53:25.393  8 Y 3 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+13:53:25.398  8 Y 3 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+13:53:25.400  8 Y 3 [Membership]GetSchema("Columns")
+13:53:25.403  8 Y 3 [Membership]GetSchema("Indexes")
+13:53:25.404  8 Y 3 [Membership]GetSchema("IndexColumns")
+13:53:25.424  8 Y 3 检查表[Menu/SqlServer]的数据表架构耗时111ms
+13:53:25.425  8 Y 3 开始检查连接[Membership/SqlServer]的数据库架构……
+13:53:25.451  8 Y 3 [Membership]的所有实体类（3个）：UserX,Menu,Role
+13:53:25.451  8 Y 3 [Membership]需要检查架构的实体类（0个）：
+13:53:25.451  8 Y 3 检查连接[Membership/SqlServer]的数据库架构耗时26ms
+13:53:25.453  8 Y 3 初始化[Admin]的菜单体系
+13:53:25.477  8 Y 3 Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:53:25.502 11 Y T 自动为[Log]设置SQLite连接字符串：Data Source=....\MyCubeFile\Data\Log.db;Migration=On
+13:53:25.503 11 Y T Log 设定 Data Source=....\MyCubeFile\Data\Log.db;Migration=On
+13:53:25.507 11 Y T Data Source=D:\GitHub\Demo\MyCubeFile\Data\Log.db;Pooling=true;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+13:53:25.507 11 Y T Log 格式 Data Source=D:\GitHub\Demo\MyCubeFile\Data\Log.db;Pooling=true;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+13:53:25.507 11 Y T 集中初始化表架构时没赶上，现在补上！
+13:53:25.507 11 Y T 开始同步检查表[UserOnline/SQLite]的数据表架构……
+13:53:25.532 11 Y T TypeX.GetType("System.Data.SQLite.SQLiteFactory") => Plugins\System.Data.SQLite.dll
+13:53:25.532 11 Y T System.Data.SQLite.SQLite驱动D:\GitHub\Demo\MyCube\Plugins\System.Data.SQLite.dll 版本v1.0.105.1
+13:53:25.670 11 Y T [Log]GetSchema("MetaDataCollections")
+13:53:25.675  9 Y 19 新增了菜单，需要检查权限
+13:53:25.680  9 Y 19 检查实体XCode.Membership.Role的数据表架构，模式：CheckTableWhenFirstUse
+13:53:25.680  9 Y 19 开始同步检查表[Role/SqlServer]的数据表架构……
+13:53:25.680  9 Y 19 select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+13:53:25.692  9 Y 19 [Membership]GetSchema("Tables")
+13:53:25.703  9 Y 19 SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+13:53:25.712  9 Y 19 select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+13:53:25.724  9 Y 19 [Membership]GetSchema("Columns")
+13:53:25.749  9 Y 19 [Membership]GetSchema("Indexes")
+13:53:25.771  9 Y 19 [Membership]GetSchema("IndexColumns")
+13:53:25.796  9 Y 19 检查表[Role/SqlServer]的数据表架构耗时117ms
+13:53:25.808  9 Y 19 Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+13:53:25.810  9 Y 19 Select Count(*) From [Role]
+13:53:25.823  9 Y 19 Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:53:25.833  9 Y 19 Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:53:25.843  9 Y 19 Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:53:25.867  9 Y 19 Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:53:25.878  9 Y 19 Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:53:25.930 11 Y T [Log]GetSchema("Tables")
+13:53:25.943 11 Y T [Log]GetSchema("Columns")
+13:53:25.987 11 Y T [Log]GetSchema("Indexes")
+13:53:25.988 11 Y T [Log]GetSchema("IndexColumns")
+13:53:25.994 11 Y T 检查表[UserOnline/SQLite]的数据表架构耗时487ms
+13:53:25.994 11 Y T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 1
+13:53:25.994 10 Y 20 开始检查连接[Log/SQLite]的数据库架构……
+13:53:25.996 11 Y T Select Count(*) From UserOnline
+13:53:26.017 10 Y 20 [Log]的所有实体类（3个）：Log,UserOnline,VisitStat
+13:53:26.017 10 Y 20 [Log]需要检查架构的实体类（2个）：UserOnline,VisitStat
+13:53:26.017 10 Y 20 Log待检查表架构的实体个数：1
+13:53:26.018 10 Y 20 [Log]GetSchema("Tables")
+13:53:26.018 10 Y 20 [Log]GetSchema("Columns")
+13:53:26.056 10 Y 20 [Log]GetSchema("Indexes")
+13:53:26.060 10 Y 20 [Log]GetSchema("IndexColumns")
+13:53:26.061 10 Y 20 检查连接[Log/SQLite]的数据库架构耗时67ms
+13:53:26.062 10 Y 20 Select * From UserOnline Where SessionID='fre0zx3adecbbrkut5vg35jl' Order By ID Desc limit 1
+13:53:26.062  8 Y 21 Select * From UserOnline Where SessionID='qgs2z4fxdfids1vgxabmtaan' Order By ID Desc limit 1
+13:53:26.070 11 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:33:26' Order By ID Desc
+13:53:26.071  8 Y 21 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'qgs2z4fxdfids1vgxabmtaan', 1, '/Admin', 'GET /Admin 18ms', 0, '::1', '2018-06-04 13:53:26', '2018-06-04 13:53:26');Select last_insert_rowid() newid
+13:53:26.077  9 Y 22 Select * From UserOnline Where SessionID='rok5315tg0ehda3uhjgqzear' Order By ID Desc limit 1
+13:53:26.077  9 Y 22 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'rok5315tg0ehda3uhjgqzear', 1, '/Admin/User/Login', '用户管理 GET /Admin/User/Login?r=%2FAdmin 104ms', 0, '::1', '2018-06-04 13:53:26', '2018-06-04 13:53:26');Select last_insert_rowid() newid
+13:53:26.084  8 Y 23 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:53:26.089 10 Y 20 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'fre0zx3adecbbrkut5vg35jl', 1, '/', 'GET / 211ms', 0, '::1', '2018-06-04 13:53:26', '2018-06-04 13:53:26');Select last_insert_rowid() newid
+13:53:26.091 10 Y 24 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/' Order By ID Desc limit 1
+13:53:26.092 11 Y 25 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:53:26.092 11 Y 25 Select * From VisitStat Where Level=0 And Page='/Admin' Order By ID Desc limit 1
+13:53:26.092  8 Y 23 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin' Order By ID Desc limit 1
+13:53:26.092 10 Y 24 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/' Order By ID Desc limit 1
+13:53:26.092 11 Y 25 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:53:26.092  8 Y 23 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:53:26.093  8 Y 23 Select * From VisitStat Where Level=0 And Page='全部' Order By ID Desc limit 1
+13:53:26.093 11 Y 25 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+13:53:26.093 11 Y 27 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/' Order By ID Desc limit 1
+13:53:26.093 11 Y 27 Select * From VisitStat Where Level=0 And Page='/' Order By ID Desc limit 1
+13:53:26.094  9 Y 28 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:53:26.094  9 Y 28 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:53:26.095  9 Y 28 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:53:26.095  9 Y 28 Select * From VisitStat Where Level=0 And Page='/Admin/User/Login' Order By ID Desc limit 1
+13:53:31.089 11 Y EQ Update VisitStat Set Times=Times+1, Cost=454, UpdateTime='2018-06-04 13:53:26' Where ID=14
+13:53:31.089 11 Y EQ Update VisitStat Set Times=Times+1, Cost=454, UpdateTime='2018-06-04 13:53:26' Where ID=16
+13:53:31.089 11 Y EQ Update VisitStat Set Times=Times+1, Cost=283, UpdateTime='2018-06-04 13:53:26' Where ID=2
+13:53:31.089 11 Y EQ Update VisitStat Set Times=Times+1, Cost=454, UpdateTime='2018-06-04 13:53:26' Where ID=13
+13:53:31.089 11 Y EQ Update VisitStat Set Times=Times+1, Cost=1419, UpdateTime='2018-06-04 13:53:26' Where ID=12
+13:53:31.090 11 Y EQ Update VisitStat Set Times=Times+1, Cost=1419, UpdateTime='2018-06-04 13:53:26' Where ID=9
+13:53:31.090 11 Y EQ Update VisitStat Set Title='用户管理', Times=Times+3, Cost=301, MaxCost=806, UpdateTime='2018-06-04 13:53:26' Where ID=6
+13:53:31.090 11 Y EQ Update VisitStat Set Title='用户管理', Times=Times+3, Cost=334, UpdateTime='2018-06-04 13:53:26' Where ID=5
+13:53:31.090 11 Y EQ Update VisitStat Set Times=Times+1, Cost=283, UpdateTime='2018-06-04 13:53:26' Where ID=1
+13:53:31.090 11 Y EQ Update VisitStat Set Times=Times+1, Cost=283, UpdateTime='2018-06-04 13:53:26' Where ID=4
+13:53:31.090 11 Y EQ Update VisitStat Set Title='用户管理', Times=Times+3, Cost=301, MaxCost=806, UpdateTime='2018-06-04 13:53:26' Where ID=7
+13:53:31.090 11 Y EQ Update VisitStat Set Times=Times+1, Cost=1419, UpdateTime='2018-06-04 13:53:26' Where ID=11
+13:53:31.090 11 Y EQ Update VisitStat Set Times=Times+1, Cost=454, UpdateTime='2018-06-04 13:53:26' Where ID=15
+13:53:31.090 11 Y EQ Update VisitStat Set Title='用户管理', Times=Times+3, Cost=301, MaxCost=806, UpdateTime='2018-06-04 13:53:26' Where ID=3
+13:53:31.090 11 Y EQ Update VisitStat Set Times=Times+1, Cost=1419, UpdateTime='2018-06-04 13:53:26' Where ID=10
+13:53:31.090 11 Y EQ Update VisitStat Set Times=Times+1, Cost=283, UpdateTime='2018-06-04 13:53:26' Where ID=8
+13:53:33.281  8 W - 检查实体XCode.Membership.UserX的数据表架构，模式：CheckTableWhenFirstUse
+13:53:33.281  8 W - 开始同步检查表[UserX/SqlServer]的数据表架构……
+13:53:33.281  8 W - select b.name n, a.value v from sys.extended_properties a inner join sysobjects b on a.major_id=b.id and a.minor_id=0 and a.name = 'MS_Description'
+13:53:33.282  8 W - SELECT 表名=d.name,字段序号=a.colorder,字段名=a.name,标识=case when COLUMNPROPERTY( a.id,a.name,'IsIdentity')=1 then Convert(Bit,1) else Convert(Bit,0) end,主键=case when exists(SELECT 1 FROM sysobjects where xtype='PK' and name in (SELECT name FROM sysindexes WHERE id = a.id AND indid in(SELECT indid FROM sysindexkeys WHERE id = a.id AND colid=a.colid))) then Convert(Bit,1) else Convert(Bit,0) end,类型=b.name,占用字节数=a.length,长度=COLUMNPROPERTY(a.id,a.name,'PRECISION'),小数位数=isnull(COLUMNPROPERTY(a.id,a.name,'Scale'),0),允许空=case when a.isnullable=1 then Convert(Bit,1)else Convert(Bit,0) end,默认值=isnull(e.text,''),字段说明=isnull(g.[value],'')FROM syscolumns a left join systypes b on a.xtype=b.xusertype inner join sysobjects d on a.id=d.id  and d.xtype='U' left join syscomments e on a.cdefault=e.id left join sys.extended_properties g on a.id=g.major_id and a.colid=g.minor_id and g.name = 'MS_Description'  order by a.id,a.colorder
+13:53:33.285  8 W - select ind.* from sys.indexes ind inner join sys.objects obj on ind.object_id = obj.object_id where obj.type='u'
+13:53:33.286  8 W - 检查表[UserX/SqlServer]的数据表架构耗时5ms
+13:53:33.286  8 W - UserX.Count 快速计算表记录数（非精确）[User/Membership] 参考值 1
+13:53:33.286  8 W - Select Count(*) From [User]
+13:53:33.286  8 W - Select * From [User] Where Name=N'admin'
+13:53:33.311  8 W - Update [User] Set RoleIDs=N'', Logins=Logins+1, LastLogin={ts'2018-06-04 13:53:33'} Where ID=1
+13:53:33.317 11 Y 33 Select * From UserOnline Where SessionID='xtlysha32m3l3yxfazgd0jml' Order By ID Desc limit 1
+13:53:33.317 11 Y 33 Insert Into UserOnline(UserID, Name, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(1, '管理员', 'xtlysha32m3l3yxfazgd0jml', 1, '/Admin/User/Login', '用户管理 POST /Admin/User/Login?r=%2FAdmin 63ms', 0, '::1', '2018-06-04 13:53:33', '2018-06-04 13:53:33');Select last_insert_rowid() newid
+13:53:33.325 10 W - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:53:34.133  8 Y 37 Select * From UserOnline Where SessionID='xtlysha32m3l3yxfazgd0jml' Order By ID Desc limit 1
+13:53:34.319  8 Y EQ 检查实体XCode.Membership.Log的数据表架构，模式：CheckTableWhenFirstUse
+13:53:34.319  8 Y EQ 开始同步检查表[Log/SQLite]的数据表架构……
+13:53:34.319  8 Y EQ [Log]GetSchema("Tables")
+13:53:34.320  8 Y EQ [Log]GetSchema("Columns")
+13:53:34.354  8 Y EQ [Log]GetSchema("Indexes")
+13:53:34.355  8 Y EQ [Log]GetSchema("IndexColumns")
+13:53:34.363  8 Y EQ 检查表[Log/SQLite]的数据表架构耗时43ms
+13:53:34.363  8 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateIP, CreateTime, Remark) Values('用户', '登录', 0, '', 0, '::1', '2018-06-04 13:53:32', 'admin');Select last_insert_rowid() newid
+13:53:34.363  8 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateIP, CreateTime, Remark) Values('用户', '修改', 1, '管理员', 1, '::1', '2018-06-04 13:53:32', 'ID=1,Logins=5,LastLogin=2018-06-04 13:53:33');Select last_insert_rowid() newid
+13:53:34.413  8 Y 42 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:53:34.413 11 Y 43 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:53:34.413 10 Y 44 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:53:34.414  8 Y 42 Select * From VisitStat Where Level=0 And Page='/Admin/Index/Main' Order By ID Desc limit 1
+13:53:34.498 10 Y EQ Update UserOnline Set Times=Times+2, Page='/Admin/Index/Main', Status='GET /Admin/Index/Main 148ms', OnlineTime=1, UpdateTime='2018-06-04 13:53:34' Where ID=10
+13:53:35.469  5 N T 对象缓存<UserOnline>(1)     总次数          6，命中          1（16.67%）	[XCode.Membership.UserOnline]
+13:53:35.473  5 N T 实体缓存<Menu>(16)          总次数         55，命中         53（96.36%）	[XCode.Membership.Menu]
+13:53:35.474  5 N T 实体缓存<Role>(4)           总次数          7，命中          6（85.71%）	[XCode.Membership.Role]
+13:53:35.475 11 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:53:37.589 10 W - Select Count(*) From [User]
+13:53:37.590 10 W - Select Top 20 ID,Name,Password,DisplayName,Sex,Mail,Mobile,Code,Avatar,RoleID,RoleIDs,[Online],Enable,Logins,LastLogin,LastLoginIP,RegisterTime,RegisterIP From [User] Order By ID Desc
+13:53:37.654  8 Y 48 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:53:37.654 12 Y 47 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:53:37.655 11 Y 49 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User' Order By ID Desc limit 1
+13:53:37.655 12 Y 47 Select * From VisitStat Where Level=0 And Page='/Admin/User' Order By ID Desc limit 1
+13:53:39.335 12 W - Select Count(*) From [Role]
+13:53:39.335 12 W - Select Top 20 ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:53:39.383 10 Y 53 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:53:39.383  8 Y 52 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:53:39.383 11 Y 54 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Role' Order By ID Desc limit 1
+13:53:39.384 10 Y 53 Select * From VisitStat Where Level=0 And Page='/Admin/Role' Order By ID Desc limit 1
+13:53:39.499 12 Y EQ Update UserOnline Set Times=Times+2, Page='/Admin/Role', Status='角色管理 GET /Admin/Role 64ms', OnlineTime=OnlineTime+5, UpdateTime='2018-06-04 13:53:39' Where ID=10
+13:53:40.015  9 Y T System.ArgumentException: filename
+参数名: 在程序集MyCube中无法找到名为favicon.ico的资源！
+   在 NewLife.IO.FileSource.ReleaseFile(Assembly asm, String fileName, String destFile, Boolean overWrite) 位置 E:\X\Src\NewLife.Core\IO\FileSource.cs:行号 24
+   在 MyCube.AreaRegistrationBase.<>c__DisplayClass14_0.<CheckContent>b__0(Object s) 位置 D:\GitHub\Demo\MyCube\Common\AreaRegistrationBase.cs:行号 146
+   在 NewLife.Threading.TimerScheduler.Execute(Object state) 位置 E:\X\Src\NewLife.Core\Threading\TimerScheduler.cs:行号 230
+13:53:41.093 12 Y EQ Update VisitStat Set Title='角色管理', Times=Times+5, Cost=290, MaxCost=814, UpdateTime='2018-06-04 13:53:39' Where ID=6
+13:53:41.093 12 Y EQ Update VisitStat Set Times=Times+1, Cost=305, UpdateTime='2018-06-04 13:53:34' Where ID=23
+13:53:41.094 12 Y EQ Update VisitStat Set Times=Times+1, Cost=356, UpdateTime='2018-06-04 13:53:33' Where ID=14
+13:53:41.094 12 Y EQ Update VisitStat Set Title='角色管理', Times=Times+5, Cost=290, MaxCost=814, UpdateTime='2018-06-04 13:53:39' Where ID=3
+13:53:41.094 12 Y EQ Update VisitStat Set Times=Times+1, Cost=389, MaxCost=814, UpdateTime='2018-06-04 13:53:34' Where ID=2
+13:53:41.094 12 Y EQ Update VisitStat Set Times=Times+1, Cost=389, MaxCost=814, UpdateTime='2018-06-04 13:53:34' Where ID=4
+13:53:41.095 12 Y EQ Update VisitStat Set Times=Times+1, Cost=305, UpdateTime='2018-06-04 13:53:34' Where ID=22
+13:53:41.095 12 Y EQ Update VisitStat Set Title='角色管理', Times=Times+5, Cost=319, UpdateTime='2018-06-04 13:53:39' Where ID=5
+13:53:41.095 12 Y EQ Update VisitStat Set Times=Times+1, Cost=356, UpdateTime='2018-06-04 13:53:33' Where ID=13
+13:53:41.095 12 Y EQ Update VisitStat Set Title='角色管理', Times=Times+5, Cost=290, MaxCost=814, UpdateTime='2018-06-04 13:53:39' Where ID=7
+13:53:41.096 12 Y EQ Update VisitStat Set Times=Times+1, Cost=356, UpdateTime='2018-06-04 13:53:33' Where ID=16
+13:53:41.096 12 Y EQ Update VisitStat Set Times=Times+1, Cost=389, MaxCost=814, UpdateTime='2018-06-04 13:53:34' Where ID=8
+13:53:41.096 12 Y EQ Update VisitStat Set Times=Times+1, Cost=356, UpdateTime='2018-06-04 13:53:33' Where ID=15
+13:53:41.096 12 Y EQ Update VisitStat Set Times=Times+1, Cost=389, MaxCost=814, UpdateTime='2018-06-04 13:53:34' Where ID=1
+13:53:41.096 12 Y EQ Update VisitStat Set Times=Times+1, Cost=305, UpdateTime='2018-06-04 13:53:34' Where ID=21
+13:53:41.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=305, UpdateTime='2018-06-04 13:53:34' Where ID=24
+13:53:41.376 12 Y 58 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:53:41.376  9 Y 59 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:53:41.376 10 Y 60 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Menu' Order By ID Desc limit 1
+13:53:41.376 10 Y 60 Select * From VisitStat Where Level=0 And Page='/Admin/Menu' Order By ID Desc limit 1
+13:53:42.348  8 W - Log.Count 快速计算表记录数（非精确）[Log/Log] 参考值 105
+13:53:42.348  8 W - Select Count(*) From Log
+13:53:42.348  8 W - Select Count(*) From Log
+13:53:42.348  8 W - Select * From Log Order By ID Desc limit 20
+13:53:42.612  9 Y 63 Select Count(ID) as ID,Category From Log Group By Category Order By ID Desc limit 20
+13:53:42.620 11 Y 64 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Log' Order By ID Desc limit 1
+13:53:42.620 12 Y 65 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Log' Order By ID Desc limit 1
+13:53:42.620  9 Y 66 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Log' Order By ID Desc limit 1
+13:53:42.621 10 Y 67 Select * From VisitStat Where Level=0 And Page='/Admin/Log' Order By ID Desc limit 1
+13:53:42.622  9 Y 66 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Log', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:42', '2018-06-04 13:53:42');Select last_insert_rowid() newid
+13:53:42.622 11 Y 64 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Log', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:42', '2018-06-04 13:53:42');Select last_insert_rowid() newid
+13:53:42.622 12 Y 65 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Log', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:42', '2018-06-04 13:53:42');Select last_insert_rowid() newid
+13:53:42.622 10 Y 67 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Log', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:42', '2018-06-04 13:53:42');Select last_insert_rowid() newid
+13:53:44.499 12 Y EQ Update UserOnline Set Times=Times+2, Page='/Admin/Log', Status='日志管理 GET /Admin/Log 284ms', OnlineTime=OnlineTime+3, UpdateTime='2018-06-04 13:53:42' Where ID=10
+13:53:46.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=107, MaxCost=165, UpdateTime='2018-06-04 13:53:37' Where ID=35
+13:53:46.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=115, UpdateTime='2018-06-04 13:53:39' Where ID=37
+13:53:46.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=107, MaxCost=165, UpdateTime='2018-06-04 13:53:37' Where ID=36
+13:53:46.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=115, UpdateTime='2018-06-04 13:53:39' Where ID=38
+13:53:46.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=115, UpdateTime='2018-06-04 13:53:39' Where ID=39
+13:53:46.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=115, UpdateTime='2018-06-04 13:53:39' Where ID=40
+13:53:46.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=107, MaxCost=165, UpdateTime='2018-06-04 13:53:37' Where ID=34
+13:53:46.097 12 Y EQ Update VisitStat Set Times=Times+1, Cost=107, MaxCost=165, UpdateTime='2018-06-04 13:53:37' Where ID=33
+13:53:49.371 11 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:53:49.371 12 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:53:49.703 11 Y 72 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Cube' Order By ID Desc limit 1
+13:53:49.703  8 Y 73 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Cube' Order By ID Desc limit 1
+13:53:49.703 12 Y 74 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Cube' Order By ID Desc limit 1
+13:53:49.703 11 Y 72 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Cube', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:49', '2018-06-04 13:53:49');Select last_insert_rowid() newid
+13:53:49.703  8 Y 73 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Cube', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:49', '2018-06-04 13:53:49');Select last_insert_rowid() newid
+13:53:49.703 12 Y 74 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Cube', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:49', '2018-06-04 13:53:49');Select last_insert_rowid() newid
+13:53:49.704  9 Y 75 Select * From VisitStat Where Level=0 And Page='/Admin/Cube' Order By ID Desc limit 1
+13:53:49.704  9 Y 75 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Cube', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:49', '2018-06-04 13:53:49');Select last_insert_rowid() newid
+13:53:51.098 16 Y EQ Update VisitStat Set Title='平台设置', Times=Times+3, Cost=282, UpdateTime='2018-06-04 13:53:49' Where ID=6
+13:53:51.098 16 Y EQ Update VisitStat Set Title='平台设置', Times=Times+3, Cost=282, UpdateTime='2018-06-04 13:53:49' Where ID=3
+13:53:51.098 16 Y EQ Update VisitStat Set Times=Times+1, Cost=129, UpdateTime='2018-06-04 13:53:41' Where ID=45
+13:53:51.098 16 Y EQ Update VisitStat Set Title='日志管理', Times=1, Users=1, IPs=1, Cost=284, MaxCost=284, Remark='管理员,::1' Where ID=54
+13:53:51.098 16 Y EQ Update VisitStat Set Title='平台设置', Times=Times+3, Cost=309, UpdateTime='2018-06-04 13:53:49' Where ID=5
+13:53:51.098 16 Y EQ Update VisitStat Set Title='平台设置', Times=Times+3, Cost=282, UpdateTime='2018-06-04 13:53:49' Where ID=7
+13:53:51.098 16 Y EQ Update VisitStat Set Times=Times+1, Cost=129, UpdateTime='2018-06-04 13:53:41' Where ID=47
+13:53:51.098 16 Y EQ Update VisitStat Set Title='日志管理', Times=1, Users=1, IPs=1, Cost=284, MaxCost=284, Remark='管理员,::1' Where ID=53
+13:53:51.098 16 Y EQ Update VisitStat Set Times=Times+1, Cost=129, UpdateTime='2018-06-04 13:53:41' Where ID=48
+13:53:51.098 16 Y EQ Update VisitStat Set Title='日志管理', Times=1, Users=1, IPs=1, Cost=284, MaxCost=284, Remark='管理员,::1' Where ID=56
+13:53:51.098 16 Y EQ Update VisitStat Set Times=Times+1, Cost=129, UpdateTime='2018-06-04 13:53:41' Where ID=46
+13:53:51.098 16 Y EQ Update VisitStat Set Title='日志管理', Times=1, Users=1, IPs=1, Cost=284, MaxCost=284, Remark='管理员,::1' Where ID=55
+13:53:52.856 11 Y 78 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/File' Order By ID Desc limit 1
+13:53:52.856  8 Y 79 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/File' Order By ID Desc limit 1
+13:53:52.856  9 Y 80 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/File' Order By ID Desc limit 1
+13:53:52.856  9 Y 80 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/File', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:52', '2018-06-04 13:53:52');Select last_insert_rowid() newid
+13:53:52.856 11 Y 78 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/File', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:52', '2018-06-04 13:53:52');Select last_insert_rowid() newid
+13:53:52.856  8 Y 79 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/File', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:52', '2018-06-04 13:53:52');Select last_insert_rowid() newid
+13:53:52.856 10 Y 81 Select * From VisitStat Where Level=0 And Page='/Admin/File' Order By ID Desc limit 1
+13:53:52.857 10 Y 81 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/File', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:52', '2018-06-04 13:53:52');Select last_insert_rowid() newid
+13:53:53.901 12 Y 85 切换到系统库[master]
+13:53:53.904 12 Y 85 退出系统库[master]，回到[MyCube]
+13:53:53.904 12 Y 86 MyCubeConn 设定 Server=.;user id=sa;password=123123;Database=MyCube
+13:53:53.905 12 Y 86 MyCubeConn 格式 Server=.;user id=sa;password=123123;Database=MyCube;Pooling=false;Application Name=XCode_MyCube_MyCubeConn
+13:53:53.905 12 Y 86 切换到系统库[master]
+13:53:53.907 12 Y 86 退出系统库[master]，回到[MyCube]
+13:53:54.147 10 Y 88 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Db' Order By ID Desc limit 1
+13:53:54.147  8 Y 89 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Db' Order By ID Desc limit 1
+13:53:54.147 18 Y 90 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Db' Order By ID Desc limit 1
+13:53:54.147  8 Y 89 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(1, '2018-01-01 00:00:00', '/Admin/Db', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:54', '2018-06-04 13:53:53');Select last_insert_rowid() newid
+13:53:54.147 18 Y 90 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(2, '2018-06-01 00:00:00', '/Admin/Db', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:54', '2018-06-04 13:53:53');Select last_insert_rowid() newid
+13:53:54.148 10 Y 88 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(3, '2018-06-04 00:00:00', '/Admin/Db', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:54', '2018-06-04 13:53:53');Select last_insert_rowid() newid
+13:53:54.148 15 Y 93 Select * From VisitStat Where Level=0 And Page='/Admin/Db' Order By ID Desc limit 1
+13:53:54.148 15 Y 93 Insert Into VisitStat(Level, Time, Page, Times, Users, IPs, Error, Cost, MaxCost, CreateTime, UpdateTime) Values(0, null, '/Admin/Db', 0, 0, 0, 0, 0, 0, '2018-06-04 13:53:54', '2018-06-04 13:53:53');Select last_insert_rowid() newid
+13:53:54.502 14 Y EQ Update UserOnline Set Times=Times+3, Page='/Admin/Db', Status='GET /Admin/Db 249ms', OnlineTime=OnlineTime+12, UpdateTime='2018-06-04 13:53:54' Where ID=10
+13:53:55.072  8 Y 96 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/File' Order By ID Desc limit 1
+13:53:55.072 17 Y 97 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/File' Order By ID Desc limit 1
+13:53:55.073  8 Y 96 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/File' Order By ID Desc limit 1
+13:53:55.073 17 Y 97 Select * From VisitStat Where Level=0 And Page='/Admin/File' Order By ID Desc limit 1
+13:53:56.074 14 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:33:56' Order By ID Desc
+13:53:56.099 10 Y EQ Update VisitStat Set Title='平台设置', Times=1, Users=1, IPs=1, Cost=334, MaxCost=334, Remark='管理员,::1' Where ID=59
+13:53:56.099 10 Y EQ Update VisitStat Set Title='平台设置', Times=1, Users=1, IPs=1, Cost=334, MaxCost=334, Remark='管理员,::1' Where ID=57
+13:53:56.099 10 Y EQ Update VisitStat Set Title='平台设置', Times=1, Users=1, IPs=1, Cost=334, MaxCost=334, Remark='管理员,::1' Where ID=58
+13:53:56.099 10 Y EQ Update VisitStat Set Title='平台设置', Times=1, Users=1, IPs=1, Cost=334, MaxCost=334, Remark='管理员,::1' Where ID=60
+13:53:56.561 11 Y 101 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Cube' Order By ID Desc limit 1
+13:53:56.561 16 Y 100 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Cube' Order By ID Desc limit 1
+13:53:56.561 10 Y 102 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Cube' Order By ID Desc limit 1
+13:53:56.566 17 Y 105 Select * From VisitStat Where Level=0 And Page='/Admin/Cube' Order By ID Desc limit 1
+13:53:57.460 11 W - Select Count(*) From Log
+13:53:57.460 11 W - Select * From Log Order By ID Desc limit 20
+13:53:57.465 17 Y 109 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Log' Order By ID Desc limit 1
+13:53:57.465  8 Y 108 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Log' Order By ID Desc limit 1
+13:53:57.465 17 Y 109 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Log' Order By ID Desc limit 1
+13:53:57.465  8 Y 108 Select * From VisitStat Where Level=0 And Page='/Admin/Log' Order By ID Desc limit 1
+13:53:58.987 12 W - Select Count(*) From [Role]
+13:53:58.988 12 W - Select Top 20 ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:53:59.394 12 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+13:53:59.394 14 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+13:53:59.395 19 W - Select Count(*) From [User]
+13:53:59.398 19 W - Select Top 20 ID,Name,Password,DisplayName,Sex,Mail,Mobile,Code,Avatar,RoleID,RoleIDs,[Online],Enable,Logins,LastLogin,LastLoginIP,RegisterTime,RegisterIP From [User] Order By ID Desc
+13:53:59.503 12 Y EQ Update UserOnline Set Times=Times+6, Page='/Admin/User', Status='用户管理 GET /Admin/User 9ms', OnlineTime=OnlineTime+5, UpdateTime='2018-06-04 13:53:59' Where ID=10
+13:54:01.100 16 Y EQ Update VisitStat Set Title='用户管理', Times=Times+8, Cost=238, UpdateTime='2018-06-04 13:53:59' Where ID=6
+13:54:01.100 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=321, MaxCost=321, Remark='管理员,::1' Where ID=64
+13:54:01.100 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=321, MaxCost=321, Remark='管理员,::1' Where ID=62
+13:54:01.100 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=249, MaxCost=249, UpdateTime='2018-06-04 13:53:54', Remark='管理员,::1' Where ID=66
+13:54:01.100 16 Y EQ Update VisitStat Set Title='用户管理', Times=Times+8, Cost=238, UpdateTime='2018-06-04 13:53:59' Where ID=3
+13:54:01.100 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=3, MaxCost=3, UpdateTime='2018-06-04 13:53:55', Remark='管理员,::1' Where ID=63
+13:54:01.100 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=249, MaxCost=249, UpdateTime='2018-06-04 13:53:54', Remark='管理员,::1' Where ID=65
+13:54:01.100 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=3, MaxCost=3, UpdateTime='2018-06-04 13:53:55', Remark='管理员,::1' Where ID=62
+13:54:01.100 16 Y EQ Update VisitStat Set Title='用户管理', Times=Times+8, Cost=260, UpdateTime='2018-06-04 13:53:59' Where ID=5
+13:54:01.100 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=321, MaxCost=321, Remark='管理员,::1' Where ID=61
+13:54:01.100 16 Y EQ Update VisitStat Set Title='用户管理', Times=Times+8, Cost=238, UpdateTime='2018-06-04 13:53:59' Where ID=7
+13:54:01.101 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=249, MaxCost=249, UpdateTime='2018-06-04 13:53:54', Remark='管理员,::1' Where ID=68
+13:54:01.101 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=249, MaxCost=249, UpdateTime='2018-06-04 13:53:54', Remark='管理员,::1' Where ID=67
+13:54:01.101 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=3, MaxCost=3, UpdateTime='2018-06-04 13:53:55', Remark='管理员,::1' Where ID=61
+13:54:01.101 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=3, MaxCost=3, UpdateTime='2018-06-04 13:53:55', Remark='管理员,::1' Where ID=64
+13:54:01.101 16 Y EQ Update VisitStat Set Times=1, Users=1, IPs=1, Cost=321, MaxCost=321, Remark='管理员,::1' Where ID=63
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=82, UpdateTime='2018-06-04 13:53:59' Where ID=35
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=93, UpdateTime='2018-06-04 13:53:58' Where ID=37
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=170, UpdateTime='2018-06-04 13:53:56' Where ID=57
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=82, UpdateTime='2018-06-04 13:53:59' Where ID=36
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=144, UpdateTime='2018-06-04 13:53:57' Where ID=56
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=144, UpdateTime='2018-06-04 13:53:57' Where ID=55
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=170, UpdateTime='2018-06-04 13:53:56' Where ID=58
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=144, UpdateTime='2018-06-04 13:53:57' Where ID=53
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=98, UpdateTime='2018-06-04 13:53:58' Where ID=45
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=170, UpdateTime='2018-06-04 13:53:56' Where ID=59
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=93, UpdateTime='2018-06-04 13:53:58' Where ID=38
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=93, UpdateTime='2018-06-04 13:53:58' Where ID=39
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=93, UpdateTime='2018-06-04 13:53:58' Where ID=40
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=98, UpdateTime='2018-06-04 13:53:58' Where ID=47
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=170, UpdateTime='2018-06-04 13:53:56' Where ID=60
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=82, UpdateTime='2018-06-04 13:53:59' Where ID=34
+13:54:06.102 16 Y EQ Update VisitStat Set Times=Times+1, Cost=98, UpdateTime='2018-06-04 13:53:58' Where ID=48
+13:54:06.103 16 Y EQ Update VisitStat Set Times=Times+1, Cost=98, UpdateTime='2018-06-04 13:53:58' Where ID=46
+13:54:06.103 16 Y EQ Update VisitStat Set Times=Times+1, Cost=144, UpdateTime='2018-06-04 13:53:57' Where ID=54
+13:54:06.103 16 Y EQ Update VisitStat Set Times=Times+1, Cost=82, UpdateTime='2018-06-04 13:53:59' Where ID=33
+13:54:26.075  9 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:34:26' Order By ID Desc
+13:54:26.075  8 Y - Select Count(*) From UserOnline
+13:54:56.076 19 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:34:56' Order By ID Desc
+13:55:26.077  9 Y - Select Count(*) From UserOnline
+13:55:26.077 20 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:35:26' Order By ID Desc
+13:55:56.077 27 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:35:56' Order By ID Desc
+13:56:26.078 20 Y - Select Count(*) From UserOnline
+13:56:26.078 28 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:36:26' Order By ID Desc
+13:56:56.079 14 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:36:56' Order By ID Desc
+13:57:26.079 32 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:37:26' Order By ID Desc
+13:57:56.080 33 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:37:56' Order By ID Desc
+13:57:56.080 30 Y - Select Count(*) From UserOnline
+13:58:26.081 33 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:38:26' Order By ID Desc
+13:58:56.082 22 Y - Select Count(*) From UserOnline
+13:58:56.082 20 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:38:56' Order By ID Desc
+13:59:26.083 22 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:39:26' Order By ID Desc
+13:59:56.084 30 Y - Select Count(*) From UserOnline
+13:59:56.084 14 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:39:56' Order By ID Desc
+14:00:26.085 14 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:40:26' Order By ID Desc
+14:00:56.086 14 Y - Select Count(*) From UserOnline
+14:00:56.086 34 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:40:56' Order By ID Desc
+14:01:26.086 30 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:41:26' Order By ID Desc
+14:01:56.087 14 Y - Select Count(*) From UserOnline
+14:01:56.087 35 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:41:56' Order By ID Desc
+14:02:26.088 14 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:42:26' Order By ID Desc
+14:02:56.089 34 Y - Select Count(*) From UserOnline
+14:02:56.089 35 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:42:56' Order By ID Desc
+14:03:26.090 36 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:43:26' Order By ID Desc
+14:03:35.474  5 N T 对象缓存<UserOnline>(1)     总次数         19，命中         14（73.68%）	[XCode.Membership.UserOnline]
+14:03:35.474  5 N T 实体缓存<Menu>(16)          总次数        180，命中        173（96.11%）	[XCode.Membership.Menu]
+14:03:35.474  5 N T 统计字段<Log>(1)            总次数          3，命中          2（66.67%）	[XCode.Membership.Log]
+14:03:35.474  5 N T 实体缓存<Role>(4)           总次数         22，命中         14（63.64%）	[XCode.Membership.Role]
+14:03:35.474 35 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+14:03:35.474 14 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+14:03:56.091 35 Y - Select Count(*) From UserOnline
+14:03:56.091 30 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:43:56' Order By ID Desc
+14:04:26.092 37 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:44:26' Order By ID Desc
+14:04:56.093 37 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:44:56' Order By ID Desc
+14:05:26.094 35 Y - Select Count(*) From UserOnline
+14:05:26.094 14 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:45:26' Order By ID Desc
+14:05:56.095 42 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:45:56' Order By ID Desc
+14:06:26.096 35 Y - Select Count(*) From UserOnline
+14:06:26.096 41 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:46:26' Order By ID Desc
+14:06:56.097 35 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:46:56' Order By ID Desc
+14:06:56.108 35 Y T Delete From UserOnline Where ID=6
+14:06:56.112 36 Y - Select Count(*) From [User]
+14:06:56.113 35 Y T Select ID,Name,Password,DisplayName,Sex,Mail,Mobile,Code,Avatar,RoleID,RoleIDs,[Online],Enable,Logins,LastLogin,LastLoginIP,RegisterTime,RegisterIP From [User] Order By ID Desc
+14:06:56.120 35 Y T Update [User] Set RoleIDs=N'', [Online]=0 Where ID=1
+14:06:59.455 43 Y EQ Insert Into Log(Category, [Action], LinkID, UserName, CreateUserID, CreateTime, Remark) Values('用户', '修改', 1, '管理员', 1, '2018-06-04 14:06:55', 'ID=1,Online=False');Select last_insert_rowid() newid
+14:07:26.127 37 Y - Select Count(*) From UserOnline
+14:07:26.127 14 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:47:26' Order By ID Desc
+14:07:56.129 45 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:47:56' Order By ID Desc
+14:08:26.130 44 Y - Select Count(*) From UserOnline
+14:08:26.130 37 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:48:26' Order By ID Desc
+14:08:56.130 14 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:48:56' Order By ID Desc
+14:09:26.131 36 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:49:26' Order By ID Desc
+14:09:26.131 45 Y - Select Count(*) From UserOnline
+14:09:56.132 44 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:49:56' Order By ID Desc
+14:10:26.132 14 Y - Select Count(*) From UserOnline
+14:10:26.132 45 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:50:26' Order By ID Desc
+14:10:56.133 44 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:50:56' Order By ID Desc
+14:11:26.135 14 Y - Select Count(*) From UserOnline
+14:11:26.135 48 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:51:26' Order By ID Desc
+14:11:56.135 45 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:51:56' Order By ID Desc
+14:12:26.136 44 Y - Select Count(*) From UserOnline
+14:12:26.136 45 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:52:26' Order By ID Desc
+14:12:56.136 44 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:52:56' Order By ID Desc
+14:13:26.137 51 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:53:26' Order By ID Desc
+14:13:35.475  5 N T 对象缓存<UserOnline>(1)     总次数         19，命中         14（73.68%）	[XCode.Membership.UserOnline]
+14:13:35.475  5 N T 实体缓存<Menu>(16)          总次数        181，命中        173（95.58%）	[XCode.Membership.Menu]
+14:13:35.475 45 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+14:13:35.475  5 N T 统计字段<Log>(1)            总次数          4，命中          2（50.00%）	[XCode.Membership.Log]
+14:13:35.475 51 Y - Select Count(ID) as ID,Category From Log Group By Category Order By ID Desc limit 20
+14:13:35.475  5 N T 实体缓存<UserX>(1)          总次数          2	[XCode.Membership.UserX]
+14:13:35.476  5 N T 实体缓存<Role>(4)           总次数         23，命中         14（60.87%）	[XCode.Membership.Role]
+14:13:35.476 46 Y - Select ID,Name,Password,DisplayName,Sex,Mail,Mobile,Code,Avatar,RoleID,RoleIDs,[Online],Enable,Logins,LastLogin,LastLoginIP,RegisterTime,RegisterIP From [User] Order By ID Desc
+14:13:35.476 14 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+14:13:56.138 45 Y - Select Count(*) From UserOnline
+14:13:56.138 53 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:53:56' Order By ID Desc
+14:13:56.140 53 Y T Delete From UserOnline Where ID=9
+14:13:56.140 53 Y T Delete From UserOnline Where ID=8
+14:13:56.140 53 Y T Delete From UserOnline Where ID=7
+14:14:26.141 51 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 13:54:26' Order By ID Desc
+14:14:26.142 51 Y T Delete From UserOnline Where ID=10
+14:14:26.143 46 Y - Select Count(*) From [User]
+14:14:26.143 51 Y T Update [User] Set RoleIDs=N'' Where ID=1
+14:14:26.143 52 Y - Select ID,Name,Password,DisplayName,Sex,Mail,Mobile,Code,Avatar,RoleID,RoleIDs,[Online],Enable,Logins,LastLogin,LastLoginIP,RegisterTime,RegisterIP From [User] Order By ID Desc
+14:14:56.152 52 Y - Select Count(*) From UserOnline
+14:14:56.152 52 Y - Select Count(*) From UserOnline
+14:15:56.151 45 Y - Select Count(*) From UserOnline
+14:15:56.151 45 Y - Select Count(*) From UserOnline
+14:16:56.153 45 Y - Select Count(*) From UserOnline
+14:16:56.153 45 Y - Select Count(*) From UserOnline
+14:17:56.155 51 Y - Select Count(*) From UserOnline
+14:17:56.155 51 Y - Select Count(*) From UserOnline
+14:18:56.155 60 Y - Select Count(*) From UserOnline
+14:18:56.155 60 Y - Select Count(*) From UserOnline
+14:19:56.156 59 Y - Select Count(*) From UserOnline
+14:19:56.156 59 Y - Select Count(*) From UserOnline
+14:20:56.158 60 Y - Select Count(*) From UserOnline
+14:20:56.158 60 Y - Select Count(*) From UserOnline
+14:22:26.160 60 Y - Select Count(*) From UserOnline
+14:22:26.160 60 Y - Select Count(*) From UserOnline
+14:22:57.386 51 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+14:22:57.388 66 Y 125 Select * From UserOnline Where SessionID='xtlysha32m3l3yxfazgd0jml' Order By ID Desc limit 1
+14:22:57.389 66 Y 125 Insert Into UserOnline(UserID, SessionID, Times, Page, Status, OnlineTime, CreateIP, CreateTime, UpdateTime) Values(0, 'xtlysha32m3l3yxfazgd0jml', 1, '/Admin/Db', 'GET /Admin/Db 4ms', 0, '::1', '2018-06-04 14:22:57', '2018-06-04 14:22:57');Select last_insert_rowid() newid
+14:22:57.391 66 Y 126 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/Db' Order By ID Desc limit 1
+14:22:57.391 65 Y 127 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/Db' Order By ID Desc limit 1
+14:22:57.391 66 Y 126 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/Db' Order By ID Desc limit 1
+14:22:57.392 66 Y 126 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='全部' Order By ID Desc limit 1
+14:22:57.392 65 Y 127 Select * From VisitStat Where Level=0 And Page='/Admin/Db' Order By ID Desc limit 1
+14:22:57.392 66 Y 126 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+14:22:57.392 65 Y 127 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='全部' Order By ID Desc limit 1
+14:22:57.393 65 Y 127 Select * From VisitStat Where Level=0 And Page='全部' Order By ID Desc limit 1
+14:22:57.401 60 Y 129 Select * From VisitStat Where Level=3 And Time='2018-06-04 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+14:22:57.401 51 Y 130 Select * From VisitStat Where Level=1 And Time='2018-01-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+14:22:57.401 66 Y 131 Select * From VisitStat Where Level=2 And Time='2018-06-01 00:00:00' And Page='/Admin/User/Login' Order By ID Desc limit 1
+14:22:57.401 65 Y 133 Select * From VisitStat Where Level=0 And Page='/Admin/User/Login' Order By ID Desc limit 1
+14:22:59.694 60 Y EQ Update UserOnline Set Times=Times+1, Page='/Admin/User/Login', Status='用户管理 GET /Admin/User/Login?r=%2fAdmin%2fDb 5ms' Where ID=11
+14:23:06.304 60 Y EQ Update VisitStat Set Times=Times+1, Cost=127, UpdateTime='2018-06-04 14:22:57' Where ID=68
+14:23:06.304 60 Y EQ Update VisitStat Set Times=Times+2, Cost=226, UpdateTime='2018-06-04 14:22:57' Where ID=3
+14:23:06.305 60 Y EQ Update VisitStat Set Times=Times+1, Cost=285, UpdateTime='2018-06-04 14:22:57' Where ID=15
+14:23:06.305 60 Y EQ Update VisitStat Set Times=Times+1, Cost=127, UpdateTime='2018-06-04 14:22:57' Where ID=65
+14:23:06.306 60 Y EQ Update VisitStat Set Times=Times+1, Cost=127, UpdateTime='2018-06-04 14:22:57' Where ID=67
+14:23:06.306 60 Y EQ Update VisitStat Set Times=Times+1, Cost=285, UpdateTime='2018-06-04 14:22:57' Where ID=13
+14:23:06.307 60 Y EQ Update VisitStat Set Times=Times+1, Cost=285, UpdateTime='2018-06-04 14:22:57' Where ID=16
+14:23:06.307 60 Y EQ Update VisitStat Set Times=Times+2, Cost=226, UpdateTime='2018-06-04 14:22:57' Where ID=6
+14:23:06.307 60 Y EQ Update VisitStat Set Times=Times+1, Cost=285, UpdateTime='2018-06-04 14:22:57' Where ID=14
+14:23:06.307 60 Y EQ Update VisitStat Set Times=Times+2, Cost=226, UpdateTime='2018-06-04 14:22:57' Where ID=7
+14:23:06.307 60 Y EQ Update VisitStat Set Times=Times+1, Cost=127, UpdateTime='2018-06-04 14:22:57' Where ID=66
+14:23:06.307 60 Y EQ Update VisitStat Set Times=Times+2, Cost=247, UpdateTime='2018-06-04 14:22:57' Where ID=5
+14:23:26.162 67 Y - Select Count(*) From UserOnline
+14:23:26.162 66 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:03:26' Order By ID Desc
+14:23:35.476  5 N T 对象缓存<UserOnline>(1)     总次数         21，命中         15（71.43%）	[XCode.Membership.UserOnline]
+14:23:35.476 66 Y - Select ID,Name,DisplayName,FullName,ParentID,Url,[Sort],Icon,Visible,Necessary,Permission,Remark From Menu Order By ID Desc
+14:23:35.476  5 N T 实体缓存<Menu>(16)          总次数        184，命中        173（94.02%）	[XCode.Membership.Menu]
+14:23:35.476  5 N T 统计字段<Log>(1)            总次数          5，命中          2（40.00%）	[XCode.Membership.Log]
+14:23:35.476 51 Y - Select Count(ID) as ID,Category From Log Group By Category Order By ID Desc limit 20
+14:23:35.477 51 Y - Select ID,Name,Password,DisplayName,Sex,Mail,Mobile,Code,Avatar,RoleID,RoleIDs,[Online],Enable,Logins,LastLogin,LastLoginIP,RegisterTime,RegisterIP From [User] Order By ID Desc
+14:23:35.477  5 N T 实体缓存<UserX>(1)          总次数          4	[XCode.Membership.UserX]
+14:23:35.478  5 N T 实体缓存<Role>(4)           总次数         24，命中         14（58.33%）	[XCode.Membership.Role]
+14:23:35.479 65 Y - Select ID,Name,IsSystem,Remark,Permission,CreateUserID,CreateIP,CreateTime,UpdateUserID,UpdateIP,UpdateTime From [Role] Order By ID Desc
+14:23:56.162 66 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:03:56' Order By ID Desc
+14:24:26.163 60 Y - Select Count(*) From UserOnline
+14:24:26.163 51 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:04:26' Order By ID Desc
+14:24:56.164 68 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:04:56' Order By ID Desc
+14:25:26.165 51 Y - Select Count(*) From UserOnline
+14:25:26.165 67 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:05:26' Order By ID Desc
+14:25:56.166 67 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:05:56' Order By ID Desc
+14:26:26.166 60 Y - Select Count(*) From UserOnline
+14:26:26.166 70 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:06:26' Order By ID Desc
+14:26:56.168 69 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:06:56' Order By ID Desc
+14:27:26.168 51 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:07:26' Order By ID Desc
+14:27:26.168 72 Y - Select Count(*) From UserOnline
+14:27:56.168 60 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:07:56' Order By ID Desc
+14:28:26.169 73 Y - Select Count(*) From UserOnline
+14:28:26.169 60 Y T Select * From UserOnline Where UpdateTime<'2018-06-04 14:08:26' Order By ID Desc

@@ -18,7 +18,7 @@ namespace MyCube
 
             if (routes["Cube"] == null)
             {
-                // 为魔方注册默认首页，启动魔方站点时能自动跳入后台，同时为Home预留默认过度视图页面
+                // 注册默认首页，启动站点时能自动跳入后台，同时为Home预留默认过度视图页面
                 routes.MapRoute(
                     name: "Cube",
                     url: "{controller}/{action}/{id}",

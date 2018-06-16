@@ -72,8 +72,8 @@ namespace MyCube
         [Description("访问统计。统计页面访问量")]
         public Boolean WebStatistics { get; set; } = true;
 
-        /// <summary>捕获所有异常。默认false只捕获魔方区域异常</summary>
-        [Description("捕获所有异常。默认false只捕获魔方区域异常")]
+        /// <summary>捕获所有异常。默认false只捕获平台区域异常</summary>
+        [Description("捕获所有异常。默认false只捕获平台区域异常")]
         public Boolean CatchAllException { get; set; }
 
         /// <summary>表单组样式。大中小屏幕分别3/2/1列</summary>

@@ -48,7 +48,7 @@ namespace MyCube
 
         static AreaRegistrationBase()
         {
-            XTrace.WriteLine("{0} Start 初始化魔方 {0}", new String('=', 32));
+            XTrace.WriteLine("{0} Start 初始化平台 {0}", new String('=', 32));
             Assembly.GetExecutingAssembly().WriteVersion();
 
             // 遍历所有引用了AreaRegistrationBase的程序集
@@ -95,10 +95,10 @@ namespace MyCube
             //    constraints: new { controller = "Frontend", action = "Default" }
             //);
 
-            // 自动检查并下载魔方资源
+            // 自动检查并下载平台资源
             Task.Factory.StartNew(CheckContent, TaskCreationOptions.LongRunning).LogException();
 
-            XTrace.WriteLine("{0} End   初始化魔方 {0}", new String('=', 32));
+            XTrace.WriteLine("{0} End   初始化平台 {0}", new String('=', 32));
         }
 
         /// <summary>遍历所有引用了AreaRegistrationBase的程序集</summary>
@@ -125,7 +125,7 @@ namespace MyCube
                 if (x == null && y != null) return -1;
 
                 //return x.GetReferencedAssemblies().Any(e => e.FullName == y.FullName) ? 1 : -1;
-                // 对程序集引用进行排序时，不能使用全名，当魔方更新而APP没有重新编译时，版本的不同将会导致全名不同，无法准确进行排序
+                // 对程序集引用进行排序时，不能使用全名，当平台更新而APP没有重新编译时，版本的不同将会导致全名不同，无法准确进行排序
                 var yname = y.GetName().Name;
                 return x.GetReferencedAssemblies().Any(e => e.Name == yname) ? 1 : -1;
             });
@@ -147,7 +147,7 @@ namespace MyCube
                 }, 15000);
             }
 
-            // 检查魔方样式
+            // 检查平台样式
             var js = "~/Content/Cube.js".GetFullPath();
             var css = "~/Content/Cube.css".GetFullPath();
             if (File.Exists(js) && File.Exists(css))
@@ -273,7 +273,7 @@ namespace MyCube
         }
 
         private static ICollection<String> _areas;
-        /// <summary>判断控制器是否归属于魔方管辖</summary>
+        /// <summary>判断控制器是否归属于平台管辖</summary>
         /// <param name="controller"></param>
         /// <returns></returns>
         public static Boolean Contains(IController controller)
